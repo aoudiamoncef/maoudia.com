@@ -1,0 +1,17 @@
++++
+date = "2021-05-19T07:30:00+01:00"
+author = "Moncef AOUDIA"
+showDate = false
+noSummary = true
+resizeImages = false
++++
+
+:source-highlighter: highlightjs
+:icons: font
+
+image::/images/favicons/splash.png[Moncef AOUDIA]
+
+[WARNING]
+====
+Travail en cours…
+====

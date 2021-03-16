@@ -1,0 +1,11 @@
+[googleAnalytics]
+  anonymizeIP = true
+  respectDoNotTrack = true
+  useSessionStorage = false
+[instagram]
+  simple = false
+[twitter]
+  enableDNT = true
+  simple = false
+[youtube]
+  privacyEnhanced = true

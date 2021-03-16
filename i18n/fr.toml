@@ -1,0 +1,66 @@
+[categories]
+other = "Catégories"
+
+[authors]
+other = "Auteurs"
+
+[tags]
+other = "Mots clés"
+
+[findMeOn]
+other = "Trouver moi sur"
+
+[latestPosts]
+other = "Derniers articles"
+
+[search]
+other = "Chercher ..."
+
+[noSearchResults]
+other = "Rien n'a été trouvé."
+
+[olderPosts]
+other = "Articles plus anciens"
+
+[newerPosts]
+other = "messages plus récents"
+
+[continueReading]
+other = "continuer la lecture"
+
+[otherLanguages]
+other = "Autres langues"
+
+[readingTime]
+one = "1 Min. lecture"
+other = "{{.Count}} Min. lecture"
+
+[series]
+other = "Séries"
+
+[published]
+other = "Publié le"
+
+[updated]
+other = "Mise à jour le"
+
+[by]
+other = "Par"
+
+[homePage]
+other = "acceuil"
+
+[pageNotFound]
+other = "Page introuvable"
+
+[issue]
+other = "ticket"
+
+[errorMessagePart1]
+other = "Veuillez retourner à l'"
+
+[errorMessagePart2]
+other = "Pensez à ouvrir un"
+
+[errorMessagePart3]
+other = "pour résoudre le problème"

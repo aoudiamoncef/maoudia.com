@@ -1,0 +1,19 @@
+[en]
+  title = "Moncef AOUDIA"
+  subtitle = "Software developer, open-source enthusiast/maintainer."
+  weight = 1
+  [en.Taxonomies]
+    author   = "author"
+    tag      = "tags"
+    category = "categories"
+    series   = "series"
+
+[fr]
+  title = "Moncef AOUDIA"
+  subtitle = "Développeur, passionné et mainteneur de projets open-source."
+  weight = 2
+  [fr.Taxonomies]
+    author   = "author"
+    tag      = "tags"
+    category = "categories"
+    series   = "series"

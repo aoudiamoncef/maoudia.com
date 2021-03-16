@@ -1,0 +1,162 @@
+td, th {
+    padding: 0px 0px;
+    border-bottom: none;
+}
+
+.bilberry-hugo-theme header {
+    background-color: #000a12;
+}
+
+.bilberry-hugo-theme article .content a {
+    font-style: normal;
+}
+
+.bilberry-hugo-theme article .content {
+    padding: 1.5em;
+}
+
+.bilberry-hugo-theme a {
+    color: #3f8500;
+}
+
+.bilberry-hugo-theme a:hover {
+    color: #5abf00;
+}
+
+.bilberry-hugo-theme article .content a.more {
+    color: #3f8500;
+}
+
+.bilberry-hugo-theme a:hover {
+    text-decoration: underline;
+}
+
+.bilberry-hugo-theme .main::before {
+    display: none;
+}
+
+.bilberry-hugo-theme nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    min-height: 65px;
+}
+
+.bilberry-hugo-theme .main .article-wrapper .bubble {
+    position: absolute;
+    left: 25px;
+    top: 70px;
+    background-color: #ccc;
+    border: 3px solid #fff;
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.bilberry-hugo-theme header .container::after {
+    display: none;
+}
+
+.bilberry-hugo-theme .main::after {
+    display: none;
+}
+
+.bilberry-hugo-theme article {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    width: -webkit-fill-available;
+    position: relative;
+}
+
+.bilberry-hugo-theme article .content .meta span::before {
+    display: none;
+    width: -webkit-fill-available;
+}
+
+.bilberry-hugo-theme header .titles h3 a {
+    color: #f1f1f1;
+}
+
+.bilberry-hugo-theme header .titles h3 a:hover{
+    color: #5abf00;
+}
+
+.bilberry-hugo-theme nav ul li a {
+    color: #f1f1f1;
+}
+
+.bilberry-hugo-theme nav ul li a:hover {
+    color: #5abf00;
+}
+
+.bilberry-hugo-theme header .languages a:hover {
+    color: #5abf00;
+}
+
+.bilberry-hugo-theme header .logo .overlay {
+    background-color: #5abf00;
+}
+
+.bilberry-hugo-theme header .logo a:hover {
+    color: #f1f1f1;
+}
+
+.bilberry-hugo-theme article .content a.more:hover {
+    color: #5abf00;
+}
+
+.bilberry-hugo-theme #comments-container {
+    padding-bottom: 1.2em;
+    width: -webkit-fill-available;
+}
+
+.bilberry-hugo-theme .main #comments-container {
+    margin: 0 1.5em;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+}
+
+.utterances {
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+    width: -webkit-fill-available;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+.bilberry-hugo-theme footer .container ul a {
+    color: #40603e;
+}
+
+
+.bilberry-hugo-theme footer .container .right .languages a {
+    color: #40603e;
+}
+
+.bilberry-hugo-theme .credits .container .author {
+    color: #2b5c00;
+}
+
+.bilberry-hugo-theme .credits .container a {
+    color: #2b5c00;
+}
+
+.bilberry-hugo-theme footer .container a:hover {
+    color: #444;
+}

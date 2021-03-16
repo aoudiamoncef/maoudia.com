@@ -1,0 +1,44 @@
+name: Build staging
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    environment: staging
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ secrets.HUGO_VERSION }}
+          extended: true
+        env:
+          HUGO_googleAnalytics: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY_ID}} 
+          HUGO_PARAMS_algolia_appId: ${{ secrets.ALGOLIA_APP_ID }} 
+          HUGO_PARAMS_algolia_apiKey: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          HUGO_PARAMS_algolia_indexName: ${{ secrets.ALGOLIA_INDEX_NAME }}
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+      - run: gem install asciidoctor asciidoctor-html5s
+
+      - name: Run Hugo
+        run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
+
+      - name: Upload Hugo Algolia Index
+        uses: aoudiamoncef/hugo-algolia-uploader@main
+        with:
+          app_id: ${{ secrets.ALGOLIA_APP_ID }}
+          admin_key: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+          index_name: ${{ secrets.ALGOLIA_INDEX_NAME }}

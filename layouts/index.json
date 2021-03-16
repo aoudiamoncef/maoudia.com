@@ -1,0 +1,33 @@
+{{- $.Scratch.Add "index" slice -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | absURL) "title" ($name | humanize) "type" "category" "objectID" (print "/categories/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.author -}}
+    {{- $author_name := $name -}}
+    {{- $author_path := (printf "/author/%s" (urlize $name)) -}}
+    {{- $author_page := site.GetPage $author_path -}}
+    {{- if $author_page -}}
+        {{- $author_name = $author_page.Title -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" ($author_path | absURL) "title" $author_name "type" "author" "objectID" ($author_path | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.series -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/series/" $name | absURL) "title" ($name | humanize) "type" "series" "objectID" (print "/series/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range where .Site.RegularPages "Type" "not in" (slice "page" "json" "status") -}}
+    {{- range .Translations -}}
+        {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "content" (replaceRE "\n" " " .Plain) "objectID" (.Permalink | md5) ) -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "content" (replaceRE "\n" " " .Plain) "objectID" (.Permalink | md5) ) -}}
+
+{{- end -}}
+
+{{- $.Scratch.Get "index" | jsonify -}}

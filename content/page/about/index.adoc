@@ -1,0 +1,16 @@
++++
+title = "À propos"
+date = 2021-05-19T07:30:00+01:00
+excludeFromTopNav = false
+showPublishDate = false
+showLastModificationDate = false
+showReadingTime = false
+slug = "about"
++++
+
+:source-highlighter: highlightjs
+
+I am a software developer && open-source enthusiast/maintainer.
+
+
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[alt]

@@ -1,0 +1,55 @@
+baseURL = "https://www.maoudia.com"
+languageCode = "en-us"
+title = "Moncef AOUDIA"
+theme = "bilberry"
+copyright = "Copyright © 2021 Moncef AOUDIA"
+
+# Generate the robots.txt file for SEO
+enableRobotsTXT = true
+
+enableGitInfo = true
+
+enableEmoji = true
+
+googleAnalytics = ""
+
+canonifyURLs = false
+
+[permalinks]
+    article = ":section/:slug/"
+    blog = ":section/:slug/"
+    page = "/:slug/"
+    status = ":section/:slug/" 
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+
+[outputs]
+  home = [ "HTML", "JSON", "AMP", "RSS" ]
+  page = [ "HTML", "AMP"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
+  [markup.asciidocExt]
+    backend = "html5"
+    extensions = ["asciidoctor-html5s"]
+    failureLevel = "fatal"
+    noHeaderOrFooter = true
+    preserveTOC = false
+    safeMode = "unsafe"
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  publishDate = ["publishDate", "date", "lastmod"]
+  expiryDate = ["expiryDate"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]
+
+defaultContentLanguage = "en"

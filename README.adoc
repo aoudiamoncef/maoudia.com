@@ -1,0 +1,23 @@
+++++
+<h1 align="center">
+    <img src="static/images/favicons/android-chrome-384x384.png" width="100"> </br>
+    Moncef AOUDIA website
+</h1>
+++++
+
+This repo contains the source code of the https://www.maoudia.com[maoudia.com] website. It is
+built using https://gohugo.io/[Hugo], https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] and https://pages.github.com/[GitHub Pages].
+
+== Editing
+
+Launch a local Hugo server including live reload by running:
+
+[source,shell]
+----
+hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
+----
+
+== Deployment
+
+Deployment to CloudFlare/GitHub pages happens automatically upon pushing the main
+branch.

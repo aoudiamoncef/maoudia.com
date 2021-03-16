@@ -1,0 +1,69 @@
+[categories]
+other = "Categories"
+
+[authors]
+other = "Authors"
+
+[tags]
+other = "Tags"
+
+[findMeOn]
+other = "Find me on"
+
+[latestPosts]
+other = "Latest posts"
+
+[search]
+other = "Search ..."
+
+[noSearchResults]
+other = "Nothing found."
+
+[olderPosts]
+other = "Older posts"
+
+[newerPosts]
+other = "Newer posts"
+
+[continueReading]
+other = "Continue reading"
+
+[otherLanguages]
+other = "Other languages"
+
+[readingTime]
+one = "1 min read"
+other = "{{.Count}} min read"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[series]
+other = "Series"
+
+[published]
+other = "Published on"
+
+[updated]
+other = "Updated on"
+
+[by]
+other = "By"
+
+[homePage]
+other = "homepage"
+
+[pageNotFound]
+other = "Page Not Found"
+
+[issue]
+other = "issue"
+
+[errorMessagePart1]
+other = "Please return to the"
+
+[errorMessagePart2]
+other = "Consider opening a"
+
+[errorMessagePart3]
+other = "to fix the problem"

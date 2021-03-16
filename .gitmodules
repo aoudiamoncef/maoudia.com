@@ -1,0 +1,3 @@
+[submodule "themes/bilberry"]
+	path = themes/bilberry
+	url = https://github.com/aoudiamoncef/bilberry-hugo-theme.git

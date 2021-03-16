@@ -1,0 +1,10 @@
+<article class="default article">
+    {{ partial "featured-image.html" .ctx }}
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+
+    {{ with .ctx.Params.link }}
+        <script>window.location = {{ . | relURL }}</script>
+    {{ end }}
+
+    {{ partial "article-footer.html" .ctx }}
+</article>
