@@ -25,9 +25,9 @@ jobs:
           extended: true
         env:
           HUGO_GOOGLEANALYTICS: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY_ID}} 
-          HUGO_PARAMS_ALGOLIA_APPID: ${{ secrets.ALGOLIA_APP_ID }} 
-          HUGO_PARAMS_ALGOLIA_APIKEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-          HUGO_PARAMS_ALGOLIA_INDEXNAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          HUGOxPARAMSxALGOLIA_APPID: ${{ secrets.ALGOLIA_APP_ID }} 
+          HUGOxPARAMSxALGOLIA_APIKEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          HUGOxPARAMSxALGOLIA_INDEXNAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
