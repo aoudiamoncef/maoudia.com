@@ -91,7 +91,7 @@
     <link rel="stylesheet" rel="preload" href="{{ "theme.css" | absURL }}">
 
     {{ if .Site.Params.enableTwitterCard | default true }}
-        {{ template "_internal/twitter_cards.html" }}
+         {{ partial "twitter-card.html" . }}
     {{ end }}
 
     {{ if .Site.Params.concatCssAssets | default true }}

@@ -23,10 +23,10 @@ jobs:
           hugo-version: ${{ secrets.HUGO_VERSION }}
           extended: true
         env:
-          HUGO_googleAnalytics: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY_ID}} 
-          HUGO_PARAMS_algolia_appId: ${{ secrets.ALGOLIA_APP_ID }} 
-          HUGO_PARAMS_algolia_apiKey: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-          HUGO_PARAMS_algolia_indexName: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          HUGO_GOOGLEANALYTICS: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY_ID}} 
+          HUGO_PARAMS_ALGOLIA_APPID: ${{ secrets.ALGOLIA_APP_ID }} 
+          HUGO_PARAMS_ALGOLIA_APIKEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          HUGO_PARAMS_ALGOLIA_INDEXNAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
