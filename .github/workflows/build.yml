@@ -25,6 +25,7 @@ jobs:
           extended: true
         env:
           HUGO_GOOGLEANALYTICS: ${{ secrets.GOOGLE_ANALYTICS_PROPERTY_ID}} 
+          HUGO_BASEURL: ${{ secrets.HUGO_BASE_URL}} 
           HUGOxPARAMSxALGOLIA_APPID: ${{ secrets.ALGOLIA_APP_ID }} 
           HUGOxPARAMSxALGOLIA_APIKEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
           HUGOxPARAMSxALGOLIA_INDEXNAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
