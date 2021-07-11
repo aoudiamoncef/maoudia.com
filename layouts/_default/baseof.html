@@ -59,7 +59,11 @@
     <title>
         {{ block "title" . }}
            {{ if .Scratch.Get "title" }}
-               {{ .Scratch.Get "title" }} &vert; {{ .Site.Title }}
+               {{ if .IsHome }}
+                    {{ .Site.Title }} &vert; {{ i18n "shortDescription" }} 
+               {{ else }}
+                    {{ .Scratch.Get "title" }} &vert; {{ .Site.Title }}
+               {{ end }}
            {{ else }}
                {{ .Site.Title }}
            {{ end }}

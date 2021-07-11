@@ -1,6 +1,6 @@
 [en]
   title = "Moncef AOUDIA"
-  subtitle = "Moncef AOUDIA - Software developer, open-source enthusiast/maintainer"
+  subtitle = "Software developer, open-source enthusiast/maintainer"
   weight = 1
   [en.Taxonomies]
     author   = "author"
@@ -10,7 +10,7 @@
 
 [fr]
   title = "Moncef AOUDIA"
-  subtitle = "Moncef AOUDIA - Développeur, passionné et mainteneur de projets open-source"
+  subtitle = "Développeur, passionné et mainteneur de projets open-source"
   weight = 2
   [fr.Taxonomies]
     author   = "author"

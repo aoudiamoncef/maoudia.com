@@ -21,7 +21,7 @@
                     {{ $lastMod := .ctx.Lastmod.Format "2006-01-02" }}
                     {{ $lastModTime := time $lastMod }}
                         {{if ($lastModTime.After (time $publishDate))}}
-                            <span> | </span>
+                            <span> &vert; </span>
                             <span>{{ i18n "updated" }} </span>
                             <span class="date moment">{{ $lastMod }}</span>
                         {{ end }}
@@ -37,7 +37,7 @@
         {{ end }}
 
         {{ if ( and (.ctx.Site.Params.showReadingTime | default false) (.ctx.Params.showReadingTime | default true)) }}
-            <span> | </span>
+            <span> &vert; </span>
             {{ if .ctx.Params.readingTime }}
                 <span class="readingTime">{{ i18n "readingTime" .ctx.Params.readingTime }}</span>
             {{ else }}
@@ -46,7 +46,7 @@
         {{ end }}
 
         {{ with .ctx.Params.categories }}
-            <span> | </span>
+            <span> &vert; </span>
             <span class="categories">
                 {{ range . }}
                     {{ $urlValue := replace . " " "-" | lower}}
@@ -58,7 +58,7 @@
         {{ end }}
 
         {{ with .ctx.Params.author }}
-            <span> | {{ i18n "by" }}</span>
+            <span> &vert; {{ i18n "by" }}</span>
             <span class="author">
                 {{ $urlValue := replace . " " "-" | lower}}
                 {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}

@@ -1,16 +1,29 @@
 ++++
 <h1 align="center">
     <img src="static/images/favicons/android-chrome-384x384.png" width="100"> </br>
-    Moncef AOUDIA website
+    Moncef AOUDIA's website
 </h1>
 ++++
 
 This repo contains the source code of the https://www.maoudia.com[maoudia.com] website. It is
 built using https://gohugo.io/[Hugo], https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] and https://pages.github.com/[GitHub Pages].
 
+== Requirements
+* Install https://gohugo.io/getting-started/installing/[Hugo]
+* Install https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
+* Install https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
+
+[source,shell]
+----
+gem install asciidoctor asciidoctor-html5s
+----
+
+NOTE: To manually upload `ìndex.json` content to https://www.algolia.com/[Algolia] search index, see Billeberry https://github.com/Lednerb/bilberry-hugo-theme#Algolia-Search[Algolia-Search].
+
+
 == Editing
 
-Launch a local Hugo server including live reload by running:
+Launch a local Hugo server including live reload:
 
 [source,shell]
 ----
