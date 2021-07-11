@@ -8,7 +8,7 @@ resizeImages = false
 :source-highlighter: highlightjs
 :icons: font
 
-image::/images/favicons/splash.png[Moncef AOUDIA]
+image::/images/favicons/splash.png[Moncef AOUDIA logo]
 
 [WARNING]
 ====

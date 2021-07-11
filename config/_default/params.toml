@@ -28,7 +28,7 @@ resizeImages = true
 
 # Header configuration
 # your subtitle if you want to use any
-subtitle = "Software developer, open-source enthusiast/maintainer."
+# subtitle = ""
 # if you want to use gravatar for the header image
 gravatarEMail = "mf.aoudia@gmail.com"
 # set an path to the image file you want to use | overwrites gravatar
@@ -93,6 +93,7 @@ socialMediaLinks = [
   { link = "https://medium.com/@aoudiamoncef", title = "Moncef AOUDIA Medium", icon = "fab fa-medium-m" },
   { link = "https://aoudiamoncef.hashnode.dev", title = "Moncef AOUDIA Hashnode", icon = "fas fa-dice-one" },
   { link = "https://stackoverflow.com/users/8126192/moncef-aoudia", title = "Moncef AOUDIA Stackoverflow", icon = "fab fa-stack-overflow" },
+  { link = "https://www.reddit.com/user/aoudiamoncef", title = "Moncef AOUDIA Reddit", icon = "fab fa-reddit" },
   { link = "https://slides.com/aoudiamoncef", title = "Moncef AOUDIA Slides", icon = "fas fa-sliders-h" },
   { link = "https://speakerdeck.com/aoudiamoncef", title = "Moncef AOUDIA SpeakerDeck", icon = "fab fa-speaker-deck" },
   { link = "https://www.maoudia.com/index.xml", title = "Moncef AOUDIA RSS", icon = "fas fa-rss" },

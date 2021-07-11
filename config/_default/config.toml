@@ -1,4 +1,5 @@
 baseURL = "https://www.maoudia.com"
+relativeurls = false
 languageCode = "en-us"
 title = "Moncef AOUDIA"
 theme = "bilberry"
@@ -16,7 +17,6 @@ googleAnalytics = ""
 canonifyURLs = false
 
 [permalinks]
-    article = ":section/:slug/"
     blog = ":section/:slug/"
     page = "/:slug/"
     status = ":section/:slug/" 
