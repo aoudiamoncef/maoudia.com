@@ -1,4 +1,5 @@
 baseURL = "https://www.maoudia.com"
+relativeurls = true
 languageCode = "en-us"
 title = "Moncef AOUDIA"
 theme = "bilberry"
