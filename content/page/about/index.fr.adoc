@@ -9,6 +9,7 @@ slug = "about"
 +++
 
 :source-highlighter: highlightjs
+:icons: font
 
 Je suis développeur de logiciels && un passionné / mainteneur open-source.
 
