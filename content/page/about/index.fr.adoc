@@ -13,4 +13,4 @@ slug = "about"
 
 Je suis développeur de logiciels && un passionné / mainteneur open-source.
 
-image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[alt]
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[Github stats, 595, 165]
