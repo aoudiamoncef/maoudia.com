@@ -160,3 +160,22 @@ td, th {
 .bilberry-hugo-theme footer .container a:hover {
     color: #444;
 }
+
+.bilberry-hugo-theme header .languages a:not(:last-child):after {
+    content: "";
+}
+
+.bilberry-hugo-theme header .languages span {
+    text-transform: uppercase;
+    font-size: .8em;
+    color: #f1f1f1;
+    letter-spacing: .1em;
+}
+
+.bilberry-hugo-theme footer .container .right .languages a:not(:last-child):after {
+    content: "";
+}
+
+bilberry-hugo-theme footer .container .right .languages span {
+    color: #40603e;
+}

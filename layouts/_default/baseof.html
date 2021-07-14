@@ -59,7 +59,8 @@
     <title>
         {{ block "title" . }}
            {{ if .Scratch.Get "title" }}
-               {{ if .IsHome }}
+               {{ $langURL := printf "%s/%s" $.Site.Home $.Site.Language.Lang }}
+               {{ if or (.IsHome) (eq $.Permalink $langURL) }}
                     {{ .Site.Title }} &vert; {{ i18n "shortDescription" }} 
                {{ else }}
                     {{ .Scratch.Get "title" }} &vert; {{ .Site.Title }}

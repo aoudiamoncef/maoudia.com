@@ -59,11 +59,15 @@
             {{- $.Scratch.Set "language" .Language -}}
             <div class="languages">
                 <strong>{{ i18n "otherLanguages" }}</strong>
-                {{ range $.Site.Home.AllTranslations }}
+                {{ $len := (len $.Site.Home.AllTranslations) }}
+                {{ range $index, $element := $.Site.Home.AllTranslations }}
                 {{ if eq ($.Scratch.Get "language") .Language }}
-                <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
+                    <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
                 {{ else }}
-                <a href="{{ .Permalink }}">{{ .Language }}</a>
+                    <a href="{{ .Permalink }}">{{ .Language }}</a>
+                {{ end }}
+                {{ if not (eq (add $index 1) $len) }}
+                    <span> &vert; </span>     
                 {{ end }}
                 {{ end }}
             </div>
@@ -81,18 +85,14 @@
                 {{ if .Site.Params.copyrightUseCurrentYear }}
                 {{ now.Year }}
                 {{ else }}
-                {{ .Site.Params.copyrightYearOverride | default 2018 }}
+                {{ .Site.Params.copyrightYearOverride | default 2021 }}
                 {{ end }}
-                {{ .Site.Params.copyrightBy | default "by Lednerb" }}
+                {{ .Site.Params.copyrightBy | default "by Moncef AOUDIA" }}
             </a>
-            {{ with  .OutputFormats.Get "rss" -}}
-            -
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
-            {{- end }}
         </div>
         <div class="author">
             <a href="{{ .Site.Params.creditsUrl | default "https://github.com/aoudiamoncef/bilberry-hugo-theme" }}"
-                target="_blank" rel="noopener">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
+                target="_blank" rel="noopener">{{ i18n "creditsText" | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>

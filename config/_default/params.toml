@@ -104,7 +104,7 @@ copyrightBy = "Moncef AOUDIA"
 copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
 copyrightYearOverride = "2021"
 copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0"
-creditsText = "Source code for Moncef AOUDIA's website"
+# creditsText = "Source code for Moncef AOUDIA's website"
 creditsUrl = "https://github.com/aoudiamoncef/maoudia.com"
 # Enable / Disable Utterances comments
 utterances    = true
