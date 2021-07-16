@@ -9,9 +9,9 @@ This repo contains the source code of the https://www.maoudia.com[maoudia.com] w
 built using https://gohugo.io/[Hugo], https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] and https://pages.github.com/[GitHub Pages].
 
 == Requirements
-* https://gohugo.io/getting-started/installing/[Hugo] (0.85.x)
-* https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
-* https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
+1. https://gohugo.io/getting-started/installing/[Hugo] (0.85.x)
+2. https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
+3. https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
 
 [source,shell]
 ----
@@ -22,6 +22,12 @@ NOTE: To manually upload `ìndex.json` content to https://www.algolia.com/[Algol
 
 
 == Editing
+
+[source,shell]
+----
+git clone https://github.com/aoudiamoncef/maoudia.com.git
+git submodule update --init --recursive
+----
 
 Launch a local Hugo server including live reload:
 
