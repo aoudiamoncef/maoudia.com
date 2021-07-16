@@ -115,4 +115,7 @@ utterancesLabel   = "Comment"
 utterancesTheme = "github-light"
 utterancesCrossOrigin = "anonymous"
 
+# Enable / Disable Webmentions
+webmention = true
+
 backToTop = true

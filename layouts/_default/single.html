@@ -8,6 +8,9 @@
     </div>
 
     {{  if eq .Type "article" }}
+        <div id="webmentions-container">
+            {{ partial "webmention.html" . }}
+        </div>
         <div id="comments-container">
             {{ partial "utterances.html" . }}
         </div>

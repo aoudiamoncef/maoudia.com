@@ -56,7 +56,11 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
 
-    <link href="https://github.com/aoudiamoncef" rel="me">
+    {{ if .Site.Params.webmention }}
+        <link href="https://github.com/aoudiamoncef" rel="me">
+        <link rel="webmention" href="https://webmention.io/maoudia.com/webmention"/>
+        <link rel="pingback" href="https://webmention.io/maoudia.com/xmlrpc"/>
+    {{ end }}
     
     {{ hugo.Generator }}
 
