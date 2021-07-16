@@ -115,4 +115,4 @@ utterancesLabel   = "Comment"
 utterancesTheme = "github-light"
 utterancesCrossOrigin = "anonymous"
 
-backToTop = false
+backToTop = true

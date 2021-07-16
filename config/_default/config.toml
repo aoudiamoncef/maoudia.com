@@ -1,4 +1,4 @@
-baseURL = "https://www.maoudia.com"
+# baseURL = "https://www.maoudia.com"
 relativeurls = false
 languageCode = "en-us"
 title = "Moncef AOUDIA"
@@ -7,14 +7,14 @@ copyright = "Copyright © 2021 Moncef AOUDIA"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
-
 enableGitInfo = true
-
 enableEmoji = true
-
 googleAnalytics = ""
-
 canonifyURLs = false
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+disableAliases = false
 
 [permalinks]
     blog = ":section/:slug/"
@@ -51,5 +51,3 @@ canonifyURLs = false
   publishDate = ["publishDate", "date", "lastmod"]
   expiryDate = ["expiryDate"]
   lastmod = [":git", "lastmod", "date", "publishDate"]
-
-defaultContentLanguage = "en"
