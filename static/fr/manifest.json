@@ -30,7 +30,7 @@
             "purpose": "any maskable"
         }
     ],
-    "start_url": "/",
+    "start_url": "/fr/",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#FFFFFF",

@@ -69,7 +69,10 @@ other = "Consider opening a"
 other = "to fix the problem"
 
 [shortDescription]
-other = "Software developer, opensource enthusiast"
+other = "Software developer - Open source enthusiast"
 
 [creditsText]
 other = "Source code"
+
+[reroute]
+other = "Rerouting..."

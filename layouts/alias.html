@@ -15,7 +15,6 @@
     ; (function () {
       // Only do i18n at root, 
       // otherwise, redirect immediately
-      console.log("pathname " + window.location.pathname)
       if (window.location.pathname !== '/') {
         window.location.replace('{{ .Permalink }}')
         return
@@ -47,7 +46,6 @@
       }
 
       var preferLang = getFirstBrowserLanguage()
-      console.log("preferLang " + preferLang)
       if (preferLang.indexOf('fr') !== -1) {
         // visitor prefers French
         window.location.replace('/fr/')
@@ -60,8 +58,19 @@
 </head>
 
 <body>
-  <h1>Rerouting</h1>
-  <p>You should be rerouted in a jiff, if not, <a href="{{ .Permalink }}">click here</a>.</p>
+  <div class="content">
+    <div class="article-wrapper u-cf single">
+        <article class="error404 article">
+            <div class="content">
+			<h1>{{ i18n "reroute" }}</h1>
+            <p></p>
+            <p>{{ i18n "errorMessagePart1" }}<a href="{{ "/" | relLangURL}}" title="{{ i18n "homePage" }}"> {{ i18n "homePage" }}</a>.</p>
+            <p></p>
+            <p>{{ i18n "errorMessagePart2" }} <a href="https://github.com/aoudiamoncef/aoudiamoncef.github.io/issues" target="_blank" rel="noopener noreferrer">{{ i18n "issue" }}</a> {{ i18n "errorMessagePart3" }}.</p>
+            </div>
+        </article>
+    </div>
+</div>
 </body>
 
 </html>

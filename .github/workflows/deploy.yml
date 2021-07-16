@@ -42,6 +42,7 @@ jobs:
           app_id: ${{ secrets.ALGOLIA_APP_ID }}
           admin_key: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
           index_name: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          index_languages: en
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

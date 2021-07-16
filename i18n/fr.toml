@@ -66,7 +66,10 @@ other = "Pensez à ouvrir un"
 other = "pour résoudre le problème"
 
 [shortDescription]
-other = "Développeur, passionné d'open-source"
+other = "Développeur logiciel - Passionné d'open-source"
 
 [creditsText]
 other = "Code source"
+
+[reroute]
+other = "Redirection..."
