@@ -1,8 +1,8 @@
-+++
+    +++
 date = "2021-05-19T07:30:00+01:00"
 showDate = false
 noSummary = true
-resizeImages = false
+resizeImages = true
 +++
 
 :source-highlighter: highlightjs

@@ -1,361 +1,353 @@
-const CACHE_VERSION = 1;
+class Pwa {
 
-const BASE_CACHE_FILES = [
-    '/css/main.min.css',
-    '/theme.css',
-    '/theme.js',
-    '/en/manifest.json',
-    '/fr/manifest.json',
-    '/modernizr-simple.js',
-    '/images/favicons/splash.png',
-    '/images/favicons/android-chrome-192x192.png',
-    '/images/favicons/android-chrome-384x384.png',
-    '/images/favicons/apple-touch-icon-57x57.png',
-    '/images/favicons/apple-touch-icon-72x72.png',
-    '/images/favicons/apple-touch-icon-76x76.png',
-    '/images/favicons/apple-touch-icon-114x114.png',
-    '/images/favicons/apple-touch-icon-120x120.png',
-    '/images/favicons/apple-touch-icon-144x144.png',
-    '/images/favicons/apple-touch-icon-152x152.png',
-    '/images/favicons/apple-touch-icon-180x180.png',
-    '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-700.woff2?17c283b4e785e073ec09dc72acebafac',
-    '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-regular.woff2?a9557eb451f17dcd8e687327ea9383a0',
-    '/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?cac68c831145804808381a7032fdc7c2',
-    '/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?c500da19d776384ba69573ae6fe274e7',
-    '/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-700.woff2?2efeb8cab5dd5cfbeb1b234ff52e92e6'
-];
+    constructor(self) {
+        this.scope = self;
+        let Version = new URL(location).searchParams.get("version");
+        this.CACHE_VERSION = Version;
+        this.BASE_CACHE_FILES = [
+            '/',
+            '/favicon.ico',
+            '/en/',
+            '/en/about',
+            '/en/blog/index.xml',
+            '/en/favicon.ico',
+            '/en/index.xml',
+            '/en/manifest.json',
+            '/en/offline',
+            '/en/uses',
+            '/fr/',
+            '/fr/about',
+            '/fr/blog/index.xml',
+            '/fr/favicon.ico',
+            '/fr/index.xml',
+            '/fr/manifest.json',
+            '/fr/offline',
+            '/fr/uses',
+            '/css/main.min.css',
+            '/theme.css',
+            '/theme.js',
+            '/images/badges/activemq.svg',
+            '/images/badges/algolia.svg',
+            '/images/badges/altair.svg',
+            '/images/badges/analytics.svg',
+            '/images/badges/android.svg',
+            '/images/badges/androidstudio.svg',
+            '/images/badges/ansible.svg',
+            '/images/badges/apachecamel.svg',
+            '/images/badges/apachemaven.svg',
+            '/images/badges/apicurio.svg',
+            '/images/badges/apollographql.svg',
+            '/images/badges/arduino.svg',
+            '/images/badges/asciidoc.svg',
+            '/images/badges/bamboo.svg',
+            '/images/badges/bash.svg',
+            '/images/badges/beats.svg',
+            '/images/badges/bitbucket.svg',
+            '/images/badges/brave.svg',
+            '/images/badges/chocolatey.svg',
+            '/images/badges/chrome.svg',
+            '/images/badges/circleci.svg',
+            '/images/badges/cloudflare.svg',
+            '/images/badges/codacy.svg',
+            '/images/badges/confluence.svg',
+            '/images/badges/consul.svg',
+            '/images/badges/css3.svg',
+            '/images/badges/curl.svg',
+            '/images/badges/deezer.svg',
+            '/images/badges/dependabot.svg',
+            '/images/badges/devto-large.svg',
+            '/images/badges/devto.svg',
+            '/images/badges/diagramsnet.svg',
+            '/images/badges/discord-large.svg',
+            '/images/badges/discord.svg',
+            '/images/badges/docker.svg',
+            '/images/badges/elasticsearch.svg',
+            '/images/badges/fastlane.svg',
+            '/images/badges/filezilla.svg',
+            '/images/badges/focustodo.svg',
+            '/images/badges/gatling.svg',
+            '/images/badges/gatsby.svg',
+            '/images/badges/git.svg',
+            '/images/badges/github-large.svg',
+            '/images/badges/github.svg',
+            '/images/badges/githubactions.svg',
+            '/images/badges/gitkraken.svg',
+            '/images/badges/gitlab-large.svg',
+            '/images/badges/gitlab.svg',
+            '/images/badges/gitpod.svg',
+            '/images/badges/gitter.svg',
+            '/images/badges/gmail-large.svg',
+            '/images/badges/gmail.svg',
+            '/images/badges/gradle.svg',
+            '/images/badges/grafana.svg',
+            '/images/badges/graphql.svg',
+            '/images/badges/hangouts.svg',
+            '/images/badges/hashnode-large.svg',
+            '/images/badges/hashnode.svg',
+            '/images/badges/heidisql.svg',
+            '/images/badges/hibernate.svg',
+            '/images/badges/html5.svg',
+            '/images/badges/hugo.svg',
+            '/images/badges/hyper.svg',
+            '/images/badges/influxdb.svg',
+            '/images/badges/intellijidea.svg',
+            '/images/badges/jamstack.svg',
+            '/images/badges/java.svg',
+            '/images/badges/jekyll.svg',
+            '/images/badges/jira.svg',
+            '/images/badges/junit.svg',
+            '/images/badges/kibana.svg',
+            '/images/badges/kotlin.svg',
+            '/images/badges/latex.svg',
+            '/images/badges/linkedin-large.svg',
+            '/images/badges/linkedIn.svg',
+            '/images/badges/linux.svg',
+            '/images/badges/logstash.svg',
+            '/images/badges/macos.svg',
+            '/images/badges/maoudiacom-large.svg',
+            '/images/badges/maoudiacom.svg',
+            '/images/badges/mariadb.svg',
+            '/images/badges/markdown.svg',
+            '/images/badges/mattermost.svg',
+            '/images/badges/medium-large.svg',
+            '/images/badges/medium.svg',
+            '/images/badges/meet.svg',
+            '/images/badges/microcks.svg',
+            '/images/badges/microservices.svg',
+            '/images/badges/mongodb.svg',
+            '/images/badges/mqtt.svg',
+            '/images/badges/mremoteng.svg',
+            '/images/badges/mutiny.svg',
+            '/images/badges/myki.svg',
+            '/images/badges/mysql.svg',
+            '/images/badges/netlify.svg',
+            '/images/badges/npm.svg',
+            '/images/badges/numpy.svg',
+            '/images/badges/ohmyzsh.svg',
+            '/images/badges/openapi.svg',
+            '/images/badges/oss.svg',
+            '/images/badges/overleaf.svg',
+            '/images/badges/pandas.svg',
+            '/images/badges/pocket-large.svg',
+            '/images/badges/pocket.svg',
+            '/images/badges/postgresql.svg',
+            '/images/badges/postman.svg',
+            '/images/badges/python.svg',
+            '/images/badges/quarkus.svg',
+            '/images/badges/quora-large.svg',
+            '/images/badges/quora.svg',
+            '/images/badges/reactivex.svg',
+            '/images/badges/reactor.svg',
+            '/images/badges/reddit-large.svg',
+            '/images/badges/reddit.svg',
+            '/images/badges/redis.svg',
+            '/images/badges/rss-large.svg',
+            '/images/badges/rss.svg',
+            '/images/badges/slack.svg',
+            '/images/badges/slides-large.svg',
+            '/images/badges/slides.svg',
+            '/images/badges/sonarqube.svg',
+            '/images/badges/sonatype.svg',
+            '/images/badges/speakerdeck-large.svg',
+            '/images/badges/speakerdeck.svg',
+            '/images/badges/spotify.svg',
+            '/images/badges/spring.svg',
+            '/images/badges/springboot.svg',
+            '/images/badges/sql.svg',
+            '/images/badges/stackoverflow-large.svg',
+            '/images/badges/stackoverflow.svg',
+            '/images/badges/travisci.svg',
+            '/images/badges/twitter-large.svg',
+            '/images/badges/twitter.svg',
+            '/images/badges/ublockorigin.svg',
+            '/images/badges/ubuntu.svg',
+            '/images/badges/visualstudiocode.svg',
+            '/images/badges/windows.svg',
+            '/images/badges/windowsterminal.svg',
+            '/images/badges/yammer.svg',
+            '/images/badges/zulip.svg',
+            '/images/banners/banner-700x350.png',
+            '/images/favicons/splash.png',
+            '/images/favicons/android-chrome-192x192.png',
+            '/images/favicons/android-chrome-384x384.png',
+            '/images/favicons/apple-touch-icon-57x57.png',
+            '/images/favicons/apple-touch-icon-72x72.png',
+            '/images/favicons/apple-touch-icon-76x76.png',
+            '/images/favicons/apple-touch-icon-114x114.png',
+            '/images/favicons/apple-touch-icon-120x120.png',
+            '/images/favicons/apple-touch-icon-144x144.png',
+            '/images/favicons/apple-touch-icon-152x152.png',
+            '/images/favicons/apple-touch-icon-180x180.png',
+            '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-700.woff2?17c283b4e785e073ec09dc72acebafac',
+            '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-regular.woff2?a9557eb451f17dcd8e687327ea9383a0',
+            '/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?cac68c831145804808381a7032fdc7c2',
+            '/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?c500da19d776384ba69573ae6fe274e7',
+            '/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-700.woff2?2efeb8cab5dd5cfbeb1b234ff52e92e6'
+        ];
+        this.host = `${self.location.protocol}//${self.location.host}`;
+        this.OFFLINE_PAGE = '/offline/';
+        this.NOT_FOUND_PAGE = '/404.html';
+        this.CACHE_NAME = `content-v${this.CACHE_VERSION}`;
+        this.MAX_TTL = 86400;
+        this.TTL_EXCEPTIONS = ["jpg", "jpeg", "png", "gif", "mp4"];
+        this.LANG = getFirstBrowserLanguage
+    }
 
-const OFFLINE_CACHE_FILES = [
-    '/images/favicons/splash.png',
-    '/images/favicons/android-chrome-192x192.png',
-    '/images/favicons/android-chrome-384x384.png',
-    '/images/favicons/apple-touch-icon-57x57.png',
-    '/images/favicons/apple-touch-icon-72x72.png',
-    '/images/favicons/apple-touch-icon-76x76.png',
-    '/images/favicons/apple-touch-icon-114x114.png',
-    '/images/favicons/apple-touch-icon-120x120.png',
-    '/images/favicons/apple-touch-icon-144x144.png',
-    '/images/favicons/apple-touch-icon-152x152.png',
-    '/images/favicons/apple-touch-icon-180x180.png',
-    '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-700.woff2?17c283b4e785e073ec09dc72acebafac',
-    '/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-regular.woff2?a9557eb451f17dcd8e687327ea9383a0',
-    '/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?cac68c831145804808381a7032fdc7c2',
-    '/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?c500da19d776384ba69573ae6fe274e7',
-    '/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-700.woff2?2efeb8cab5dd5cfbeb1b234ff52e92e6'
-];
-
-const NOT_FOUND_CACHE_FILES = [
-    '/en/404.html',
-    '/fr/404.html'
-];
-
-const OFFLINE_PAGE = '/offline/index.html';
-const NOT_FOUND_PAGE = '/en/404.html';
-
-const CACHE_VERSIONS = {
-    assets: 'assets-v' + CACHE_VERSION,
-    content: 'content-v' + CACHE_VERSION,
-    offline: 'offline-v' + CACHE_VERSION,
-    notFound: '404-v' + CACHE_VERSION,
-};
-
-// Define MAX_TTL's in SECONDS for specific file extensions
-const MAX_TTL = {
-    '/': 3600,
-    html: 3600,
-    json: 86400,
-    js: 86400,
-    css: 86400,
-};
-
-const CACHE_BLACKLIST = [
-    (str) => {
-       return !str.startsWith('http://localhost') ;
-    },
-];
-
-const SUPPORTED_METHODS = [
-    'GET',
-];
-
-/**
- * isBlackListed
- * @param {string} url
- * @returns {boolean}
- */
-function isBlacklisted(url) {
-    return (CACHE_BLACKLIST.length > 0) ? !CACHE_BLACKLIST.filter((rule) => {
-        if(typeof rule === 'function') {
-            return !rule(url);
-        } else {
+    canCache(url) {
+        if (url.startsWith("http://localhost")) {
             return false;
         }
-    }).length : false
-}
+        const result = url.toString().startsWith(this.host);
+        return result;
+    }
 
-/**
- * getFileExtension
- * @param {string} url
- * @returns {string}
- */
-function getFileExtension(url) {
-    let extension = url.split('.').reverse()[0].split('?')[0];
-    return (extension.endsWith('/')) ? '/' : extension;
-}
+    getFileExtension(url) {
+        const extension = url.split('.').reverse()[0].split('?')[0];
+        return (extension.endsWith('/')) ? '/' : extension;
+    }
 
-/**
- * getTTL
- * @param {string} url
- */
-function getTTL(url) {
-    if (typeof url === 'string') {
-        let extension = getFileExtension(url);
-        if (typeof MAX_TTL[extension] === 'number') {
-            return MAX_TTL[extension];
-        } else {
-            return null;
+    getTTL(url) {
+        if (typeof url === 'string') {
+            const extension = this.getFileExtension(url);
+            return ~this.TTL_EXCEPTIONS.indexOf(extension) ?
+                null : this.MAX_TTL;
         }
-    } else {
         return null;
     }
-}
 
-/**
- * installServiceWorker
- * @returns {Promise}
- */
-function installServiceWorker() {
-    return Promise.all(
-        [
-            caches.open(CACHE_VERSIONS.assets)
-                .then(
-                    (cache) => {
-                        return cache.addAll(BASE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.offline)
-                .then(
-                    (cache) => {
-                        return cache.addAll(OFFLINE_CACHE_FILES);
-                    }
-                ),
-            caches.open(CACHE_VERSIONS.notFound)
-                .then(
-                    (cache) => {
-                        return cache.addAll(NOT_FOUND_CACHE_FILES);
-                    }
-                )
-        ]
-    );
-}
+    async installServiceWorker() {
+        try {
+            await caches.open(this.CACHE_NAME).then((cache) => {
+                return cache.addAll(this.BASE_CACHE_FILES);
+            }, err => console.error(`Error with ${this.CACHE_NAME}`, err));
+            return this.scope.skipWaiting();
+        }
+        catch (err) {
+            return console.error("Error with installation: ", err);
+        }
+    }
 
-/**
- * cleanupLegacyCache
- * @returns {Promise}
- */
-function cleanupLegacyCache() {
+    cleanupLegacyCache() {
 
-    let currentCaches = Object.keys(CACHE_VERSIONS)
-        .map(
-            (key) => {
-                return CACHE_VERSIONS[key];
-            }
-        );
+        const currentCaches = [this.CACHE_NAME];
 
-    return new Promise(
-        (resolve, reject) => {
-
-            caches.keys()
-                .then(
-                    (keys) => {
-                        return legacyKeys = keys.filter(
-                            (key) => {
-                                return !~currentCaches.indexOf(key);
-                            }
-                        );
-                    }
-                )
-                .then(
-                    (legacy) => {
+        return new Promise(
+            (resolve, reject) => {
+                caches.keys()
+                    .then((keys) => keys.filter((key) => !~currentCaches.indexOf(key)))
+                    .then((legacy) => {
                         if (legacy.length) {
-                            Promise.all(
-                                legacy.map(
-                                    (legacyKey) => {
-                                        return caches.delete(legacyKey)
-                                    }
-                                )
-                            )
-                                .then(
-                                    () => {
-                                        resolve()
-                                    }
-                                )
-                                .catch(
-                                    (err) => {
-                                        reject(err);
-                                    }
-                                );
+                            Promise.all(legacy.map((legacyKey) => caches.delete(legacyKey))
+                            ).then(() => resolve()).catch((err) => {
+                                console.error("Error in legacy cleanup: ", err);
+                                reject(err);
+                            });
                         } else {
                             resolve();
                         }
-                    }
-                )
-                .catch(
-                    () => {
-                        reject();
-                    }
-                );
+                    }).catch((err) => {
+                        console.error("Error in legacy cleanup: ", err);
+                        reject(err);
+                    });
+            });
+    }
 
+    async preCacheUrl(url) {
+        const cache = await caches.open(this.CACHE_NAME);
+        const response = await cache.match(url);
+        if (!response) {
+            return fetch(url).then(resp => cache.put(url, resp.clone()));
         }
-    );
+        return null;
+    }
+
+    register() {
+        this.scope.addEventListener('install', event => {
+            event.waitUntil(
+                Promise.all([
+                    this.installServiceWorker(),
+                    this.scope.skipWaiting(),
+                ]));
+        });
+
+        this.scope.addEventListener('activate', event => {
+            event.waitUntil(Promise.all(
+                [this.cleanupLegacyCache(),
+                this.scope.clients.claim(),
+                this.scope.skipWaiting()]).catch((err) => {
+                    console.error("Activation error: ", err);
+                    event.skipWaiting();
+                }));
+        });
+
+        this.scope.addEventListener('fetch', event => {
+            event.respondWith(
+                caches.open(this.CACHE_NAME).then(async cache => {
+                    if (!this.canCache(event.request.url)) {
+                        return fetch(event.request);
+                    }
+                    const response = await cache.match(event.request);
+                    if (response) {
+                        const headers = response.headers.entries();
+                        let date = null;
+                        for (let pair of headers) {
+                            if (pair[0] === 'date') {
+                                date = new Date(pair[1]);
+                                break;
+                            }
+                        }
+                        if (!date) {
+                            return response;
+                        }
+                        const age = parseInt(((new Date().getTime() - date.getTime()) / 1000).toString());
+                        const ttl = this.getTTL(event.request.url);
+                        if (ttl === null || (ttl && age < ttl)) {
+                            return response;
+                        }
+                    }
+                    return fetch(event.request.clone()).then(resp => {
+                        if (resp.status < 400) {
+                            if (this.canCache(event.request.url)) {
+                                cache.put(event.request, resp.clone());
+                            }
+                            return resp;
+                        }
+                        else {
+                            return cache.match(this.LANG + this.NOT_FOUND_PAGE);
+                        }
+                    }).catch(err => {
+                        console.error(`Error fetching ${event.request.url} resulted in offline`, err);
+                        return cache.match('/' + this.LANG + this.OFFLINE_PAGE);
+                    })
+                }));
+        });
+    }
 }
 
+var getFirstBrowserLanguage = () => {
+    var nav = window.navigator,
+      browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+      i,
+      language
 
-self.addEventListener(
-    'install', event => {
-        event.waitUntil(installServiceWorker());
+    if (Array.isArray(nav.languages)) {
+      for (i = 0; i < nav.languages.length; i++) {
+        language = nav.languages[i]
+        if (language && language.length) {
+          return language
+        }
+      }
     }
-);
 
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener(
-    'activate', event => {
-        event.waitUntil(
-            Promise.all(
-                [
-                    cleanupLegacyCache(),
-                ]
-            )
-                .catch(
-                    (err) => {
-                        event.skipWaiting();
-                    }
-                )
-        );
+    // support for other well known properties in browsers
+    for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+      language = nav[browserLanguagePropertyKeys[i]]
+      if (language && language.length) {
+        return language
+      }
     }
-);
+    return 'en'
+  }
 
-self.addEventListener(
-    'fetch', event => {
-
-        event.respondWith(
-            caches.open(CACHE_VERSIONS.content)
-                .then(
-                    (cache) => {
-
-                        return cache.match(event.request)
-                            .then(
-                                (response) => {
-
-                                    if (response) {
-
-                                        let headers = response.headers.entries();
-                                        let date = null;
-
-                                        for (let pair of headers) {
-                                            if (pair[0] === 'date') {
-                                                date = new Date(pair[1]);
-                                            }
-                                        }
-
-                                        if (date) {
-                                            let age = parseInt((new Date().getTime() - date.getTime()) / 1000);
-                                            let ttl = getTTL(event.request.url);
-
-                                            if (ttl && age > ttl) {
-
-                                                return new Promise(
-                                                    (resolve) => {
-
-                                                        return fetch(event.request)
-                                                            .then(
-                                                                (updatedResponse) => {
-                                                                    if (updatedResponse) {
-                                                                        cache.put(event.request, updatedResponse.clone());
-                                                                        resolve(updatedResponse);
-                                                                    } else {
-                                                                        resolve(response)
-                                                                    }
-                                                                }
-                                                            )
-                                                            .catch(
-                                                                () => {
-                                                                    resolve(response);
-                                                                }
-                                                            );
-
-                                                    }
-                                                )
-                                                    .catch(
-                                                        (err) => {
-                                                            return response;
-                                                        }
-                                                    );
-                                            } else {
-                                                return response;
-                                            }
-
-                                        } else {
-                                            return response;
-                                        }
-
-                                    } else {
-                                        return null;
-                                    }
-                                }
-                            )
-                            .then(
-                                (response) => {
-                                    if (response) {
-                                        return response;
-                                    } else {
-                                        return fetch(event.request) 
-                                            .then(
-                                                (response) => {
-
-                                                    if(response.status < 400) {
-                                                        if (~SUPPORTED_METHODS.indexOf(event.request.method) && !isBlacklisted(event.request.url)) {
-                                                            cache.put(event.request, response.clone());
-                                                        }
-                                                        return response;
-                                                    } 
-                                                    else {
-                                                        return caches.open(CACHE_VERSIONS.notFound).then((cache) => {
-                                                            return cache.match(NOT_FOUND_PAGE);
-                                                        })
-                                                    }
-                                                }
-                                            )
-                                            .then((response) => {
-                                                if(response) {
-                                                    return response;
-                                                }
-                                            })
-                                            .catch(
-                                                () => {
-
-                                                    return caches.open(CACHE_VERSIONS.offline)
-                                                        .then(
-                                                            (offlineCache) => {
-                                                                return offlineCache.match(OFFLINE_CACHE_FILES)
-                                                            }
-                                                        )
-
-                                                }
-                                            )
-                                        
-                                    }
-                                }
-                            )
-                            .catch(
-                                (error) => {
-                                    console.error('  Error in fetch handler:', error);
-                                    throw error;
-                                }
-                            );
-                    }
-                )
-        );
-
-    }
-);
+const pwa = new Pwa(self);
+pwa.register();

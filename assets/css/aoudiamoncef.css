@@ -189,6 +189,10 @@ td, th {
     content: "";
 }
 
-bilberry-hugo-theme footer .container .right .languages span {
+.bilberry-hugo-theme footer .container .right .languages span {
     color: #40603e;
+}
+
+.bilberry-hugo-theme article .badge img {
+    display: inline-table;
 }

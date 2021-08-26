@@ -1,0 +1,15 @@
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js?version={{.Site.Params.swVersion}}', { scope: '/' })
+            .then(() => {
+                console.info('Moncef AOUDIA Service Worker Registered');
+            }, err => console.error("Moncef AOUDIA Service Worker registration failed: ", err));
+
+        navigator.serviceWorker
+            .ready
+            .then(() => {
+                console.info('Moncef AOUDIA Service Worker Ready');
+            });
+    }
+</script>

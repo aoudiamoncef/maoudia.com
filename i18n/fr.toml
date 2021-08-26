@@ -73,3 +73,9 @@ other = "Code source"
 
 [reroute]
 other = "Redirection..."
+
+[offline]
+other = "Mode hors ligne ❌"
+
+[offlineMessage]
+other = "Oops, veuillez attendre le retour de votre connexion internet"

@@ -11,6 +11,339 @@ slug = "about"
 :source-highlighter: highlightjs
 :icons: font
 
+:badges: /images/badges
+
+:activemq: image:{badges}/activemq.svg[activemq]
+:algolia: image:{badges}/algolia.svg[algolia]
+:altair: image:{badges}/altair.svg[altair]
+:analytics: image:{badges}/analytics.svg[googleanalytics]
+:android: image:{badges}/android.svg[android]
+:androidstudio: image:{badges}/androidstudio.svg[androidstudio]
+:ansible: image:{badges}/ansible.svg[ansible]
+:apachecamel: image:{badges}/apachecamel.svg[apachecamel]
+:apachemaven: image:{badges}/apachemaven.svg[apachemaven]
+:apicurio: image:{badges}/apicurio.svg[apicurio]]
+:apollographql: image:{badges}/apollographql.svg[apollographql]
+:arduino: image:{badges}/arduino.svg[arduino]
+:asciidoc: image:{badges}/asciidoc.svg[asciidoc]
+:asciidoctor: image:{badges}/asciidoctor.svg[asciidoctor]
+:bamboo: image:{badges}/bamboo.svg[bamboo]
+:beats: image:{badges}/beats.svg[beats]
+:bitbucket: image:{badges}/bitbucket.svg[bitbucket]
+:brave: image:{badges}/brave.svg[brave]
+:chocolatey: image:{badges}/chocolatey.svg[chocolatey]
+:chrome: image:{badges}/chrome.svg[googlechrome]
+:circleci: image:{badges}/circleci.svg[circleci]
+:cloudflare: image:{badges}/cloudflare.svg[cloudflare]
+:codacy: image:{badges}/codacy.svg[codacy]
+:confluence: image:{badges}/confluence.svg[confluence]
+:consul: image:{badges}/consul.svg[consul]
+:css3: image:{badges}/css3.svg[css3]
+:curl: image:{badges}/curl.svg[curl]
+:deezer: image:{badges}/deezer.svg[deezer]
+:dependabot: image:{badges}/dependabot.svg[dependabot]
+:devto: image:{badges}/devto.svg[dev.to] 
+:devtoBadge: image:{badges}/devto-large.svg[dev.tobadge, link = "https://dev.to/aoudiamoncef"] 
+:diagramsnet: image:{badges}/diagramsnet.svg[diagramsnet]
+:discord: image:{badges}/discord.svg[discord]
+:discordBadge: image:{badges}/discord-large.svg[discordbadge, link = "https://discordapp.com/users/365160200900182026"]
+:docker: image:{badges}/docker.svg[docker]
+:elasticsearch: image:{badges}/elasticsearch.svg[elasticsearch]
+:elasticstack: image:{badges}/elasticstack.svg[elasticstack]
+:fastlane: image:{badges}/fastlane.svg[fastlane]
+:filezilla: image:{badges}/filezilla.svg[filezilla]
+:focustodo: image:{badges}/focustodo.svg[focustodo]
+:gatling: image:{badges}/gatling.svg[gatling]
+:gatsby: image:{badges}/gatsby.svg[gatsby]
+:git: image:{badges}/git.svg[git] 
+:github: image:{badges}/github.svg[github] 
+:githubactions: image:{badges}/githubactions.svg[githubactions]
+:githubBadge: image:{badges}/github-large.svg[githubbadge, link = "https://github.com/aoudiamoncef"] 
+:gitkraken: image:{badges}/gitkraken.svg[gitkraken]
+:gitlab: image:{badges}/gitlab.svg[gitlab, link = "https://gitlab.com/"] 
+:gitlabBadge: image:{badges}/gitlab-large.svg[gitlabbadge, link = "https://gitlab.com/aoudiamoncef"]
+:gitpod: image:{badges}/gitpod.svg[gitpod]
+:gitter: image:{badges}/gitter.svg[gitter] 
+:gmail: image:{badges}/gmail.svg[gmail]
+:gmailBadge: image:{badges}/gmail-large.svg[gmailbadge, link = "mailto:mf.aoudia@gmail.com"]
+:gnubash: image:{badges}/bash.svg[gnubash]
+:gradle: image:{badges}/gradle.svg[gradle]
+:grafana: image:{badges}/grafana.svg[grafana]
+:graphql: image:{badges}/graphql.svg[graphql]
+:hangouts: image:{badges}/hangouts.svg[googlehangouts]
+:hashnode: image:{badges}/hashnode.svg[hashnode]
+:hashnodeBadge: image:{badges}/hashnode-large.svg[hashnodebadge, link = "https://aoudiamoncef.hashnode.dev"]
+:heidisql: image:{badges}/heidisql.svg[heidisql]
+:hibernate: image:{badges}/hibernate.svg[hibernate]
+:html5: image:{badges}/html5.svg[html5]
+:hugo: image:{badges}/hugo.svg[hugo] 
+:hyper: image:{badges}/hyper.svg[hyper]
+:influxdb: image:{badges}/influxdb.svg[influxdb]
+:intellijidea: image:{badges}/intellijidea.svg[intellijidea]
+:jamstack: image:{badges}/jamstack.svg[jamstack]
+:java: image:{badges}/java.svg[java]
+:jekyll: image:{badges}/jekyll.svg[jekyll]
+:jetbrains: image:{badges}/jetbrains.svg[jetbrains]
+:jira: image:{badges}/jira.svg[jira]
+:junit5: image:{badges}/junit.svg[junit5]
+:kde: image:{badges}/kde.svg[kde]
+:kibana: image:{badges}/kibana.svg[kibana]
+:kotlin: image:{badges}/kotlin.svg[kotlin]
+:latex: image:{badges}/latex.svg[latex] 
+:linkedin: image:{badges}/linkedin.svg[linkedin] 
+:linkedinBadge: image:{badges}/linkedin-large.svg[linkedinbadge, link = "https://www.linkedin.com/in/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-moncef-aoudia-7723b311b"] 
+:linux: image:{badges}/linux.svg[linux]
+:logstash: image:{badges}/logstash.svg[logstash]
+:macos: image:{badges}/macos.svg[macos]
+:maoudia: image:{badges}/maoudiacom-large.svg[maoudia, link = "https://www.maoudia.com/en/"]
+:mariadb: image:{badges}/mariadb.svg[mariadb]
+:markdown: image:{badges}/markdown.svg[markdown]
+:mattermost: image:{badges}/mattermost.svg[mattermost]
+:medium: image:{badges}/medium.svg[medium]
+:mediumBadge: image:{badges}/medium-large.svg[mediumbadge, link = "https://medium.com/@aoudiamoncef"]
+:meet: image:{badges}/meet.svg[googlemeet]
+:microcks: image:{badges}/microcks.svg[microcks]
+:microservices: image:{badges}/microservices.svg[microservices]
+:microsoft: image:{badges}/microsoft.svg[microsoft]
+:mongodb: image:{badges}/mongodb.svg[mongodb]
+:mremoteng: image:{badges}/mremoteng.svg[mremoteng]
+:mutiny: image:{badges}/mutiny.svg[mutiny]
+:myki: image:{badges}/myki.svg[myki]
+:mysql: image:{badges}/mysql.svg[mysql]
+:netlify: image:{badges}/netlify.svg[netlify]
+:npm: image:{badges}/npm.svg[npm]
+:numpy: image:{badges}/numpy.svg[numpy]
+:ohmyzsh: image:{badges}/ohmyzsh.svg[ohmyzsh]
+:openapiinitiative: image:{badges}/openapi.svg[openapiinitiative]
+:opensourceinitiative: image:{badges}/oss.svg[opensourceinitiative]
+:overleaf: image:{badges}/overleaf.svg[overleaf]
+:pandas: image:{badges}/pandas.svg[pandas]
+:pocket: image:{badges}/pocket.svg[pocket]
+:pocketBadge: image:{badges}/pocket-large.svg[pocketbadge, link = "https://getpocket.com/@701dbpd1T08b8g7f59Ab790A73g1T0G2725K38yf75eym1w2di86eN27V2dIJ51a"]
+:postgresql: image:{badges}/postgresql.svg[postgresql]
+:postman: image:{badges}/postman.svg[postman]
+:python: image:{badges}/python.svg[python]
+:quarkus: image:{badges}/quarkus.svg[quarkus]
+:quora: image:{badges}/quora.svg[quora]
+:quoraBadge: image:{badges}/quora-large.svg[quora, link = "https://www.quora.com/profile/Moncef-AOUDIA"]
+:reactivex: image:{badges}/reactivex.svg[reactivex]
+:reactor: image:{badges}/reactor.svg[reactor] 
+:reddit: image:{badges}/reddit.svg[reddit]
+:redditBadge: image:{badges}/reddit-large.svg[redditbadge, link = "https://www.reddit.com/user/aoudiamoncef"]
+:redis: image:{badges}/redis.svg[redis] 
+:rss: image:{badges}/rss.svg[rss]
+:rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/en/index.xml"]
+:slack: image:{badges}/slack.svg[slack]
+:slides: image:{badges}/slides.svg[slides]
+:slidesBadge: image:{badges}/slides-large.svg[slidesbadge, link = "https://slides.com/aoudiamoncef"]
+:sonarqube: image:{badges}/sonarqube.svg[sonarqube] 
+:sonatype: image:{badges}/sonatype.svg[sonatype]
+:speakerdeck: image:{badges}/speakerdeck.svg[speakerdeck]
+:speakerdeckBadge: image:{badges}/speakerdeck-large.svg[speakerdeckbadge, link = "https://speakerdeck.com/aoudiamoncef"]
+:spotify: image:{badges}/spotify.svg[spotify]
+:spring: image:{badges}/spring.svg[spring]
+:springboot: image:{badges}/springboot.svg[springboot]
+:sql: image:{badges}/sql.svg[sql]
+:stackoverflow: image:{badges}/stackoverflow.svg[stackoverflow]
+:stackoverflowBadge: image:{badges}/stackoverflow-large.svg[stackoverflowbadge, link = "https://stackoverflow.com/users/8126192/moncef-aoudia"]
+:travisci: image:{badges}/travisci.svg[travisci] 
+:twitter: image:{badges}/twitter.svg[twitter] 
+:twitterBadge: image:{badges}/twitter-large.svg[twitterbadge, link= "https://twitter.com/aoudiamoncef"] 
+:ublockorigin: image:{badges}/ublockorigin.svg[ublockorigin]
+:ubuntu: image:{badges}/ubuntu.svg[ubuntu]
+:visualstudiocode: image:{badges}/visualstudiocode.svg[visualstudiocode]
+:windows: image:{badges}/windows.svg[windows]
+:windowsterminal: image:{badges}/windowsterminal.svg[windowsterminal]
+:yammer: image:{badges}/yammer.svg[yammer]
+:zulip: image:{badges}/zulip.svg[zulip]
+
 Je suis développeur de logiciels && un passionné / mainteneur open-source.
 
 image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[Github stats]
+
+== Trouver moi sur 🌍
+[.badge]
+{twitterBadge} 
+{githubBadge}
+{gitlabBadge}
+{linkedinBadge}
+{gmailBadge}
+{discordBadge}
+{hashnodeBadge}
+{devtoBadge}
+{mediumBadge}
+{pocketBadge}
+{redditBadge}
+{slidesBadge} 
+{speakerdeckBadge}
+{stackoverflowBadge}
+{quoraBadge}
+{maoudia}
+{rssBadge} 
+
+== My universe 🔮
+
+Technologies I have used at work and/or side projects.
+
+.Languages
+[%collapsible]
+====
+[.badge]
+{java}
+{kotlin}
+{sql}
+{asciidoc}
+{css3}
+{graphql}
+{html5}
+{latex}
+{markdown}
+{python}
+====
+
+.IDEs
+[%collapsible]
+[.badge]
+====
+{androidstudio}
+{intellijidea}
+{visualstudiocode}
+====
+
+.Data 
+[%collapsible]
+[.badge]
+====
+{activemq}
+{elasticsearch}
+{influxdb}
+{mariadb}
+{mongodb}
+{mysql}
+{postgresql}
+{redis}
+====
+
+.Frameworks && bibliothèques
+[%collapsible]
+[.badge]
+====
+{apachecamel}
+{apollographql}
+{gatsby}
+{hibernate}
+{hugo}
+{jekyll}
+{junit5}
+{mutiny}
+{numpy}
+{pandas}
+{quarkus}
+{reactivex}
+{reactor}
+{spring} 
+{springboot} 
+====
+
+.Outils
+[%collapsible]
+[.badge]
+====
+{altair}
+{ansible}
+{apachemaven}
+{asciidoctor}
+{beats}
+{chocolatey}
+{curl}
+{docker}
+{fastlane}
+{filezilla}
+{focustodo}
+{gatling}
+{git}
+{gitkraken}
+{gnubash}
+{gradle}
+{heidisql}
+{hyper}
+{kibana}
+{logstash}
+{mremoteng}
+{myki}
+{npm}
+{ohmyzsh}
+{pocket}
+{postman}
+{windowsterminal}
+====
+
+.Services de/pour développement
+[%collapsible]
+[.badge]
+====
+{algolia}
+{analytics}
+{apicurio}
+{bamboo}
+{bitbucket}
+{circleci}
+{cloudflare}
+{codacy}
+{confluence}
+{consul}
+{dependabot}
+{diagramsnet}
+{github}
+{githubactions}
+{gitlab}
+{gitpod}
+{grafana}
+{jira}
+{microcks}
+{netlify}
+{overleaf}
+{sonarqube}
+{sonatype}
+{travisci}
+====
+
+.Communication 
+[%collapsible]
+[.badge]
+====
+{gitter}
+{hangouts}
+{mattermost}
+{meet}
+{slack}
+{yammer}
+{zulip}
+====
+
+.Systèmes d'exploitation
+[%collapsible]
+[.badge]
+====
+{android}
+{arduino}
+{linux}
+{macos}
+{ubuntu}
+{windows}
+====
+
+.Divers
+[%collapsible]
+[.badge]
+====
+{brave}
+{chrome}
+{deezer}
+{jamstack}
+{microservices}
+{openapiinitiative}
+{opensourceinitiative}
+{spotify}
+{ublockorigin}
+====

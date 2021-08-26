@@ -95,8 +95,8 @@
     <script src="{{ "modernizr-simple.js" | relURL }}"></script>
 
     {{ if .RelPermalink }}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RelPermalink }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RelPermalink }}blog/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }} Blog" />
     {{ end }}
 
     {{ with .Params.original_url }}
@@ -155,9 +155,9 @@
     {{ end }}
 
     {{ if .Site.Params.backToTop | default true }}
-        <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+        <script src="/js/vanilla-back-to-top.min.js"></script>
         <script>addBackToTop({
-            diameter: 32,
+            diameter: 48,
             backgroundColor: 'rgb(45, 54, 66)',
             textColor: '#fff'
         })

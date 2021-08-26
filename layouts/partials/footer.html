@@ -9,7 +9,7 @@
                 {{ $dontRender :=  (slice "page" "quote" "link" "status") }}
                 {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
                     <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        <a href="{{ .Permalink }}" alt="{{ .Title }}">{{ .Title }}</a>
                     </li>
                 {{ end }}
             </ul>
@@ -18,11 +18,11 @@
 
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
-            <a href="{{ "/categories/" | relLangURL }}"><strong>{{ i18n "categories" }}</strong></a>
+            <a href="{{ "/categories/" | relLangURL }}" alt="{{ i18n "categories" }}"><strong>{{ i18n "categories" }}</strong></a>
             <ul>
                 {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
                 <li>
-                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }}
+                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}" alt="{{ $taxonomy.Name | humanize }}">{{ $taxonomy.Name | humanize }}
                         ({{ $taxonomy.Count }})</a>
                 </li>
                 {{ end }}
@@ -52,6 +52,9 @@
                 {{ range .Site.Params.socialMediaLinks }}
                 <a href="{{ .link }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a>
                 {{ end }}
+                {{- with .Site.Language.Lang }}
+                <a href="/{{ . }}/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                {{- end }}
             </div>
             {{ end }}
 
@@ -90,6 +93,9 @@
                 {{ .Site.Params.copyrightBy | default "by Moncef AOUDIA" }}
             </a>
         </div>
+        <div class="sitemap">
+            <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/{{ .Sitemap.Filename }}" title="sitemap" target="_blank" rel="noopener noreferrer"><i class="fas fa-sitemap"></i></a>
+        </div>
         <div class="author">
             <a href="{{ .Site.Params.creditsUrl | default "https://github.com/aoudiamoncef/bilberry-hugo-theme" }}"
                 target="_blank" rel="noopener">{{ i18n "creditsText" | default "Bilberry Hugo Theme" }}</a>
@@ -97,21 +103,4 @@
     </div>
 </div>
 
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('/sw.js', { scope: '.' })
-            .then(() => {
-                {{/*  console.info('Moncef AOUDIA Service Worker Registered');  */}}
-            }, err => {
-                {{/*  console.error("Moncef AOUDIA Service Worker registration failed: ", err);  */}}
-                throw err;
-            });
-    
-        navigator.serviceWorker
-            .ready
-            .then(() => {
-                {{/*  console.info('Moncef AOUDIA Service Worker Ready');  */}}
-            });
-    }
-  </script>
+{{ partial "sw.html" . }}

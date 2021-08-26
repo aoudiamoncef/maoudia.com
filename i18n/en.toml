@@ -76,3 +76,9 @@ other = "Source code"
 
 [reroute]
 other = "Rerouting..."
+
+[offline]
+other = "Offline mode ❌"
+
+[offlineMessage]
+other = "Oops, please wait until your internet connection is back"

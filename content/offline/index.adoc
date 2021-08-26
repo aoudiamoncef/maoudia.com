@@ -1,0 +1,8 @@
++++
+title = "Offline"
+date = 2021-05-19T08:30:00+01:00
+excludeFromTopNav = true
+showPublishDate = false
+showLastModificationDate = false
+showReadingTime = false
++++
