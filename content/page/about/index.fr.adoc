@@ -22,7 +22,7 @@ slug = "about"
 :ansible: image:{badges}/ansible.svg[ansible]
 :apachecamel: image:{badges}/apachecamel.svg[apachecamel]
 :apachemaven: image:{badges}/apachemaven.svg[apachemaven]
-:apicurio: image:{badges}/apicurio.svg[apicurio]]
+:apicurio: image:{badges}/apicurio.svg[apicurio]
 :apollographql: image:{badges}/apollographql.svg[apollographql]
 :arduino: image:{badges}/arduino.svg[arduino]
 :asciidoc: image:{badges}/asciidoc.svg[asciidoc]
@@ -126,7 +126,7 @@ slug = "about"
 :quarkus: image:{badges}/quarkus.svg[quarkus]
 :quora: image:{badges}/quora.svg[quora]
 :quoraBadge: image:{badges}/quora-large.svg[quora, link = "https://www.quora.com/profile/Moncef-AOUDIA"]
-:reactivex: image:{badges}/reactivex.svg[reactivex]
+:rxjava: image:{badges}/reactivex.svg[rxjava]
 :reactor: image:{badges}/reactor.svg[reactor] 
 :reddit: image:{badges}/reddit.svg[reddit]
 :redditBadge: image:{badges}/reddit-large.svg[redditbadge, link = "https://www.reddit.com/user/aoudiamoncef"]
@@ -159,8 +159,6 @@ slug = "about"
 
 Je suis développeur de logiciels && un passionné / mainteneur open-source.
 
-image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[Github stats]
-
 == Trouver moi sur 🌍
 [.badge]
 {twitterBadge} 
@@ -181,9 +179,9 @@ image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icon
 {maoudia}
 {rssBadge} 
 
-== My universe 🔮
+== Mon univers 🔮
 
-Technologies I have used at work and/or side projects.
+Technologies que j'ai utilisées au travail et/ou dans le cadre de projets parallèles.
 
 .Languages
 [%collapsible]
@@ -224,7 +222,7 @@ Technologies I have used at work and/or side projects.
 {redis}
 ====
 
-.Frameworks && bibliothèques
+.Frameworks et bibliothèques
 [%collapsible]
 [.badge]
 ====
@@ -239,7 +237,7 @@ Technologies I have used at work and/or side projects.
 {numpy}
 {pandas}
 {quarkus}
-{reactivex}
+{rxjava}
 {reactor}
 {spring} 
 {springboot} 
@@ -278,7 +276,7 @@ Technologies I have used at work and/or side projects.
 {windowsterminal}
 ====
 
-.Services de/pour développement
+.Services
 [%collapsible]
 [.badge]
 ====
@@ -347,3 +345,16 @@ Technologies I have used at work and/or side projects.
 {spotify}
 {ublockorigin}
 ====
+
+{empty} +
+
+== Mes projets 👨‍💻
+
+[.badge]
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com "]
+
+== Statistiques Github 📊 
+
+[.badge]
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[visualisation statistiques Github]

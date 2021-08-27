@@ -77,7 +77,7 @@ Memory: '32Go'
 * link:https://www.jetbrains.com/idea/[IntelliJ IDEA] - Java/Kotlin
 * link:https://code.visualstudio.com/[Visual Studio Code] - Everything else
 
-=== Apps && Productivity 📊 
+=== Apps and Productivity 📊 
 [.badge]
 * link:https://altair.sirmuel.design/[Altair] - GraphQL GUI client {opensourceinitiative}
 * link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc® into a document model and converting it to many output formats {opensourceinitiative}
@@ -99,7 +99,7 @@ Memory: '32Go'
 * link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - JetBrains IDEs manager
 * link:https://github.com/microsoft/terminal[Windows terminal] - Windows terminal emulator {opensourceinitiative}
 
-=== Development Services 🎒
+=== Services 🎒
 
 [.badge]
 * link:https://www.algolia.com/[Algolia] - Web search SaaS
@@ -110,7 +110,7 @@ Memory: '32Go'
 * link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repository
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelines
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
-* link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking & testing {opensourceinitiative}
+* link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking and testing {opensourceinitiative}
 * link:https://www.openrainbow.com/[Rainbow] - Communications Platform as a Service
 * link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {opensourceinitiative}
 * link:https://wakatime.com/[WakaTime] - Code statistics and dashboards

@@ -2,7 +2,10 @@
 title = "{{ replace .Name "-" " " | title }}"
 description = "xxx"
 date = {{ now.Format "2006-01-02" }}
-lastmod = """
+lastmod = 2021-05-19T08:30:00+01:00
+showPublishDate = true
+showLastModificationDate = true
+showReadingTime = true
 images = ["featuredImage.jpg"]
 categories = ["Tutorial", "Tip"]
 tags = ["Java", "Kotlin", "Android", "Hugo", "SpringBoot", "GraphQL", "Programming", "Quarkus"]
@@ -12,7 +15,9 @@ series = []
 audio = []
 videos = []
 resizeImages = false
+excludeFromIndex = false
 draft = true
+slug = "/"
 +++
 
 

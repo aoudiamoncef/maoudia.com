@@ -123,4 +123,5 @@ webmention = true
 
 backToTop = true
 
+enableSw = true
 swVersion = 1.0

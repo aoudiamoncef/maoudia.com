@@ -100,7 +100,7 @@ Mémoire vive: 32Go
 * link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - Gestionnaire d'IDEs JetBrains
 * link:https://github.com/microsoft/terminal[Windows terminal] - Emulateur de terminal Windows {opensourceinitiative}
 
-=== Development Services 🎒
+=== Services 🎒
 
 [.badge]
 * link:https://www.algolia.com/[Algolia] - Saas de recherche web

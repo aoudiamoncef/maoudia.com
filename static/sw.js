@@ -8,21 +8,23 @@ class Pwa {
             '/',
             '/favicon.ico',
             '/en/',
-            '/en/about',
+            '/en/about/',
+            '/en/blog/',
             '/en/blog/index.xml',
             '/en/favicon.ico',
             '/en/index.xml',
             '/en/manifest.json',
-            '/en/offline',
-            '/en/uses',
+            '/en/offline/',
+            '/en/uses/',
             '/fr/',
-            '/fr/about',
+            '/fr/about/',
+            '/fr/blog/',
             '/fr/blog/index.xml',
             '/fr/favicon.ico',
             '/fr/index.xml',
             '/fr/manifest.json',
-            '/fr/offline',
-            '/fr/uses',
+            '/fr/offline/',
+            '/fr/uses/',
             '/css/main.min.css',
             '/theme.css',
             '/theme.js',
@@ -143,6 +145,7 @@ class Pwa {
             '/images/badges/redis.svg',
             '/images/badges/rss-large.svg',
             '/images/badges/rss.svg',
+            '/images/badges/rxjava.svg',
             '/images/badges/slack.svg',
             '/images/badges/slides-large.svg',
             '/images/badges/slides.svg',
@@ -185,17 +188,19 @@ class Pwa {
             '/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-700.woff2?2efeb8cab5dd5cfbeb1b234ff52e92e6'
         ];
         this.host = `${self.location.protocol}//${self.location.host}`;
+        console.info(`Host: ${this.host}`);
         this.OFFLINE_PAGE = '/offline/';
         this.NOT_FOUND_PAGE = '/404.html';
         this.CACHE_NAME = `content-v${this.CACHE_VERSION}`;
         this.MAX_TTL = 86400;
         this.TTL_EXCEPTIONS = ["jpg", "jpeg", "png", "gif", "mp4"];
-        this.LANG = getFirstBrowserLanguage
+        let lang = new URL(location).searchParams.get("lang");
+        this.LANG = lang
     }
 
     canCache(url) {
         if (url.startsWith("http://localhost")) {
-            return false;
+            return true;
         }
         const result = url.toString().startsWith(this.host);
         return result;
@@ -313,41 +318,16 @@ class Pwa {
                             return resp;
                         }
                         else {
-                            return cache.match(this.LANG + this.NOT_FOUND_PAGE);
+                            return cache.match(`/${this.LANG}${this.NOT_FOUND_PAGE}`);
                         }
                     }).catch(err => {
                         console.error(`Error fetching ${event.request.url} resulted in offline`, err);
-                        return cache.match('/' + this.LANG + this.OFFLINE_PAGE);
+                        return cache.match(`/${this.LANG}${this.OFFLINE_PAGE}`);
                     })
                 }));
         });
     }
 }
-
-var getFirstBrowserLanguage = () => {
-    var nav = window.navigator,
-      browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
-      i,
-      language
-
-    if (Array.isArray(nav.languages)) {
-      for (i = 0; i < nav.languages.length; i++) {
-        language = nav.languages[i]
-        if (language && language.length) {
-          return language
-        }
-      }
-    }
-
-    // support for other well known properties in browsers
-    for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
-      language = nav[browserLanguagePropertyKeys[i]]
-      if (language && language.length) {
-        return language
-      }
-    }
-    return 'en'
-  }
 
 const pwa = new Pwa(self);
 pwa.register();

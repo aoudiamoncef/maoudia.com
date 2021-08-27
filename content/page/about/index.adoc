@@ -1,6 +1,6 @@
 +++
 title = "About"
-date = 2021-05-19T07:30:00+01:00
+date = 2021-05-19T07:30:00+02:00
 excludeFromTopNav = false
 showPublishDate = false
 showLastModificationDate = false
@@ -22,7 +22,7 @@ slug = "about"
 :ansible: image:{badges}/ansible.svg[ansible]
 :apachecamel: image:{badges}/apachecamel.svg[apachecamel]
 :apachemaven: image:{badges}/apachemaven.svg[apachemaven]
-:apicurio: image:{badges}/apicurio.svg[apicurio]]
+:apicurio: image:{badges}/apicurio.svg[apicurio]
 :apollographql: image:{badges}/apollographql.svg[apollographql]
 :arduino: image:{badges}/arduino.svg[arduino]
 :asciidoc: image:{badges}/asciidoc.svg[asciidoc]
@@ -133,6 +133,7 @@ slug = "about"
 :redis: image:{badges}/redis.svg[redis] 
 :rss: image:{badges}/rss.svg[rss]
 :rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/en/index.xml"]
+:rxjava: image:{badges}/rxjava.svg[rxjava]
 :slack: image:{badges}/slack.svg[slack]
 :slides: image:{badges}/slides.svg[slides]
 :slidesBadge: image:{badges}/slides-large.svg[slidesbadge, link = "https://slides.com/aoudiamoncef"]
@@ -161,8 +162,6 @@ slug = "about"
 I am a software developer && open-source enthusiast/maintainer.
 
 <!--more-->
-
-image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[Github stats]
 
 == Find me on 🌍
 [.badge]
@@ -227,7 +226,7 @@ Technologies I have used at work and/or side projects.
 {redis}
 ====
 
-.Frameworks && libraries
+.Frameworks and libraries
 [%collapsible]
 [.badge]
 ====
@@ -242,7 +241,7 @@ Technologies I have used at work and/or side projects.
 {numpy}
 {pandas}
 {quarkus}
-{reactivex}
+{rxjava}
 {reactor}
 {spring} 
 {springboot} 
@@ -281,7 +280,7 @@ Technologies I have used at work and/or side projects.
 {windowsterminal}
 ====
 
-.Development services
+.Services
 [%collapsible]
 [.badge]
 ====
@@ -347,6 +346,21 @@ Technologies I have used at work and/or side projects.
 {microservices}
 {openapiinitiative}
 {opensourceinitiative}
+{reactivex}
 {spotify}
 {ublockorigin}
 ====
+
+{empty} +
+
+== My projects 👨‍💻
+
+[.badge]
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[Apollo client maven plugin project] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[maoudia.com project"]
+
+== Github stats 📊 
+
+[.badge]
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[Github stats visualization]
+image:https://github-readme-streak-stats.herokuapp.com/?user=aoudiamoncef[Github streak stats visualization]
