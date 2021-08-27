@@ -9,8 +9,7 @@ if [[ "$BRANCH" == "main" ]]; then
 else
   echo "Build && deploy $BRANCH"
   DOMAIN="maoudia.pages.dev"
-  COMMIT_SHA=$(git rev-parse HEAD)
-  SUBDOMAIN=${COMMIT_SHA:0:7}
+  SUBDOMAIN=${CF_PAGES_COMMIT_SHA:0:8}
   SITE_URL="${SUBDOMAIN}.${DOMAIN}"
 fi
 
