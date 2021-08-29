@@ -12,4 +12,4 @@ exclude = true
 :source-highlighter: highlightjs
 :icons: font
 
-Moncef AOUDIA ^À propos^ 🔗
+Moncef AOUDIA ^À^ ^propos^ 🔗

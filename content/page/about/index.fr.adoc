@@ -165,6 +165,8 @@ slug = "about"
 
 Je suis développeur logiciels, passionné/mainteneur d'open-source.
 
+<!--more-->
+
 == Trouver moi sur 🌍
 [.badge]
 {twitterBadge} 
