@@ -60,7 +60,7 @@ Memory: '32Go'
 * link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Desk 🏷️
 * link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - EBooks reader 📚
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
-* link:https://www.amazon.com/NOVOO-Adapter-Compatible-MateBook-Chromebook/dp/B075FQY5BN[Novoo hub] - Docking Station 🏷️
+* link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Docking Station 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Keyboard ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Mouse 🖱️
 * link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
@@ -68,6 +68,7 @@ Memory: '32Go'
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Headphone 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Headphone 🎧 🎤
 * link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chair 🪑
+* link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Router 🌐
 
 == Software
 
@@ -102,14 +103,16 @@ Memory: '32Go'
 === Services 🎒
 
 [.badge]
-* link:https://www.algolia.com/[Algolia] - Web search SaaS
+* link:https://www.algolia.com/[Algolia] - Web search Saas
 * link:https://www.apicur.io/[Apicurio] - API design studio {opensourceinitiative}
 * link:https://pages.cloudflare.com/[Cloudflare Pages] - JAMstack platform, global CDN
+* link:https://www.consul.io/[Consul] - Service mesh solution {opensourceinitiative}
 * link:https://domain.com/[Domain.com] - Domain name provider
 * link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, and Logstash
 * link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repository
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelines
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
+* link:https://konghq.com/kong/[Kong] - API gateway
 * link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking and testing {opensourceinitiative}
 * link:https://www.openrainbow.com/[Rainbow] - Communications Platform as a Service
 * link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {opensourceinitiative}

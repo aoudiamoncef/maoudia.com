@@ -30,6 +30,7 @@ slug = "about"
 :bamboo: image:{badges}/bamboo.svg[bamboo]
 :beats: image:{badges}/beats.svg[beats]
 :bitbucket: image:{badges}/bitbucket.svg[bitbucket]
+:bootstrap: image:{badges}/bootstrap.svg[bootstrap]
 :brave: image:{badges}/brave.svg[brave]
 :chocolatey: image:{badges}/chocolatey.svg[chocolatey]
 :chrome: image:{badges}/chrome.svg[googlechrome]
@@ -67,6 +68,7 @@ slug = "about"
 :gmail: image:{badges}/gmail.svg[gmail]
 :gmailBadge: image:{badges}/gmail-large.svg[gmailbadge, link = "mailto:mf.aoudia@gmail.com"]
 :gnubash: image:{badges}/bash.svg[gnubash]
+:googlecloud: image:{badges}/googlecloud.svg[googlecloud]
 :gradle: image:{badges}/gradle.svg[gradle]
 :grafana: image:{badges}/grafana.svg[grafana]
 :graphql: image:{badges}/graphql.svg[graphql]
@@ -83,11 +85,14 @@ slug = "about"
 :jamstack: image:{badges}/jamstack.svg[jamstack]
 :java: image:{badges}/java.svg[java]
 :jekyll: image:{badges}/jekyll.svg[jekyll]
+:jenkins: image:{badges}/jenkins.svg[jenkins]
 :jetbrains: image:{badges}/jetbrains.svg[jetbrains]
 :jira: image:{badges}/jira.svg[jira]
 :junit5: image:{badges}/junit.svg[junit5]
 :kde: image:{badges}/kde.svg[kde]
+:keycloak: image:{badges}/keycloak.svg[keycloak]
 :kibana: image:{badges}/kibana.svg[kibana]
+:kong: image:{badges}/kong.svg[kong]
 :kotlin: image:{badges}/kotlin.svg[kotlin]
 :latex: image:{badges}/latex.svg[latex] 
 :linkedin: image:{badges}/linkedin.svg[linkedin] 
@@ -159,7 +164,7 @@ slug = "about"
 :zulip: image:{badges}/zulip.svg[zulip]
 
 
-I am a software developer && open-source enthusiast/maintainer.
+I am a software developer, open-source enthusiast/maintainer.
 
 <!--more-->
 
@@ -232,6 +237,7 @@ Technologies I have used at work and/or side projects.
 ====
 {apachecamel}
 {apollographql}
+{bootstrap}
 {gatsby}
 {hibernate}
 {hugo}
@@ -300,8 +306,12 @@ Technologies I have used at work and/or side projects.
 {githubactions}
 {gitlab}
 {gitpod}
+{googlecloud}
 {grafana}
+{jenkins}
 {jira}
+{keycloak}
+{kong}
 {microcks}
 {netlify}
 {overleaf}

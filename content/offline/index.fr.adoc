@@ -7,4 +7,6 @@ showPublishDate = false
 showLastModificationDate = false
 showReadingTime = false
 type = "offline"
+slug = "offline"
+exclude = true
 +++

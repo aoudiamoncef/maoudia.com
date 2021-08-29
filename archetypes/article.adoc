@@ -18,6 +18,7 @@ resizeImages = false
 excludeFromIndex = false
 draft = true
 slug = "/"
+exclude = false
 +++
 
 

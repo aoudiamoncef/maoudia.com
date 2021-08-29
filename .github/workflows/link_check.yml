@@ -26,4 +26,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g asciidoc-link-check
-    - run: find . -name \*.adoc -exec asciidoc-link-check -c config.json --progress {} \;
+    - run: find . -name \*.adoc -exec asciidoc-link-check -c .github/workflows/config/config.json --progress {} \;

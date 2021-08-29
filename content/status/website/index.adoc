@@ -2,15 +2,17 @@
 date = "2021-05-19T07:30:00+01:00"
 showDate = false
 noSummary = true
-resizeImages = true
+resizeImages = false
+type = "status"
+exclude = true
 +++
 
 :source-highlighter: highlightjs
 :icons: font
 
-image::/images/favicons/splash.png[Moncef AOUDIA, logo]
+image::/images/banners/banner-700x350.png[maoudia.com banner]
 
 [WARNING]
 ====
-Travail en cours…
+Work in progress... 👨‍💻
 ====

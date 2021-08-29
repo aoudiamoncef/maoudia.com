@@ -30,6 +30,7 @@ slug = "about"
 :bamboo: image:{badges}/bamboo.svg[bamboo]
 :beats: image:{badges}/beats.svg[beats]
 :bitbucket: image:{badges}/bitbucket.svg[bitbucket]
+:bootstrap: image:{badges}/bootstrap.svg[bootstrap]
 :brave: image:{badges}/brave.svg[brave]
 :chocolatey: image:{badges}/chocolatey.svg[chocolatey]
 :chrome: image:{badges}/chrome.svg[googlechrome]
@@ -67,6 +68,7 @@ slug = "about"
 :gmail: image:{badges}/gmail.svg[gmail]
 :gmailBadge: image:{badges}/gmail-large.svg[gmailbadge, link = "mailto:mf.aoudia@gmail.com"]
 :gnubash: image:{badges}/bash.svg[gnubash]
+:googlecloud: image:{badges}/googlecloud.svg[googlecloud]
 :gradle: image:{badges}/gradle.svg[gradle]
 :grafana: image:{badges}/grafana.svg[grafana]
 :graphql: image:{badges}/graphql.svg[graphql]
@@ -83,11 +85,14 @@ slug = "about"
 :jamstack: image:{badges}/jamstack.svg[jamstack]
 :java: image:{badges}/java.svg[java]
 :jekyll: image:{badges}/jekyll.svg[jekyll]
+:jenkins: image:{badges}/jenkins.svg[jenkins]
 :jetbrains: image:{badges}/jetbrains.svg[jetbrains]
 :jira: image:{badges}/jira.svg[jira]
 :junit5: image:{badges}/junit.svg[junit5]
 :kde: image:{badges}/kde.svg[kde]
+:keycloak: image:{badges}/keycloak.svg[keycloak]
 :kibana: image:{badges}/kibana.svg[kibana]
+:kong: image:{badges}/kong.svg[kong]
 :kotlin: image:{badges}/kotlin.svg[kotlin]
 :latex: image:{badges}/latex.svg[latex] 
 :linkedin: image:{badges}/linkedin.svg[linkedin] 
@@ -126,13 +131,14 @@ slug = "about"
 :quarkus: image:{badges}/quarkus.svg[quarkus]
 :quora: image:{badges}/quora.svg[quora]
 :quoraBadge: image:{badges}/quora-large.svg[quora, link = "https://www.quora.com/profile/Moncef-AOUDIA"]
-:rxjava: image:{badges}/reactivex.svg[rxjava]
+:reactivex: image:{badges}/reactivex.svg[reactivex]
 :reactor: image:{badges}/reactor.svg[reactor] 
 :reddit: image:{badges}/reddit.svg[reddit]
 :redditBadge: image:{badges}/reddit-large.svg[redditbadge, link = "https://www.reddit.com/user/aoudiamoncef"]
 :redis: image:{badges}/redis.svg[redis] 
 :rss: image:{badges}/rss.svg[rss]
 :rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/en/index.xml"]
+:rxjava: image:{badges}/rxjava.svg[rxjava]
 :slack: image:{badges}/slack.svg[slack]
 :slides: image:{badges}/slides.svg[slides]
 :slidesBadge: image:{badges}/slides-large.svg[slidesbadge, link = "https://slides.com/aoudiamoncef"]
@@ -157,7 +163,7 @@ slug = "about"
 :yammer: image:{badges}/yammer.svg[yammer]
 :zulip: image:{badges}/zulip.svg[zulip]
 
-Je suis développeur de logiciels && un passionné / mainteneur open-source.
+Je suis développeur logiciels, passionné/mainteneur d'open-source.
 
 == Trouver moi sur 🌍
 [.badge]
@@ -228,6 +234,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 ====
 {apachecamel}
 {apollographql}
+{bootstrap}
 {gatsby}
 {hibernate}
 {hugo}
@@ -237,8 +244,8 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {numpy}
 {pandas}
 {quarkus}
-{rxjava}
 {reactor}
+{rxjava}
 {spring} 
 {springboot} 
 ====
@@ -296,8 +303,12 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {githubactions}
 {gitlab}
 {gitpod}
+{googlecloud}
 {grafana}
+{jenkins}
 {jira}
+{keycloak}
+{kong}
 {microcks}
 {netlify}
 {overleaf}

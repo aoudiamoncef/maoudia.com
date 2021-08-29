@@ -40,3 +40,9 @@ hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings -
 
 Deployment to CloudFlare/GitHub pages happens automatically upon pushing the main
 branch.
+
+== Awesome Blogs 
+
+* link:https://github.com/JeremyLikness/jeremylikness-blog[Jeremy Likness]
+
+* link:https://github.com/gunnarmorling/morling.dev[Gunnar Morling]

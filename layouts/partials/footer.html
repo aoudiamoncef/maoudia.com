@@ -6,7 +6,7 @@
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
             <ul>
-                {{ $dontRender :=  (slice "page" "quote" "link" "status") }}
+                {{ $dontRender :=  (slice "page" "quote" "link" "status" "offline") }}
                 {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
                     <li>
                         <a href="{{ .Permalink }}" alt="{{ .Title }}">{{ .Title }}</a>

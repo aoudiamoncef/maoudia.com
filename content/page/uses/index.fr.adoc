@@ -61,7 +61,7 @@ Mémoire vive: 32Go
 * link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Bureau 🏷️
 * link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse d'eBooks 📚
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Support d'écouteurs 🏷️
-* link:https://www.amazon.com/NOVOO-Adapter-Compatible-MateBook-Chromebook/dp/B075FQY5BN[Novoo hub] - Station d'accueil 🏷️
+* link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Station d'accueil 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Clavier ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Souris 🖱️
 * link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
@@ -69,6 +69,7 @@ Mémoire vive: 32Go
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Écouteurs 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Écouteurs 🎧 🎤
 * link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chaise 🪑
+* link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Routeur 🌐
 
 == Logiciels
 
@@ -80,7 +81,7 @@ Mémoire vive: 32Go
 
 === Applications et productivité 📊 
 [.badge]
-* link:https://altair.sirmuel.design/[Altair] - interface graphique(client) GraphQL {opensourceinitiative}
+* link:https://altair.sirmuel.design/[Altair] - Interface graphique(client) GraphQL {opensourceinitiative}
 * link:https://asciidoctor.org/[Asciidoctor] - Processeur de texte permettant d'analyser AsciiDoc® en un modèle de document et de le convertir en de nombreux formats de sortie {opensourceinitiative}
 * link:https://brave.com/[Brave] - Navigateur web axé sur la confidentialité et basé sur Chromium {opensourceinitiative}
 * link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Émulateur de terminal Linux {opensourceinitiative}
@@ -96,22 +97,24 @@ Mémoire vive: 32Go
 * link:https://myki.com/[Myki] - Gestionnaire de mots de passe hors ligne et d'authentificateur 2FA
 * link:https://ohmyz.sh/[Oh My Zsh] - Framework pour la configuration de Zsh {opensourceinitiative}
 * link:https://getpocket.com/[Pocket] - Gestionnaire de listes de lecture
-* link:https://www.getpostman.com/[Postman] - Plateforme pour la création et l'utilisation d'APIs
+* link:https://www.getpostman.com/[Postman] - Plateforme pour la création et l'utilisation d'API
 * link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - Gestionnaire d'IDEs JetBrains
 * link:https://github.com/microsoft/terminal[Windows terminal] - Emulateur de terminal Windows {opensourceinitiative}
 
 === Services 🎒
 
 [.badge]
-* link:https://www.algolia.com/[Algolia] - Saas de recherche web
+* link:https://www.algolia.com/[Algolia] - Plate-forme de recherche web
 * link:https://www.apicur.io/[Apicurio] - Studio de conception d'API {opensourceinitiative}
 * link:https://pages.cloudflare.com/[Cloudflare Pages] - Plate-forme JAMstack, CDN global
+* link:https://www.consul.io/[Consul] - Solution de maillage de services {opensourceinitiative}
 * link:https://domain.com/[Domain.com] - Fournisseur de noms de domaine
 * link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, et Logstash
-* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Dépôt de code source
+* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Dépôt de code source 
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - Pipelines CI/CD
-* link:https://www.atlassian.com/software/jira[Jira] - Logiciel de suivi d'incidents et des projets
-* link:https://microcks.io/[Microcks] - Outil natif de Kubernetes pour les tests et les simulations d'API {opensourceinitiative}
+* link:https://www.atlassian.com/software/jira[Jira] - Logiciel de suivi d'incidents et de projets
+* link:https://konghq.com/kong/[Kong] - Passerelle d'API
+* link:https://microcks.io/[Microcks] - Outil natif de Kubernetes pour les tests et les simulations(Mocks) d'API {opensourceinitiative}
 * link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
 * link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {opensourceinitiative}
 * link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
