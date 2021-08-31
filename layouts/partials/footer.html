@@ -96,9 +96,12 @@
         <div class="sitemap">
             <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/{{ .Sitemap.Filename }}" title="sitemap" target="_blank" rel="noopener noreferrer"><i class="fas fa-sitemap"></i></a>
         </div>
+        <div class="source">
+            <a href="{{ .Site.Params.sourceCodeUrl | default "https://github.com/aoudiamoncef/maoudia.com" }}" title="source code" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></i></a>
+        </div>
         <div class="author">
-            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/aoudiamoncef/bilberry-hugo-theme" }}"
-                target="_blank" rel="noopener">{{ i18n "creditsText" | default "Bilberry Hugo Theme" }}</a>
+            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
+                target="_blank" rel="noopener">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>

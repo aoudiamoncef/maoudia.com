@@ -95,8 +95,8 @@
     <script src="{{ "modernizr-simple.js" | relURL }}"></script>
 
     {{ if .RelPermalink }}
-    <link href="{{ .RelPermalink }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RelPermalink }}blog/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }} Blog" />
+    <link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/blog/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }} Blog" />
     {{ end }}
 
     {{ with .Params.original_url }}
@@ -105,7 +105,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
-    <link rel="stylesheet" rel="preload" href="{{ "theme.css" | absURL }}">
+    <link rel="stylesheet" rel="preload"     href="{{ "theme.css" | absURL }}">
 
     {{ if .Site.Params.enableTwitterCard | default true }}
          {{ partial "twitter-card.html" . }}
@@ -113,7 +113,7 @@
 
     {{ if .Site.Params.concatCssAssets | default true }}
         {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" | resources.Minify }}
-        <link rel="stylesheet"  href="{{ $CSS.Permalink  | absURL }}">
+        <link rel="stylesheet" href="{{ $CSS.Permalink  | absURL }}">
     {{ end }} 
 
     {{ if isset .Site.Params "css_modules" }}
@@ -158,8 +158,8 @@
         <script src="/js/vanilla-back-to-top.min.js"></script>
         <script>addBackToTop({
             diameter: 48,
-            backgroundColor: 'rgb(45, 54, 66)',
-            textColor: '#fff'
+            backgroundColor: 'transparent',
+            textColor: 'rgb(45, 54, 66)'
         })
         </script>
     {{ end }}

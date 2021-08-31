@@ -32,10 +32,12 @@ slug = "about"
 :bitbucket: image:{badges}/bitbucket.svg[bitbucket]
 :bootstrap: image:{badges}/bootstrap.svg[bootstrap]
 :brave: image:{badges}/brave.svg[brave]
+:calibre: image:{badges}/calibre.svg[calibre]
 :chocolatey: image:{badges}/chocolatey.svg[chocolatey]
 :chrome: image:{badges}/chrome.svg[googlechrome]
 :circleci: image:{badges}/circleci.svg[circleci]
 :cloudflare: image:{badges}/cloudflare.svg[cloudflare]
+:clubhouseBadge: image:{badges}/clubhouse-badge.svg[clubhouse, link = "https://www.clubhouse.com/@aoudiamoncef"] 
 :codacy: image:{badges}/codacy.svg[codacy]
 :confluence: image:{badges}/confluence.svg[confluence]
 :consul: image:{badges}/consul.svg[consul]
@@ -131,6 +133,7 @@ slug = "about"
 :quarkus: image:{badges}/quarkus.svg[quarkus]
 :quora: image:{badges}/quora.svg[quora]
 :quoraBadge: image:{badges}/quora-large.svg[quora, link = "https://www.quora.com/profile/Moncef-AOUDIA"]
+:rainbow: image:{badges}/rainbow.svg[rainbow]
 :reactivex: image:{badges}/reactivex.svg[reactivex]
 :reactor: image:{badges}/reactor.svg[reactor] 
 :reddit: image:{badges}/reddit.svg[reddit]
@@ -158,8 +161,10 @@ slug = "about"
 :ublockorigin: image:{badges}/ublockorigin.svg[ublockorigin]
 :ubuntu: image:{badges}/ubuntu.svg[ubuntu]
 :visualstudiocode: image:{badges}/visualstudiocode.svg[visualstudiocode]
+:visualvm: image:{badges}/visualvm.svg[visualvm]
 :windows: image:{badges}/windows.svg[windows]
 :windowsterminal: image:{badges}/windowsterminal.svg[windowsterminal]
+:winds: image:{badges}/winds.svg[winds]
 :yammer: image:{badges}/yammer.svg[yammer]
 :zulip: image:{badges}/zulip.svg[zulip]
 
@@ -174,6 +179,7 @@ Je suis développeur logiciels, passionné/mainteneur d'open-source.
 {gitlabBadge}
 {linkedinBadge}
 {gmailBadge}
+{clubhouseBadge}
 {discordBadge}
 {hashnodeBadge}
 {devtoBadge}
@@ -261,6 +267,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {apachemaven}
 {asciidoctor}
 {beats}
+{calibre}
 {chocolatey}
 {curl}
 {docker}
@@ -282,6 +289,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {ohmyzsh}
 {pocket}
 {postman}
+{visualvm}
 {windowsterminal}
 ====
 
@@ -317,6 +325,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {sonarqube}
 {sonatype}
 {travisci}
+{winds}
 ====
 
 .Communication 
@@ -327,6 +336,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {hangouts}
 {mattermost}
 {meet}
+{rainbow}
 {slack}
 {yammer}
 {zulip}
@@ -364,10 +374,16 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 == Mes projets 👨‍💻
 
 [.badge]
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin] 
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com "]
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com, link = "https://github.com/aoudiamoncef/maoudia.com"]
 
 == Statistiques Github 📊 
 
 [.badge]
 image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[visualisation statistiques Github]
+
+
+[NOTE]
+====
+Si vous avez une idée d'article de blog, veuillez la soumettre en ouvrant un link:https://github.com/aoudiamoncef/maoudia.com/issues[ticket].
+====

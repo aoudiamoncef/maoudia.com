@@ -91,11 +91,12 @@ socialMediaLinks = [
   { link = "https://gitlab.com/aoudiamoncef", title = "Moncef AOUDIA Github", icon = "fab fa-gitlab" },
   { link = "https://www.linkedin.com/in/%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-moncef-aoudia-7723b311b", title = "Moncef AOUDIA Linkedin", icon = "fab fa-linkedin" },
   { link = "mailto:mf.aoudia@gmail.com", title = "Moncef AOUDIA Gmail", icon = "fas fa-envelope" },
+  { link = "https://www.clubhouse.com/@aoudiamoncef", title = "Moncef AOUDIA Clubhouse", icon = "far fa-copyright" },
   { link = "https://discordapp.com/users/365160200900182026", title = "Moncef AOUDIA Discord", icon = "fab fa-discord" },
   { link = "https://getpocket.com/@701dbpd1T08b8g7f59Ab790A73g1T0G2725K38yf75eym1w2di86eN27V2dIJ51a", title = "Moncef AOUDIA Pocket", icon = "fab fa-get-pocket" },
   { link = "https://dev.to/aoudiamoncef", title = "Moncef AOUDIA DEV.TO", icon = "fab fa-dev" },
   { link = "https://medium.com/@aoudiamoncef", title = "Moncef AOUDIA Medium", icon = "fab fa-medium-m" },
-  { link = "https://aoudiamoncef.hashnode.dev", title = "Moncef AOUDIA Hashnode", icon = "fas fa-dice-one" },
+  { link = "https://aoudiamoncef.hashnode.dev", title = "Moncef AOUDIA Hashnode", icon = "fas fa-h-square" },
   { link = "https://stackoverflow.com/users/8126192/moncef-aoudia", title = "Moncef AOUDIA Stackoverflow", icon = "fab fa-stack-overflow" },
   { link = "https://www.quora.com/profile/Moncef-AOUDIA", title = "Moncef AOUDIA Quora", icon = "fab fa-quora" },
   { link = "https://www.reddit.com/user/aoudiamoncef", title = "Moncef AOUDIA Reddit", icon = "fab fa-reddit" },
@@ -107,8 +108,10 @@ copyrightBy = "Moncef AOUDIA"
 copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
 copyrightYearOverride = "2021"
 copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0"
-# creditsText = "Source code for Moncef AOUDIA's website"
-creditsUrl = "https://github.com/aoudiamoncef/maoudia.com"
+creditsText = "Bilberry Hugo Theme"
+creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
+
+sourceCodetUrl = "https://github.com/aoudiamoncef/maoudia.com"
 # Enable / Disable Utterances comments
 utterances    = true
 utterancesJsUrl     = "https://utteranc.es/client.js"

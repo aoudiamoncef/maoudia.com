@@ -59,7 +59,7 @@ Mémoire vive: 32Go
 === Équipements 🧰
 
 * link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Bureau 🏷️
-* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse d'eBooks 📚
+* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse de livres électroniques 📚
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Support d'écouteurs 🏷️
 * link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Station d'accueil 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Clavier ⌨️
@@ -84,6 +84,7 @@ Mémoire vive: 32Go
 * link:https://altair.sirmuel.design/[Altair] - Interface graphique(client) GraphQL {opensourceinitiative}
 * link:https://asciidoctor.org/[Asciidoctor] - Processeur de texte permettant d'analyser AsciiDoc® en un modèle de document et de le convertir en de nombreux formats de sortie {opensourceinitiative}
 * link:https://brave.com/[Brave] - Navigateur web axé sur la confidentialité et basé sur Chromium {opensourceinitiative}
+* link:https://calibre-ebook.com//[Calibre] - Gestionnaire  de livres électroniques {opensourceinitiative}
 * link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Émulateur de terminal Linux {opensourceinitiative}
 * link:https://github.com/jgraph/drawio-desktop/releases/[Diagrams.net] - Logiciel de création d'organigrammes et diagrammes {opensourceinitiative}
 * link:https://www.docker.com/[Docker] - Plate-forme pour la création, le déploiement et la gestion d'applications conteneurisées {opensourceinitiative}
@@ -99,9 +100,10 @@ Mémoire vive: 32Go
 * link:https://getpocket.com/[Pocket] - Gestionnaire de listes de lecture
 * link:https://www.getpostman.com/[Postman] - Plateforme pour la création et l'utilisation d'API
 * link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - Gestionnaire d'IDEs JetBrains
+* link:https://visualvm.github.io/[VisualVM] - Outil de dépannage Java {opensourceinitiative}
 * link:https://github.com/microsoft/terminal[Windows terminal] - Emulateur de terminal Windows {opensourceinitiative}
 
-=== Services 🎒
+=== Services ⛽
 
 [.badge]
 * link:https://www.algolia.com/[Algolia] - Plate-forme de recherche web
@@ -118,7 +120,7 @@ Mémoire vive: 32Go
 * link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
 * link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {opensourceinitiative}
 * link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
-
+* link:https://winds.getstream.io/[Winds] - Application RSS et Podcast propulsée par par GetStream.io {opensourceinitiative}
 
 [NOTE]
 link:https://uses.tech/[Uses.tech] est un projet de link:https://wesbos.com/about[Wes Bos] pour "détailler les installations, le matériel, les logiciels et les configurations des développeurs". Soumettez votre ``/uses`` à link:https://github.com/wesbos/awesome-uses[Awesome Uses].
