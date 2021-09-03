@@ -91,8 +91,10 @@
     {{ end }}
 
     {{ partial "favicon.html" . }}
-
-    <script src="{{ "modernizr-simple.js" | relURL }}"></script>
+    
+    <link rel="preload" as="script" href="{{ "/static/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | absURL }}">
+    
+    <script src="{{ "/static/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | relURL }}"></script>
 
     {{ if .RelPermalink }}
     <link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -104,16 +106,19 @@
     {{ else }}
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
+    
+    <link rel="preload" as="style" href="{{ "/static/theme.ee2ee27de0516e82d7cf4ea63464e50006cab9a754e32c1b800d641e9885936e.css" | absURL }}" integrity="sha384-iGROKnlsfIfAslZBuiSmnd2IlV9UbMj80nUnB2UN2waDA80fzVx5GV28OOYxkIVP" crossorigin="anonymous">
+    <link rel="preload" as="script" href="{{ "/static/theme.79f8723c0bda82e2c04203d3e9b4e3c6242eef1c32d3d43569491d68c363c40d.js" | absURL }}" integrity="sha384-BfdHxlkI/p4vpci6VMphP1sWhIKy7GTG65LZ3iNvR/cn/mkuWY5kEx8uLsOVEEoz" crossorigin="anonymous">
 
-    <link rel="stylesheet" rel="preload"     href="{{ "theme.css" | absURL }}">
-
+    <link rel="stylesheet" href="{{ "/static/theme.ee2ee27de0516e82d7cf4ea63464e50006cab9a754e32c1b800d641e9885936e.css" | absURL }}" integrity="sha384-iGROKnlsfIfAslZBuiSmnd2IlV9UbMj80nUnB2UN2waDA80fzVx5GV28OOYxkIVP" crossorigin="anonymous">
+    
     {{ if .Site.Params.enableTwitterCard | default true }}
          {{ partial "twitter-card.html" . }}
     {{ end }}
 
     {{ if .Site.Params.concatCssAssets | default true }}
-        {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" | resources.Minify }}
-        <link rel="stylesheet" href="{{ $CSS.Permalink  | absURL }}">
+        {{ $css := resources.Match "css/**.css" | resources.Concat "static/css/main.css" | resources.Minify | resources.Fingerprint "sha384" }}
+        <link rel="stylesheet" href="{{ $css.Permalink  | absURL }}" integrity="{{ $css.Data.Integrity }}">
     {{ end }} 
 
     {{ if isset .Site.Params "css_modules" }}
@@ -141,8 +146,7 @@
     {{ partial "mathjax.html" . }}
     {{ end }}
 
-
-    <script type="text/javascript" src="{{ "theme.js" | absURL }}"></script>
+    <script type="text/javascript" src="{{ "/static/theme.79f8723c0bda82e2c04203d3e9b4e3c6242eef1c32d3d43569491d68c363c40d.js" | absURL }}" integrity="sha384-BfdHxlkI/p4vpci6VMphP1sWhIKy7GTG65LZ3iNvR/cn/mkuWY5kEx8uLsOVEEoz" crossorigin="anonymous" defer></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}
@@ -154,16 +158,7 @@
     {{ partial "algolia-search.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.backToTop | default true }}
-        <script src="/js/vanilla-back-to-top.min.js"></script>
-        <script>addBackToTop({
-            diameter: 48,
-            backgroundColor: 'transparent',
-            textColor: 'rgb(45, 54, 66)'
-        })
-        </script>
-    {{ end }}
-
+    {{ partial "backtotop.html" . }}
 </body>
 
 </html>

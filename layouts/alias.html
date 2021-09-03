@@ -15,7 +15,9 @@
     ; (function () {
       // Only do i18n at root, 
       // otherwise, redirect immediately
-      if (window.location.pathname !== '/') {
+      const bases = ["/", "/404.html",  "/404/", "/404"];
+      const pathname = window.location.pathname;
+      if (!bases.includes(pathname)) {
         window.location.replace('{{ .Permalink }}')
         return
       }
@@ -48,10 +50,10 @@
       var preferLang = getFirstBrowserLanguage()
       if (preferLang.indexOf('fr') !== -1) {
         // visitor prefers French
-        window.location.replace('/fr/')
+        window.location.replace(`${pathname}fr/`)
       } else {
         // fallback to English
-        window.location.replace('/en/')
+        window.location.replace(`${pathname}en/`)
       }
     })()
   </script>

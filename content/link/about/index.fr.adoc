@@ -9,7 +9,4 @@ blank = false
 exclude = true
 +++
 
-:source-highlighter: highlightjs
-:icons: font
-
 Moncef AOUDIA ^À^ ^propos^ 🔗

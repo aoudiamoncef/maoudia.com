@@ -1,6 +1,4 @@
 
-code { color: #305b04; }
-
 span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 .admonitionblock>table td.icon{font-size: 2.5em;text-align:center;width:80px;}
 .admonitionblock>table td.icon img{max-width:none}

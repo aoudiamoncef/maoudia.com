@@ -51,7 +51,7 @@ other = "Par"
 other = "acceuil"
 
 [pageNotFound]
-other = "Page introuvable"
+other = "Page introuvable ❌"
 
 [issue]
 other = "ticket"

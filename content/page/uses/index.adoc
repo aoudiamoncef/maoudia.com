@@ -8,10 +8,10 @@ showReadingTime = false
 slug = "uses"
 +++
 
-:source-highlighter: highlightjs
+:source-highlighter: rouge
 :icons: font
 
-:opensourceinitiative: image:/images/badges/oss.svg[opensourceinitiative]
+:opensourceinitiative: image:/static/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[opensourceinitiative]
 
 
 Here are the software and hardware I use.
@@ -57,18 +57,18 @@ Memory: '32Go'
 
 === Equipment 🧰
 
-* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Desk 🏷️
-* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - EBooks reader 📚
-* link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
+* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Monitor 🖥️
 * link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Docking Station 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Keyboard ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Mouse 🖱️
-* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
-* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Monitor 🖥️
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Headphone 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Headphone 🎧 🎤
-* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chair 🪑
+* link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
 * link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Router 🌐
+* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
+* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - EBooks reader 📚
+* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Desk 🏷️
+* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chair 🪑
 
 == Software
 

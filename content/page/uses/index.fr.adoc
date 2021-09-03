@@ -9,10 +9,10 @@ slug = "uses"
 +++
 
 
-:source-highlighter: highlightjs
+:source-highlighter: rouge
 :icons: font
 
-:opensourceinitiative: image:/images/badges/oss.svg[opensourceinitiative]
+:opensourceinitiative: image:/static/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[opensourceinitiative]
 
 
 Voici les logiciels et le matériel que j'utilise.
@@ -58,18 +58,18 @@ Mémoire vive: 32Go
 
 === Équipements 🧰
 
-* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Bureau 🏷️
-* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse de livres électroniques 📚
+* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Écran 🖥️
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Support d'écouteurs 🏷️
 * link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Station d'accueil 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Clavier ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Souris 🖱️
-* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
-* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Écran 🖥️
-* link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Écouteurs 🎧 🎵
-* link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Écouteurs 🎧 🎤
-* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chaise 🪑
+* link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Casque 🎧 🎵
+* link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Casque 🎧 🎤
 * link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Routeur 🌐
+* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
+* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse de livres électroniques 📚
+* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Bureau 🏷️
+* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chaise 🪑
 
 == Logiciels
 
@@ -120,7 +120,7 @@ Mémoire vive: 32Go
 * link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
 * link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {opensourceinitiative}
 * link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
-* link:https://winds.getstream.io/[Winds] - Application RSS et Podcast propulsée par par GetStream.io {opensourceinitiative}
+* link:https://winds.getstream.io/[Winds] - Application RSS et Podcast propulsée par GetStream.io {opensourceinitiative}
 
 [NOTE]
 link:https://uses.tech/[Uses.tech] est un projet de link:https://wesbos.com/about[Wes Bos] pour "détailler les installations, le matériel, les logiciels et les configurations des développeurs". Soumettez votre ``/uses`` à link:https://github.com/wesbos/awesome-uses[Awesome Uses].

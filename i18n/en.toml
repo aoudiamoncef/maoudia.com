@@ -54,7 +54,7 @@ other = "By"
 other = "homepage"
 
 [pageNotFound]
-other = "Page Not Found"
+other = "Page Not Found ❌"
 
 [issue]
 other = "issue"
