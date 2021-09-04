@@ -3,7 +3,10 @@
 # Files are imported in the order they appear here, after
 # theme.css and theme.js, respectively.
 css_modules = []
-js_modules = ["/static/js/vanilla-back-to-top.min.b8c249dc4a13c9f441a136d1fa5adfbb5b9143ced1646f0047771536e4157858.js", "/static/js/webmention.min.7ce29fd5f9dc2f3134a1eab3bfcd83f5c35603473b8f48acc38fe7e04d9c1930.js"]
+js_modules = [
+  "/static/js/vanilla-back-to-top.min.b8c249dc4a13c9f441a136d1fa5adfbb5b9143ced1646f0047771536e4157858.js",
+  "/static/js/webmention.min.7ce29fd5f9dc2f3134a1eab3bfcd83f5c35603473b8f48acc38fe7e04d9c1930.js"
+ ]
 
 concatCssAssets = true
 # Description and meta data for the search engines
