@@ -10,7 +10,7 @@ exclude = true
 :source-highlighter: rouge
 :icons: font
 
-image::/static/images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png[bannière de maoudia.com]
+image::/images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png[bannière de maoudia.com]
 
 [WARNING]
 ====

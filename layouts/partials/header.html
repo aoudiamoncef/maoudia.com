@@ -5,7 +5,11 @@
 {{ end }}
         <div class="container">
             <div class="logo">
+                {{ if eq .Site.Language.Lang "en" }}
+                <a href="{{ .Site.BaseURL }}" class="logo">
+                {{ else }}
                 <a href="{{ .Site.BaseURL | relLangURL }}/" class="logo">
+                {{ end }}
                     {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
                         <img src="{{ .Site.Params.customImage | relURL }}" alt="Moncef AOUDIA logo">
                     {{ else }}

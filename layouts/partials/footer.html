@@ -48,13 +48,14 @@
             {{ if .Site.Params.showFindMeOn | default true }}
             <div class="external-profiles">
                 <strong>{{ i18n "findMeOn" }}</strong>
-
                 {{ range .Site.Params.socialMediaLinks }}
                 <a href="{{ .link }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a>
                 {{ end }}
-                {{- with .Site.Language.Lang }}
-                <a href="/{{ . }}/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
-                {{- end }}
+                {{ if eq .Site.Language.Lang "en" }}
+                <a href="/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                {{ else }}
+                <a href="/{{ .Site.Language.Lang }}/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                {{ end }}
             </div>
             {{ end }}
 
@@ -94,7 +95,11 @@
             </a>
         </div>
         <div class="sitemap">
-            <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/{{ .Sitemap.Filename }}" title="sitemap" target="_blank" rel="noopener noreferrer"><i class="fas fa-sitemap"></i></a>
+            {{ if eq .Site.Language.Lang "en" }}
+            <a href="{{ .Site.BaseURL }}{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
+            {{ else }}
+            <a href="{{ .Site.BaseURL | relLangURL }}/{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
+            {{ end }}
         </div>
         <div class="source">
             <a href="{{ .Site.Params.sourceCodeUrl | default "https://github.com/aoudiamoncef/maoudia.com" }}" title="source code" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></i></a>
@@ -105,9 +110,3 @@
         </div>
     </div>
 </div>
-
-{{ if .Site.Params.enableSw | default true }}
-
-{{ partial "sw.html" . }}
-
-{{ end }}

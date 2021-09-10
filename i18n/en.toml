@@ -60,7 +60,7 @@ other = "Page Not Found ❌"
 other = "issue"
 
 [errorMessagePart1]
-other = "Please return to the"
+other = "Please return to the "
 
 [errorMessagePart2]
 other = "Consider opening a"

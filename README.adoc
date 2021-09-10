@@ -42,6 +42,24 @@ Launch a local Hugo server including live reload:
 hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
 ----
 
+.Production
+[source,shell]
+----
+env HUGO_ENV=production hugo --minify && npm run prod
+----
+
+.Generate SRI
+[source,shell]
+----
+openssl dgst -sha384 -binary path/to/your/file | openssl base64 -A
+----
+
+.Build PWA service worker
+[source,shell]
+----
+npm run prod
+----
+
 == Deployment
 
 Deployment to CloudFlare/GitHub pages happens automatically upon pushing the main

@@ -11,7 +11,7 @@ slug = "about"
 :source-highlighter: rouge
 :icons: font
 
-:badges: /static/images/badges
+:badges: /images/badges
 
 :activemq: image:{badges}/activemq.0ee475e5ff98e6a8051710b0ae731ee43be1833ef81edcb050eb0a2f78c75de0.svg[activemq]
 :algolia: image:{badges}/algolia.fb906fa202a7296e5290e8fa6ca91c2dcc63b00cd424f739d193e7045108f5c8.svg[algolia]

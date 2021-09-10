@@ -12,7 +12,7 @@ googleAnalytics = ""
 canonifyURLs = false
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 disableAliases = false
 
 [permalinks]

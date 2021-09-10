@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{/*  <!DOCTYPE html>
 <html>
 
 <head>
@@ -15,7 +15,7 @@
     ; (function () {
       // Only do i18n at root, 
       // otherwise, redirect immediately
-      const bases = ["/", "/404.html",  "/404/", "/404"];
+      const bases = ["/404.html",  "/404/", "/404","/offline/index.html",  "/offline/", "/offline"];
       const pathname = window.location.pathname;
       if (!bases.includes(pathname)) {
         window.location.replace('{{ .Permalink }}')
@@ -53,7 +53,7 @@
         window.location.replace(`${pathname}fr/`)
       } else {
         // fallback to English
-        window.location.replace(`${pathname}en/`)
+        window.location.replace(`${pathname}/`)
       }
     })()
   </script>
@@ -75,4 +75,4 @@
 </div>
 </body>
 
-</html>
+</html>  */}}
