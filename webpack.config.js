@@ -5,7 +5,6 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./pwa/service-worker.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,7 +15,12 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "**/offline/**/*.{html,ico,svg,png}",
+          from: "**/about/**/*.html",
+          to: path.resolve(__dirname, "dist"),
+          context: "public/",
+        },
+        {
+          from: "**/offline/**/*.html",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         },
@@ -26,17 +30,12 @@ module.exports = {
           context: "public/",
         },
         {
-          from: "*.{ico,json}",
+          from: "*.{html,json,ico,svg,png,js,css,woff2}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         },
         {
-          from: "fr/*.{ico,json}",
-          to: path.resolve(__dirname, "dist"),
-          context: "public/",
-        },
-        {
-          from: "*.{js,css,woff2}",
+          from: "fr/*.{html,ico,svg,png}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         },
@@ -44,9 +43,14 @@ module.exports = {
           from: "images/badges/*-large*.{ico,svg,png}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
+        },  
+        {
+          from: "images/offline/*.{ico,svg,png}",
+          to: path.resolve(__dirname, "dist"),
+          context: "public/",
         },
         {
-          from: "images/favicons/*.{ico,json,svg,png,xml}",
+          from: "images/favicons/*.{ico,svg,png,xml}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         },
@@ -54,7 +58,6 @@ module.exports = {
     }),
 
     new InjectManifest({
-      mode: "development",
       swSrc: "./pwa/service-worker.js",
       swDest: "./service-worker.js",
       exclude: ["service-worker.bundle.js", "sw.js", "amp/**"],

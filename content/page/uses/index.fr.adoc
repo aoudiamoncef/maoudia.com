@@ -8,11 +8,7 @@ showReadingTime = false
 slug = "uses"
 +++
 
-
-:source-highlighter: rouge
-:icons: font
-
-:opensourceinitiative: image:/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[opensourceinitiative]
+:opensourceinitiative: image:/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[opensourceinitiative, 50, 20]
 
 
 Voici les logiciels et le matériel que j'utilise.

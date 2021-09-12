@@ -7,10 +7,15 @@ type = "status"
 exclude = true
 +++
 
-:source-highlighter: rouge
-:icons: font
+image::/images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png[maoudia.com banner, 700, 350]
 
-image::/images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png[maoudia.com banner]
+.Available pages 🔗
+[NOTE]
+====
+* link:https://www.maoudia.com/about/[About]
+
+* link:https://www.maoudia.com/uses/[Usages]
+====
 
 [WARNING]
 ====

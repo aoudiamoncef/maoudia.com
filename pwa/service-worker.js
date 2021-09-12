@@ -1,34 +1,35 @@
-import * as navigationPreload from "workbox-navigation-preload";
-import {
-  precacheAndRoute,
-  matchPrecache,
-  cleanupOutdatedCaches,
-} from "workbox-precaching";
-import { setDefaultHandler, setCatchHandler } from "workbox-routing";
-import { registerRoute, NavigationRoute } from "workbox-routing";
-import {
-  NetworkFirst,
-  NetworkOnly,
-  StaleWhileRevalidate,
-  CacheFirst,
-} from "workbox-strategies";
-import { CacheableResponsePlugin } from "workbox-cacheable-response";
-import { ExpirationPlugin } from "workbox-expiration";
-import { setCacheNameDetails, clientsClaim, cacheNames } from "workbox-core";
 import * as googleAnalytics from "workbox-google-analytics";
+import { CacheableResponsePlugin } from "workbox-cacheable-response";
+import { cacheNames, clientsClaim, setCacheNameDetails } from "workbox-core";
+import { ExpirationPlugin } from "workbox-expiration";
+import { matchPrecache, precacheAndRoute } from "workbox-precaching";
+import {
+  registerRoute,
+  setCatchHandler,
+  setDefaultHandler,
+} from "workbox-routing";
+import {
+  CacheFirst,
+  NetworkFirst,
+  StaleWhileRevalidate,
+} from "workbox-strategies";
 
 const VERSION = 1.0;
 
-self.addEventListener('activate', event => {
-  event.waitUntil(async function() {
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async function () {
       const userCacheNames = await caches.keys();
-      await Promise.all(userCacheNames.map(async cacheName => {
+      await Promise.all(
+        userCacheNames.map(async (cacheName) => {
           if (!Object.values(cacheNames).includes(cacheName)) {
-              return await caches.delete(cacheName);
+            return await caches.delete(cacheName);
           }
           return await Promise.resolve();
-      }));
-  }());
+        })
+      );
+    })()
+  );
 });
 
 clientsClaim();
@@ -54,11 +55,16 @@ setDefaultHandler(new StaleWhileRevalidate());
 setCatchHandler(async ({ event }) => {
   switch (event.request.destination) {
     case "document":
-      let lang = "/";
+      const offlinePage = "/offline/index.html";
       if (event.request.url.indexOf("/fr/") !== -1) {
-        lang = "/fr";
+        return matchPrecache(`/fr${offlinePage}`);
       }
-      return matchPrecache(`${lang}/offline/index.html`);
+      return matchPrecache(`${offlinePage}`);
+
+    case "image":
+      return matchPrecache(
+        "/images/offline/image-not-found.6975d304cc153ce2c557b07a68b82339f19fc88ca2376077469b2c951b25d20b.svg"
+      );
 
     default:
       return Response.error();
@@ -66,9 +72,30 @@ setCatchHandler(async ({ event }) => {
 });
 
 registerRoute(
-  new RegExp("/(.*)blog(.*)/"),
+  ({ request }) => request.mode === "navigate",
   new NetworkFirst({
-    cacheName: `maoudia-blog-cache-v${VERSION}`,
+    networkTimeoutSeconds: 5,
+    cacheName: `maoudia-pages-cache-v${VERSION}`,
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+      new ExpirationPlugin({
+        maxEntries: 100,
+        maxAgeSeconds: 24 * 60 * 60,
+        purgeOnQuotaError: true,
+      }),
+    ],
+  })
+);
+
+registerRoute(
+  ({ request }) =>
+    (request.destination === "style" && request.url.indexOf(".woff") === -1) ||
+    request.destination === "script" ||
+    request.destination === "worker",
+  new StaleWhileRevalidate({
+    cacheName: `maoudia-static-cache-v${VERSION}`,
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],
@@ -82,24 +109,22 @@ registerRoute(
 );
 
 registerRoute(
-  ({ request }) => request.mode === "navigate",
-  new StaleWhileRevalidate({
-    cacheName: `maoudia-navigation-cache-v${VERSION}`,
+  ({ request }) => request.destination === "image",
+  new CacheFirst({
+    cacheName: `maoudia-image-cache-v${VERSION}`,
     plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
       new ExpirationPlugin({
-        maxEntries: 10,
-        maxAgeSeconds: 60 * 60 * 24 * 365,
-        purgeOnQuotaError: true,
+        maxEntries: 300,
+        maxAgeSeconds: 182 * 24 * 60 * 60,
       }),
     ],
   })
 );
 
 registerRoute(
-  ({ request }) => request.destination === "font",
+  ({ request }) =>
+    (request.destination === "style" && request.url.indexOf(".woff") !== -1) ||
+    request.destination === "font",
   new CacheFirst({
     cacheName: `maoudia-font-cache-v${VERSION}`,
     plugins: [
@@ -107,58 +132,8 @@ registerRoute(
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
-        maxEntries: 10,
-        maxAgeSeconds: 60 * 60 * 24 * 365,
-        purgeOnQuotaError: true,
-      }),
-    ],
-  })
-);
-
-registerRoute(
-  ({ request }) => request.destination === "image",
-  new CacheFirst({
-    cacheName: `maoudia-image-cache-v${VERSION}`,
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: 250,
-        maxAgeSeconds: 60 * 60 * 24 * 365,
-        purgeOnQuotaError: true,
-      }),
-    ],
-  })
-);
-
-registerRoute(
-  ({ request }) => request.destination === "script",
-  new CacheFirst({
-    cacheName: `maoudia-script-cache-v${VERSION}`,
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: 10,
-        maxAgeSeconds: 60 * 60 * 24,
-      }),
-    ],
-  })
-);
-
-registerRoute(
-  ({ request }) => request.destination === "style",
-  new CacheFirst({
-    cacheName: `maoudia-style-cache-v${VERSION}`,
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxEntries: 10,
-        maxAgeSeconds: 60 * 60 * 24,
+        maxEntries: 50,
+        maxAgeSeconds: 365 * 24 * 60 * 60,
       }),
     ],
   })
@@ -166,7 +141,7 @@ registerRoute(
 
 registerRoute(
   "https://utteranc.es/client.js",
-  new CacheFirst({
+  new StaleWhileRevalidate({
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],

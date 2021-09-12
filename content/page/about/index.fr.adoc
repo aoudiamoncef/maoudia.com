@@ -8,9 +8,6 @@ showReadingTime = false
 slug = "about"
 +++
 
-:source-highlighter: rouge
-:icons: font
-
 :badges: /images/badges
 
 :activemq: image:{badges}/activemq.0ee475e5ff98e6a8051710b0ae731ee43be1833ef81edcb050eb0a2f78c75de0.svg[activemq]
@@ -372,13 +369,13 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 == Mes projets 👨‍💻
 
 [.badge]
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com, link = "https://github.com/aoudiamoncef/maoudia.com"]
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin, 400, 140, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com, 400, 120, link = "https://github.com/aoudiamoncef/maoudia.com"]
 
 == Statistiques Github 📊 
 
 [.badge]
-image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[visualisation statistiques Github]
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=fr[visualisation statistiques Github, 495, 165]
 
 
 [NOTE]

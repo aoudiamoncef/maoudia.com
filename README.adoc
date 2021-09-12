@@ -15,7 +15,7 @@ built using https://gohugo.io/[Hugo] + https://github.com/Lednerb/bilberry-hugo-
 
 [source,shell]
 ----
-gem install asciidoctor asciidoctor-html5s
+gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 ----
 
 NOTE: To manually upload `index.json` content to https://www.algolia.com/[Algolia] search index, see Billeberry https://github.com/aoudiamoncef/bilberry-hugo-theme#Algolia-Search[Algolia-Search].
@@ -37,15 +37,16 @@ git submodule update --recursive --remote
 
 Launch a local Hugo server including live reload:
 
+.Development
 [source,shell]
 ----
 hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
 ----
 
-.Production
+.Build PWA service worker
 [source,shell]
 ----
-env HUGO_ENV=production hugo --minify && npm run prod
+./scripts/sw.sh
 ----
 
 .Generate SRI
@@ -54,19 +55,7 @@ env HUGO_ENV=production hugo --minify && npm run prod
 openssl dgst -sha384 -binary path/to/your/file | openssl base64 -A
 ----
 
-.Build PWA service worker
-[source,shell]
-----
-npm run prod
-----
-
 == Deployment
 
 Deployment to CloudFlare/GitHub pages happens automatically upon pushing the main
 branch.
-
-== Awesome Blogs 
-
-* link:https://github.com/JeremyLikness/jeremylikness-blog[Jeremy Likness]
-
-* link:https://github.com/gunnarmorling/morling.dev[Gunnar Morling]

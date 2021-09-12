@@ -47,8 +47,10 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
       {{ with .Summary }}
       <description>{{ . | plainify | chomp }}</description>
       {{ end }}
-      <media:thumbnail url="{{ .Scratch.Get "image" | absURL }}"/>
-      <media:content url="{{ .Scratch.Get "image" | absURL }}"/>
+      {{ $urlAmp := .Scratch.Get "image" }}
+      {{ $urlWithoutAmp := replace $urlAmp "/amp/" "/" }}
+      <media:thumbnail url="{{ $urlWithoutAmp | absURL }}"/>
+      <media:content url="{{ $urlWithoutAmp | absURL }}"/>
       {{ if ne .Params.categories nil }}
       <categories>
         {{ range .Params.categories }}

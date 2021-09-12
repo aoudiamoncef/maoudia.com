@@ -8,9 +8,6 @@ showReadingTime = false
 slug = "about"
 +++
 
-:source-highlighter: rouge
-:icons: font
-
 :badges: /images/badges
 
 :activemq: image:{badges}/activemq.0ee475e5ff98e6a8051710b0ae731ee43be1833ef81edcb050eb0a2f78c75de0.svg[activemq]
@@ -172,7 +169,7 @@ I am a software developer, open-source enthusiast/maintainer.
 
 == Find me on 🌍
 [.badge]
-{twitterBadge} 
+{twitterBadge}
 {githubBadge}
 {gitlabBadge}
 {linkedinBadge}
@@ -184,12 +181,12 @@ I am a software developer, open-source enthusiast/maintainer.
 {mediumBadge}
 {pocketBadge}
 {redditBadge}
-{slidesBadge} 
+{slidesBadge}
 {speakerdeckBadge}
 {stackoverflowBadge}
 {quoraBadge}
 {maoudia}
-{rssBadge} 
+{rssBadge}
 
 == My universe 🔮
 
@@ -252,8 +249,8 @@ Technologies I have used at work and/or side projects.
 {quarkus}
 {rxjava}
 {reactor}
-{spring} 
-{springboot} 
+{spring}
+{springboot}
 ====
 
 .Tools
@@ -373,14 +370,14 @@ Technologies I have used at work and/or side projects.
 == My projects 👨‍💻
 
 [.badge]
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[Apollo client maven plugin project, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[maoudia.com project, link = "https://github.com/aoudiamoncef/maoudia.com"]
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[Apollo client maven plugin project, 400, 140, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[maoudia.com project, 400, 120, link = "https://github.com/aoudiamoncef/maoudia.com"]
 
 == Github stats 📊 
 
 [.badge]
-image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[Github stats visualization]
-image:https://github-readme-streak-stats.herokuapp.com/?user=aoudiamoncef[Github streak stats visualization]
+image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[Github stats visualization, 495, 165]
+image:https://github-readme-streak-stats.herokuapp.com/?user=aoudiamoncef[Github streak stats visualization, 495, 195]
 
 
 [NOTE]

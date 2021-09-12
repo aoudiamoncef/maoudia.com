@@ -11,7 +11,7 @@
                 <a href="{{ .Site.BaseURL | relLangURL }}/" class="logo">
                 {{ end }}
                     {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
-                        <img src="{{ .Site.Params.customImage | relURL }}" alt="Moncef AOUDIA logo">
+                        <img src="{{ .Site.Params.customImage | relURL }}"  width="512" height="512" alt="{{ .Site.Params.author }} logo">
                     {{ else }}
                         {{ $avatarEmail := "" }}
                         {{ if not (eq .Site.Params.avatarEmail nil) }}
@@ -19,7 +19,7 @@
                         {{ else }}
                             {{ $avatarEmail = .Site.Params.gravatarEMail }}
                         {{ end }}
-                        <img src="https://seccdn.libravatar.org/avatar/{{ md5 $avatarEmail }}?d=mm&size=200" alt="">
+                        <img src="https://seccdn.libravatar.org/avatar/{{ md5 $avatarEmail }}?d=mm&size=512" width="512" height="512" alt="{{ .Site.Params.author }} logo">
                     {{ end }}
 
                     <span class="overlay"><i class="fa {{ .Site.Params.overlayIcon | default "fa-home" }}"></i></span>

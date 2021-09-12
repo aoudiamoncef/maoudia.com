@@ -206,3 +206,18 @@ td, th {
 .bilberry-hugo-theme pre code {
     background-color: #000a12;
 }
+
+.bilberry-hugo-theme pre .copy-button {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #f1f1f1;
+    padding-top: 0.5em;
+    padding-right: 0.7em;
+    padding-bottom: 0.5em;
+    padding-left: 0.7em;
+    font-size: 12pt;
+    line-height: normal;
+    height: auto;
+}

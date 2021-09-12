@@ -4,8 +4,7 @@
     "description": "maoudia.com-pwa",
     "private": true,
     "scripts": {
-        "dev": "webpack --config webpack.config.dev.js",
-        "prod": "webpack --config webpack.config.prod.js --mode production"
+        "build": "webpack --config webpack.config.js"
     },
     "keywords": [
         "PWA",

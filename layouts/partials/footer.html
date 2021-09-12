@@ -52,9 +52,9 @@
                 <a href="{{ .link }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a>
                 {{ end }}
                 {{ if eq .Site.Language.Lang "en" }}
-                <a href="/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                <a href="/index.xml" title="{{ .Site.Params.author }} RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
                 {{ else }}
-                <a href="/{{ .Site.Language.Lang }}/index.xml" title="Moncef AOUDIA RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                <a href="/{{ .Site.Language.Lang }}/index.xml" title="{{ .Site.Params.author }} RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
                 {{ end }}
             </div>
             {{ end }}
@@ -91,7 +91,7 @@
                 {{ else }}
                 {{ .Site.Params.copyrightYearOverride | default 2021 }}
                 {{ end }}
-                {{ .Site.Params.copyrightBy | default "by Moncef AOUDIA" }}
+                {{ .Site.Params.copyrightBy | default "by {{ .Site.Params.author }}" }}
             </a>
         </div>
         <div class="sitemap">

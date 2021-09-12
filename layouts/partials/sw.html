@@ -3,13 +3,13 @@
         navigator.serviceWorker
             .register('/sw.js', { updateViaCache: 'none', scope: '/' })
             .then(() => {
-                console.info('Moncef AOUDIA Service Worker Registered 😎');
-            }, err => console.error("😥 Moncef AOUDIA Service Worker registration failed: ", err));
+                console.info('{{ .Site.Params.author }} Service Worker Registered 😎');
+            }, err => console.error("😥 {{ .Site.Params.author }} Service Worker registration failed: ", err));
 
         navigator.serviceWorker
             .ready
             .then(() => {
-                console.info('Moncef AOUDIA Service Worker Ready 🤩');
+                console.info('{{ .Site.Params.author }} Service Worker Ready 🤩');
             });
     }
 </script>
