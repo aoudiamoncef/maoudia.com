@@ -46,7 +46,7 @@ hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings -
 .Build PWA service worker
 [source,shell]
 ----
-./scripts/sw.sh
+npm install && ./scripts/sw.sh
 ----
 
 .Generate SRI
