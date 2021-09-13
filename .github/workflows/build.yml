@@ -43,10 +43,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ secrets.NODE_VERSION}}
+      - run: npm install 
 
 
       - name: Run Hugo
-        run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog && ls -a && npm install && cd scripts/ && ./sw.sh
+        run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog && ls -a && cd scripts/ && ./sw.sh
       
       - name: Upload Hugo Algolia Index
         uses: aoudiamoncef/hugo-algolia-uploader@main
