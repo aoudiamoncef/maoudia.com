@@ -41,13 +41,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ secrets.NODE_VERSION}}
+      - run: npm install    
       - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
       - name: Run Hugo
         run: |
           hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
-          npm run install
-          npm run build
+          npm install
           npm run build
           mkdir -p public
           cp dist/service-worker.js public/sw.js
