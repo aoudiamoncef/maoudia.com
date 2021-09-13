@@ -36,25 +36,19 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
          ruby-version: ${{ secrets.RUBY_VERSION}} 
+      - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ secrets.NODE_VERSION}}
-      - run: npm install    
-      - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
+      - run: npm install
 
       - name: Run Hugo
         run: |
           hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
-          npm install
-          npm run build
-          mkdir -p public
-          cp dist/service-worker.js public/sw.js
-          cp dist/service-worker.js static/sw.js
           cd scripts/
           ./sw.sh
-
       
       - name: Upload Hugo Algolia Index
         uses: aoudiamoncef/hugo-algolia-uploader@main

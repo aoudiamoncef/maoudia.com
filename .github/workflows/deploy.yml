@@ -35,15 +35,18 @@ jobs:
          ruby-version: ${{ secrets.RUBY_VERSION}} 
       - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
-      - name: Run Hugo
-        run: hugo --minify
-
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ secrets.NODE_VERSION}}
       - run: npm install
-      - run: cd scripts/ && ./sw.sh
+
+      - name: Run Hugo
+        run: |
+          hugo --minify
+          cd scripts/
+          ./sw.sh
+
 
       - name: Upload Hugo Algolia Index
         uses: aoudiamoncef/hugo-algolia-uploader@main
