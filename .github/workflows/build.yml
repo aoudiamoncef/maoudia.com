@@ -39,13 +39,13 @@ jobs:
       - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
       - name: Run Hugo
-        run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
+        run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog && pwd && ls -a
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ secrets.NODE_VERSION}}
-      - run: npm install
+      - run: cd .. && npm install
       - run: cd scripts/ && ./sw.sh
       
       - name: Upload Hugo Algolia Index
