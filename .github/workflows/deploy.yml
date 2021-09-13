@@ -9,6 +9,8 @@ jobs:
   deploy:
     environment: production
     runs-on: ubuntu-20.04
+    env:
+      NODE_ENV: ${{ secrets.NODE_ENV}} 
     steps:
       - uses: actions/checkout@v2
         with:
@@ -36,15 +38,12 @@ jobs:
       - name: Run Hugo
         run: hugo --minify
 
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ secrets.NODE_VERSION}}
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: ${{ secrets.NODE_VERSION}}
-        env:
-           NODE_ENV: ${{ secrets.NODE_ENV}} 
       - run: npm install
-      - run: ./scripts/sw.sh
+      - run: cd scripts/ && ./sw.sh
 
       - name: Upload Hugo Algolia Index
         uses: aoudiamoncef/hugo-algolia-uploader@main

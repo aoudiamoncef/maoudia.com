@@ -13,4 +13,4 @@ gem install asciidoctor asciidoctor-html5s
 
 hugo -b ${SITE_URL:-$DEFAULT_URL} --minify
 
-npm run build && ./sw.sh
+./sw.sh
