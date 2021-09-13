@@ -11,7 +11,7 @@ echo "Current baseUrl: ${SITE_URL:-$DEFAULT_URL}"
 
 cd ..
 
-gem install asciidoctor asciidoctor-html5s
+gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
 hugo -b ${SITE_URL:-$DEFAULT_URL} --minify
 
