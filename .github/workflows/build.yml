@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     environment: staging
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -34,7 +34,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
          ruby-version: ${{ secrets.RUBY_VERSION}} 
-         bundler-cache: true
+      - run: gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
       - name: Run Hugo
         run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
