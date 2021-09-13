@@ -12,18 +12,13 @@ on:
 
 jobs:
   asciidoc-link-check:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: 
-          - 16.x
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ secrets.NODE_VERSION}}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ secrets.NODE_VERSION}}
     - run: npm install -g asciidoc-link-check
     - run: find . -name \*.adoc -exec asciidoc-link-check -c .github/workflows/config/config.json --progress {} \;

@@ -32,15 +32,27 @@ jobs:
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-      - run: gem install asciidoctor asciidoctor-html5s
+        with:
+         ruby-version: ${{ secrets.RUBY_VERSION}} 
+         bundler-cache: true
 
       - name: Run Hugo
         run: hugo --minify --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
 
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ secrets.NODE_VERSION}}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ secrets.NODE_VERSION}}
+        env:
+           NODE_ENV: ${{ secrets.NODE_ENV}} 
+      - run: npm install
+      - run: ./scripts/sw.sh
+      
       - name: Upload Hugo Algolia Index
         uses: aoudiamoncef/hugo-algolia-uploader@main
         with:
           app_id: ${{ secrets.ALGOLIA_APP_ID }}
           admin_key: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
           index_name: ${{ secrets.ALGOLIA_INDEX_NAME }}
-          index_languages: en
+          index_languages: en,fr
