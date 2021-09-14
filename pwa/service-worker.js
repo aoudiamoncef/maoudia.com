@@ -34,18 +34,18 @@ self.addEventListener("activate", (event) => {
 
 clientsClaim();
 
-googleAnalytics.initialize({
-  parameterOverrides: {
-    cd1: "offline",
-  },
-});
-
 setCacheNameDetails({
   prefix: "maoudia",
   suffix: `v${VERSION}`,
   precache: "precache",
   runtime: "runtime",
   googleAnalytics: "ga",
+});
+
+googleAnalytics.initialize({
+  parameterOverrides: {
+    cd1: "offline",
+  },
 });
 
 precacheAndRoute(self.__WB_MANIFEST);
@@ -140,6 +140,20 @@ registerRoute(
 );
 
 registerRoute(
+  ({ request }) =>
+    request.url.startsWith(
+      "https://github-readme-streak-stats.herokuapp.com"
+    ) || request.url.startsWith("https://github-readme-stats.vercel.app"),
+  new StaleWhileRevalidate({
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
+
+registerRoute(
   "https://utteranc.es/client.js",
   new StaleWhileRevalidate({
     plugins: [
@@ -151,10 +165,7 @@ registerRoute(
 );
 
 registerRoute(
-  ({ request }) =>
-    request.url.startsWith(
-      "https://github-readme-streak-stats.herokuapp.com"
-    ) || request.url.startsWith("https://github-readme-stats.vercel.app"),
+  "https://webmention.io",
   new StaleWhileRevalidate({
     plugins: [
       new CacheableResponsePlugin({

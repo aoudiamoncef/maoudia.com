@@ -13,6 +13,8 @@ cd ..
 
 gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
+git submodule update --init --recursive --remote
+
 hugo -b ${SITE_URL:-$DEFAULT_URL} --minify
 
 cd scripts && ./sw.sh

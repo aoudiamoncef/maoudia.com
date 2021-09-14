@@ -193,10 +193,6 @@ td, th {
     color: #40603e;
 }
 
-.bilberry-hugo-theme article .badge img {
-    display: inline-table;
-}
-
 .bilberry-hugo-theme header .logo img {
     max-width: 100%;
     border-radius: 50%;
@@ -220,4 +216,22 @@ td, th {
     font-size: 12pt;
     line-height: normal;
     height: auto;
+}
+
+.bilberry-hugo-theme article .content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.badge .image {
+    display: inline-table;
+}
+
+.bilberry-hugo-theme article .featured-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }

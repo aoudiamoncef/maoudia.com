@@ -53,6 +53,7 @@ slug = "about"
 :fastlane: image:{badges}/fastlane.5db528b1784d5cb76f41d5d5ec1afaf1089e98ce0d6f51f0f9d96ca237db2375.svg[fastlane]
 :filezilla: image:{badges}/filezilla.62c03f7a2e8975c24869dd63bb8df16589bb5f4a04a375680b65ab20b0198261.svg[filezilla]
 :focustodo: image:{badges}/focustodo.88ea0463442c8ab438435a1cf0fa6f9ad0c7c24b410a296b400feeab0fb50c7d.svg[focustodo]
+:joplin: image:{badges}/joplin.ce8641cc90de03c4246eb6cf696fcf2bdc78d8eb8349691f37f32053403b18d2.svg[joplin]
 :gatling: image:{badges}/gatling.642508f58d9a9c05a8c2a6019ad9340b4b36adeb371425c0e73c69d45ea00530.svg[gatling]
 :gatsby: image:{badges}/gatsby.12436a269c4691f706ccb4e6a9124b84fbb93bd1f9fef88276d1c85d300e0f15.svg[gatsby]
 :git: image:{badges}/git.6008a1bc0d7db7490ba06a7874f218d753c7566dd84b654e56a4b59045d8ff63.svg[git] 
@@ -270,6 +271,7 @@ Technologies I have used at work and/or side projects.
 {fastlane}
 {filezilla}
 {focustodo}
+{joplin}
 {gatling}
 {git}
 {gitkraken}
@@ -369,13 +371,11 @@ Technologies I have used at work and/or side projects.
 
 == My projects 👨‍💻
 
-[.badge]
 image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[Apollo client maven plugin project, 400, 140, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
 image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[maoudia.com project, 400, 120, link = "https://github.com/aoudiamoncef/maoudia.com"]
 
 == Github stats 📊 
 
-[.badge]
 image:https://github-readme-stats.vercel.app/api?username=aoudiamoncef&show_icons=true&theme=flag-india&hide_title=true&count_private=true&locale=en[Github stats visualization, 495, 165]
 image:https://github-readme-streak-stats.herokuapp.com/?user=aoudiamoncef[Github streak stats visualization, 495, 195]
 

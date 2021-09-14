@@ -5,6 +5,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: 'development',
   entry: "./pwa/service-worker.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -58,6 +59,7 @@ module.exports = {
     }),
 
     new InjectManifest({
+      mode: 'development',
       swSrc: "./pwa/service-worker.js",
       swDest: "./service-worker.js",
       exclude: ["service-worker.bundle.js", "sw.js", "amp/**"],

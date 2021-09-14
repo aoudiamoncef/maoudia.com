@@ -61,11 +61,6 @@
         {
             "src": "/images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png",
             "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "/images/favicons/maskable-icon-568x568.d1757e72db20af8710f7c31e33e626ad395815bcaf21e7d6037e82d8b5b61f19.png",
-            "sizes": "568x568",
             "type": "image/png",
             "purpose": "maskable"
         }

@@ -4,21 +4,21 @@
     "description": "maoudia.com-pwa",
     "private": true,
     "scripts": {
-        "build": "webpack --config webpack.config.js"
+        "build": "webpack --config webpack.config.js",
+        "dev": "webpack --config webpack.config.js --mode development",
+        "prod": "webpack --config webpack.config.js --mode production"
     },
     "keywords": [
         "PWA",
         "SW"
     ],
-    "author": "Moncef AODUIA",
+    "author": "Moncef AOUDIA",
     "license": "MIT",
-    "dependencies": {
+    "devDependencies": {
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^9.0.1",
-        "webpack-cli": "^4.8.0",
         "webpack": "^5.52.0",
-        "workbox-webpack-plugin": "^6.3.0",
-        "workbox-window": "^6.2.4"
-    },
-    "devDependencies": {}
+        "webpack-cli": "^4.8.0",
+        "workbox-webpack-plugin": "^6.3.0"
+    }
 }
