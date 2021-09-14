@@ -79,7 +79,7 @@ Memory: '32Go'
 === Apps and Productivity 📊 
 [.badge]
 * link:https://altair.sirmuel.design/[Altair] - GraphQL GUI client {oss}
-* link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc® into a document model and converting it to many output formats {oss}
+* link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc into a document model and converting it to many output formats {oss}
 * link:https://brave.com/[Brave] - Privacy-focused web browser based on Chromium {oss}
 * link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Linux terminal emulator {oss}
 * link:https://github.com/jgraph/drawio-desktop/releases/[Diagrams.net] - Flowchart maker, diagram Software {oss}

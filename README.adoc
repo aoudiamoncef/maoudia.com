@@ -54,6 +54,10 @@ npm install && ./scripts/sw.sh
 ----
 openssl dgst -sha384 -binary path/to/your/file | openssl base64 -A
 ----
+[WARNING]
+----
+Please use Unix just uses `LF` line breaks on targeted file.
+----
 
 == Deployment
 

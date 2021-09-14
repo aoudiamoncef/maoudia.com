@@ -125,10 +125,10 @@
     <link rel="stylesheet preload" as="style" href="{{ "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?d824df7eb2e268626a2dd9a6a741ac4e" | absURL }}" crossorigin="anonymous">
   
 
-    <link rel="preload" as="style" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-BZ81XvY+F5rcjwwquQEakncF0Cv+H3/Zq+DzTm1erBOX2MKX0xwvUM6ELQwlQU3T" crossorigin="anonymous">
-    <link rel="preload" as="script" href="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-Bjm0/9XxZNv/l0A+zOoxBEoTlHVgJ3idDGMxevgpPHpZ0MLd7XUgDPj7vIRtvKQQ" crossorigin="anonymous">
+    <link rel="preload" as="style" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-SGMNbxDWBwGbPHEK9PIhPReO67gSmfRaAPLJ4a7JuXnIeKCh15mfR7PENxbakJv8" crossorigin="anonymous">
+    <link rel="preload" as="script" href="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-3Y+wS2zj+gx1SJwz2je56ZD3HI8Loy7ERomDRsn3JfW5NAI//C/shVWEhYGyhf2b" crossorigin="anonymous">
         
-    <link rel="stylesheet" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-BZ81XvY+F5rcjwwquQEakncF0Cv+H3/Zq+DzTm1erBOX2MKX0xwvUM6ELQwlQU3T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-SGMNbxDWBwGbPHEK9PIhPReO67gSmfRaAPLJ4a7JuXnIeKCh15mfR7PENxbakJv8" crossorigin="anonymous">
     
     {{ if .Site.Params.enableTwitterCard | default true }}
          {{ partial "twitter-card.html" . }}
@@ -164,7 +164,7 @@
     {{ partial "mathjax.html" . }}
     {{ end }}
 
-    <script type="text/javascript" src="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-Bjm0/9XxZNv/l0A+zOoxBEoTlHVgJ3idDGMxevgpPHpZ0MLd7XUgDPj7vIRtvKQQ" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-3Y+wS2zj+gx1SJwz2je56ZD3HI8Loy7ERomDRsn3JfW5NAI//C/shVWEhYGyhf2b" crossorigin="anonymous" defer></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}

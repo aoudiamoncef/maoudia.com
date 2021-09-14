@@ -17,4 +17,4 @@ git submodule update --init --recursive --remote
 
 hugo -b ${SITE_URL:-$DEFAULT_URL} --minify
 
-cd scripts && ./sw.sh
+cd scripts ./sw.sh
