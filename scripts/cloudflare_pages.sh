@@ -13,8 +13,11 @@ cd ..
 
 gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
+echo "Updating to latest theme submodule"
 git submodule update --init --recursive --remote
 
+echo "Building Hugo website"
 hugo -b ${SITE_URL:-$DEFAULT_URL} --minify
 
-cd scripts ./sw.sh
+echo "Building service worker"
+cd scripts && ./sw.sh
