@@ -1,0 +1,125 @@
++++
+title = "Uses"
+date = 2021-05-19T08:30:00+01:00
+excludeFromTopNav = false
+showPublishDate = false
+showLastModificationDate = false
+showReadingTime = false
+slug = "uses"
++++
+
+:oss: image:/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[open source badge, 50, 20]
+
+
+Here are the software and hardware I use.
+
+<!--more-->
+
+== Hardware
+
+=== Computers 💻
+
+.Dell XPS 9570 
+[source, yaml]
+----
+OS: 'Ubuntu 20.04.2 LTS x86_64'
+Host: 'XPS 15 9570' 
+Kernel: '5.4.0-74-lowlatency'
+Shell: 'zsh 5.8' 
+Resolution: '1920x1080' 
+DE: 'Plasma' 
+WM: 'KWin' 
+WM Theme: 'WhiteSur' 
+Theme: 'WhiteSur [Plasma], Breeze [GTK2/3]' 
+Icons: 'WhiteSur [Plasma], WhiteSur [GTK2/3]' 
+Terminal: 'deepin-terminal' 
+Terminal Font: 'Hack 11' 
+CPU: 'Intel i7-8750H (12) @ 4.100GHz' 
+GPU: 'Intel UHD Graphics 630' 
+GPU: 'NVIDIA GeForce GTX 1050 Ti Mobile' 
+Memory: '16Go'  
+----
+
+.Dell Latitude 7400
+[source, yaml]
+----
+OS: 'Windows 10 Enterprise 19042.1110'
+Host: 'Latitude 14 7400'
+Resolution: '1920x1080' 
+Terminal: 'PowerShell' 
+CPU: 'Intel i7-8665U CPU @ 1.90GHz-2.11 GHz'
+GPU: 'Intel UHD Graphics 620' 
+Memory: '32Go'
+----
+
+=== Equipment 🧰
+
+* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Monitor 🖥️
+* link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Docking Station 🏷️
+* link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Keyboard ⌨️
+* link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Mouse 🖱️
+* link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Headphone 🎧 🎵
+* link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Headphone 🎧 🎤
+* link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
+* link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Router 🌐
+* link:https://www.oneplus.com/6t[OnePlus 6T] - Smartphone 📱
+* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - EBooks reader 📚
+* link:https://www.xd-design.com/us-us/bobby-hero-small-anti-theft-backpack-navy[Bobby Hero] - Backpack 🎒
+* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chair 🪑
+* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Desk 🏷️
+
+== Software
+
+=== IDEs 🛠️
+
+* link:https://developer.android.com/studio[Android Studio] - Android
+* link:https://www.jetbrains.com/idea/[IntelliJ IDEA] - Java/Kotlin
+* link:https://code.visualstudio.com/[Visual Studio Code] - Everything else
+
+=== Apps and Productivity 📊 
+[.badge]
+* link:https://altair.sirmuel.design/[Altair] - GraphQL GUI client {oss}
+* link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc into a document model and converting it to many output formats {oss}
+* link:https://brave.com/[Brave] - Privacy-focused web browser based on Chromium {oss}
+* link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Linux terminal emulator {oss}
+* link:https://github.com/jgraph/drawio-desktop/releases/[Diagrams.net] - Flowchart maker, diagram Software {oss}
+* link:https://www.docker.com/[Docker] - Platform for building, deploying and managing containerized applications {oss}
+* link:https://filezilla-project.org/[FileZilla] - Cross-platform FTP application(client/server) {oss}
+* link:https://www.focustodo.cn/[FocusToDo] - Time and task management application
+* link:https://joplinapp.org/[Joplin] - Note-taking application {oss}
+* link:https://gitforwindows.org//[Git] - Distributed version control system {oss}
+* link:https://www.gitkraken.com/[GitKraken] - Git GUI and more 
+* link:https://www.heidisql.com/[HeidiSQL] - Administration tool for MySQL and its forks {oss}
+* link:https://gohugo.io/[Hugo] - Static site generator {oss}
+* link:https://nosqlbooster.com/[NoSQLBooster] - Cross-platform GUI tool for MongoDB
+* link:https://mremoteng.org/[mRemoteNG] - Multi-protocol, tabbed remote connections manager {oss}
+* link:https://myki.com/[Myki] - Offline Password Manager and 2FA Authenticator
+* link:https://ohmyz.sh/[Oh My Zsh] - Framework for managing Zsh configuration {oss}
+* link:https://getpocket.com/[Pocket] - Reading list manager
+* link:https://www.getpostman.com/[Postman] - API platform for building and using APIs
+* link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - JetBrains IDEs manager
+* link:https://visualvm.github.io/[VisualVM] - Java troubleshooting tool {oss}
+* link:https://github.com/microsoft/terminal[Windows terminal] - Windows terminal emulator {oss}
+
+=== Services ⛽
+
+[.badge]
+* link:https://www.algolia.com/[Algolia] - Web search Saas
+* link:https://www.apicur.io/[Apicurio] - API design studio {oss}
+* link:https://pages.cloudflare.com/[Cloudflare Pages] - JAMstack platform, global CDN
+* link:https://www.consul.io/[Consul] - Service mesh solution {oss}
+* link:https://domain.com/[Domain.com] - Domain name provider
+* link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, and Logstash
+* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repositories
+* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelinesworkplace
+* link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
+* link:https://konghq.com/kong/[Kong] - API gateway
+* link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking and testing {oss}
+* link:https://www.openrainbow.com/[Rainbow] - Communications Platform as a Service
+* link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {oss}
+* link:https://wakatime.com/[WakaTime] - Code statistics and dashboards
+* link:https://winds.getstream.io/[Winds] - RSS and Podcast application powered by GetStream.io {oss}
+
+
+[NOTE]
+link:https://uses.tech/[Uses.tech] is a project by link:https://wesbos.com/about[Wes Bos] for "detailing developer setups, gear, software and configs". Submit your ``/uses`` to link:https://github.com/wesbos/awesome-uses[Awesome Uses].

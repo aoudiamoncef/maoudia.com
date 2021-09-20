@@ -1,0 +1,62 @@
+<rss version="2.0" 
+xmlns:atom="http://www.w3.org/2005/Atom" 
+xmlns:media="http://search.yahoo.com/mrss/" 
+xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+  <channel>
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+    <image>
+      <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+      <link>{{ .Permalink }}</link>
+      <url>{{ .Site.BaseURL }}images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png</url>
+      <width>512</width>
+      <height>512</height>
+    </image>
+    <image>
+      <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+      <link>{{ .Permalink }}</link>
+      <url>{{ .Site.BaseURL }}images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png</url>
+      <width>700</width>
+      <height>150</height>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
+    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
+    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
+    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
+    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    <webfeeds:accentColor>000A12</webfeeds:accentColor>
+    <webfeeds:cover image="{{ .Site.BaseURL }}images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png"/>
+    <webfeeds:icon>{{ .Site.BaseURL }}images/favicons/favicon.ico</webfeeds:icon>
+    <webfeeds:logo>{{ .Site.BaseURL }}images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png</webfeeds:logo>
+    <webfeeds:related layout="card" target="browser"/>
+    {{ if .Site.GoogleAnalytics }}
+    <webfeeds:analytics id="{{.Site.GoogleAnalytics}}" engine="GoogleAnalytics"/>
+    {{ end }}
+    {{ range where (where .Site.RegularPages "Type" "!=" "page") "Params.exclude" "!=" true }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{ with .Site.Author.email }}<author><{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      <guid isPermaLink="true">{{ .Permalink }}></guid>
+      {{ with .Summary }}
+      <description>{{ . | plainify | chomp }}</description>
+      {{ end }}
+      <media:thumbnail url="{{ .Scratch.Get "image" | absURL }}"/>
+      <media:content url="{{ .Scratch.Get "image" | absURL }}"/>
+      {{ if ne .Params.categories nil }}
+      <categories>
+        {{ range .Params.categories }}
+        <category>{{.}}</category>
+        {{ end }}
+      </categories>
+      {{ end }}
+    </item>
+    {{ end }}
+  </channel>
+</rss>

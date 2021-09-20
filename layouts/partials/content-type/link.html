@@ -2,8 +2,9 @@
     {{ with .ctx.Params.featuredImage }}
         <img src="{{ . }}" class="featured-image" alt="">
     {{ end }}
-    <a href="{{ .ctx.Params.link }}" target="_blank">
+    <a href="{{ .ctx.Params.link }}" {{ with .ctx.Params.blank }} target="_blank" {{ end }} alt="{{ .ctx.Params.title }}">
         <h4>{{ .ctx.Title }}</h4>
         {{ .ctx.Content }}
     </a>
+
 </article>

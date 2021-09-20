@@ -1,0 +1,125 @@
++++
+title = "Usages"
+date = 2021-05-19T08:30:00+01:00
+excludeFromTopNav = false
+showPublishDate = false
+showLastModificationDate = false
+showReadingTime = false
+slug = "uses"
++++
+
+:oss: image:/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[open source badge, 50, 20]
+
+
+Voici les logiciels et le matériel que j'utilise.
+
+<!--more-->
+
+== Matériel
+
+=== Ordinateurs 💻
+
+.Dell XPS 9570 
+[source]
+----
+Système d'exploitation: Ubuntu 20.04.2 LTS x86_64
+Hôte: XPS 15 9570
+Noyau: 5.4.0-74-lowlatency
+Shell: zsh 5.8
+Résolution: 1920x1080
+Environnement de bureau: Plasma
+Gestionnaire de fenêtres: KWin
+Thème GF: WhiteSur
+Thème: WhiteSur [Plasma], Breeze [GTK2/3]
+Icônes: WhiteSur [Plasma], WhiteSur [GTK2/3]
+Terminal: deepin-terminal
+Police du terminal: Hack 11
+Processeur: Intel i7-8750H (12) à 4.100 GHz
+Processeur graphique: Intel UHD Graphics 630
+Processeur graphique: NVIDIA GeForce GTX 1050 Ti Mobile
+Mémoire vive: 16Go
+----
+
+.Dell Latitude 7400
+[source]
+----
+Système d'exploitation: Windows 10 Enterprise 19042.1110
+Hôte: Latitude 14 7400
+Résolution: 1920x1080 
+Terminal: PowerShell 
+Processeur: Intel i7-8665U CPU @ 1.90GHz-2.11 GHz
+Processeur graphique: Intel UHD Graphics 620 
+Mémoire vive: 32Go
+----
+
+=== Équipements 🧰
+
+* link:https://www.samsung.com/au/monitors/high-resolution/uhd-monitor-with-1-billion-colors-32-inch-lu32j590uqexxy[Samsung U32J592UQU] - Écran 🖥️
+* link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Support d'écouteurs 🏷️
+* link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Station d'accueil 🏷️
+* link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Clavier ⌨️
+* link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Souris 🖱️
+* link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Casque 🎧 🎵
+* link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Casque 🎧 🎤
+* link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Routeur 🌐
+* link:https://www.oneplus.com/6t[OnePlus 6T] - Smartphone 📱
+* link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse de livres électroniques 📚
+* link:https://www.xd-design.com/fr-fr/bobby-hero-small-anti-theft-backpack-navy[Bobby Hero] - Sac à dos 🎒
+* link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chaise 🪑
+* link:https://www.amazon.com/DlandHome-Sit-Stand-Height-Adjustable-Standing-Workstation/dp/B07XRG56T3/ref=sr_1_7?dchild=1&m=A353Z9398OTBJJ&qid=1629235558&s=merchant-items&sr=1-7[DlandHome Sit-Stand Desk] - Bureau 🏷️
+
+== Logiciels
+
+=== IDEs 🛠️
+
+* link:https://developer.android.com/studio[Android Studio] - Android
+* link:https://www.jetbrains.com/idea/[IntelliJ IDEA] - Java/Kotlin
+* link:https://code.visualstudio.com/[Visual Studio Code] - Tout le reste
+
+=== Applications et productivité 📊 
+[.badge]
+* link:https://altair.sirmuel.design/[Altair] - Interface graphique(client) GraphQL {oss}
+* link:https://asciidoctor.org/[Asciidoctor] - Processeur de texte permettant d'analyser AsciiDoc en un modèle de document et de le convertir en de nombreux formats de sortie {oss}
+* link:https://brave.com/[Brave] - Navigateur web axé sur la confidentialité et basé sur Chromium {oss}
+* link:https://calibre-ebook.com//[Calibre] - Gestionnaire  de livres électroniques {oss}
+* link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Émulateur de terminal Linux {oss}
+* link:https://github.com/jgraph/drawio-desktop/releases/[Diagrams.net] - Logiciel de création d'organigrammes et diagrammes {oss}
+* link:https://www.docker.com/[Docker] - Plate-forme pour la création, le déploiement et la gestion d'applications conteneurisées {oss}
+* link:https://filezilla-project.org/[FileZilla] - Application FTP multiplateforme (client/serveur) {oss}
+* link:https://www.focustodo.cn/[FocusToDo] - Application de gestion du temps et des tâches
+* link:https://joplinapp.org/[Joplin] - Application de prise de notes {oss}
+* link:https://gitforwindows.org//[Git] - Logiciel de gestion de versions décentralisé {oss}
+* link:https://www.gitkraken.com/[GitKraken] - Interface graphique Git et plus
+* link:https://www.heidisql.com/[HeidiSQL] - Outil d'administration pour MySQL et ses forks {oss}
+* link:https://gohugo.io/[Hugo] - Générateur de sites statiques {oss}
+* link:https://nosqlbooster.com/[NoSQLBooster] - Interface graphique multiplateforme pour MongoDB
+* link:https://mremoteng.org/[mRemoteNG] - Gestionnaire de connexions distantes, multi-protocoles à onglets {oss}
+* link:https://myki.com/[Myki] - Gestionnaire de mots de passe hors ligne et d'authentificateur 2FA
+* link:https://ohmyz.sh/[Oh My Zsh] - Framework pour la configuration de Zsh {oss}
+* link:https://getpocket.com/[Pocket] - Gestionnaire de listes de lecture
+* link:https://www.getpostman.com/[Postman] - Plateforme pour la création et l'utilisation d'API
+* link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - Gestionnaire d'IDEs JetBrains
+* link:https://visualvm.github.io/[VisualVM] - Outil de dépannage Java {oss}
+* link:https://github.com/microsoft/terminal[Windows terminal] - Emulateur de terminal Windows {oss}
+
+=== Services ⛽
+
+[.badge]
+* link:https://www.algolia.com/[Algolia] - Plate-forme de recherche web
+* link:https://www.apicur.io/[Apicurio] - Studio de conception d'API {oss}
+* link:https://pages.cloudflare.com/[Cloudflare Pages] - Plate-forme JAMstack, CDN global
+* link:https://www.consul.io/[Consul] - Solution de maillage de services {oss}
+* link:https://domain.com/[Domain.com] - Fournisseur de noms de domaine
+* link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, et Logstash
+* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Dépôts de code source 
+* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - Pipelines CI/CD
+* link:https://www.atlassian.com/software/jira[Jira] - Logiciel de suivi d'incidents et de projets
+* link:https://konghq.com/kong/[Kong] - Passerelle d'API
+* link:https://microcks.io/[Microcks] - Outil natif de Kubernetes pour les tests et les simulations(Mocks) d'API {oss}
+* link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
+* link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {oss}
+* link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
+* link:https://winds.getstream.io/[Winds] - Application RSS et Podcast propulsée par GetStream.io {oss}
+
+[NOTE]
+link:https://uses.tech/[Uses.tech] est un projet de link:https://wesbos.com/about[Wes Bos] pour "détailler les installations, le matériel, les logiciels et les configurations des développeurs". Soumettez votre ``/uses`` à link:https://github.com/wesbos/awesome-uses[Awesome Uses].

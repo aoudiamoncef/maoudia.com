@@ -1,6 +1,4 @@
 
-code { color: #305b04; }
-
 span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 .admonitionblock>table td.icon{font-size: 2.5em;text-align:center;width:80px;}
 .admonitionblock>table td.icon img{max-width:none}
@@ -30,5 +28,3 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 
 .sidebarblock { background: none; border: none; -webkit-box-shadow: 0 0 5px rgba(118, 137, 4, 0.5); box-shadow: 0 0 5px rgba(118, 137, 4, 0.5); }
 .sidebarblock > .content > .title { color: #181818; }
-
-

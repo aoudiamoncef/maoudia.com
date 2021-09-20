@@ -1,33 +1,62 @@
 ++++
 <h1 align="center">
-    <img src="static/images/favicons/android-chrome-384x384.png" width="100"> </br>
+    <img src="static/images/favicons/android-chrome-384x384.8b4d4c18f540207ccc4a1521b3985d8c461322f0936d43bdb4ded6bbc61338d7.png" width="100"> </br>
     Moncef AOUDIA's website
 </h1>
 ++++
 
 This repo contains the source code of the https://www.maoudia.com[maoudia.com] website. It is
-built using https://gohugo.io/[Hugo], https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] and https://pages.github.com/[GitHub Pages].
+built using https://gohugo.io/[Hugo] + https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] + https://pages.github.com/[GitHub Pages].
 
 == Requirements
-* https://gohugo.io/getting-started/installing/[Hugo] (0.85.x)
-* https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
-* https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
+1. https://gohugo.io/getting-started/installing/[Hugo] (0.88.x)
+2. https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
+3. https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
 
 [source,shell]
 ----
-gem install asciidoctor asciidoctor-html5s
+gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 ----
 
-NOTE: To manually upload `ìndex.json` content to https://www.algolia.com/[Algolia] search index, see Billeberry https://github.com/aoudiamoncef/bilberry-hugo-theme#Algolia-Search[Algolia-Search].
+NOTE: To manually upload `index.json` content to https://www.algolia.com/[Algolia] search index, see Billeberry https://github.com/aoudiamoncef/bilberry-hugo-theme#Algolia-Search[Algolia-Search].
 
 
 == Editing
 
+[source,shell]
+----
+git clone https://github.com/aoudiamoncef/maoudia.com.git
+git submodule update --init --recursive
+----
+
+.Update submodules from remote
+[source,shell]
+----
+git submodule update --recursive --remote
+----
+
 Launch a local Hugo server including live reload:
 
+.Development
 [source,shell]
 ----
 hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
+----
+
+.Build PWA service worker
+[source,shell]
+----
+npm install && ./scripts/sw.sh
+----
+
+.Generate SRI
+[source,shell]
+----
+openssl dgst -sha384 -binary path/to/your/file | openssl base64 -A
+----
+[WARNING]
+----
+Please use Unix just uses `LF` line breaks on targeted file.
 ----
 
 == Deployment

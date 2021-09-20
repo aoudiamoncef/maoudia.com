@@ -51,7 +51,7 @@ other = "Par"
 other = "acceuil"
 
 [pageNotFound]
-other = "Page introuvable"
+other = "Page introuvable ❌"
 
 [issue]
 other = "ticket"
@@ -66,7 +66,13 @@ other = "Pensez à ouvrir un"
 other = "pour résoudre le problème"
 
 [shortDescription]
-other = "Développeur, passionné d'open-source"
+other = "Développeur logiciel - Passionné d'open-source"
 
-[creditsText]
-other = "Code source"
+[reroute]
+other = "Redirection..."
+
+[offline]
+other = "Mode hors ligne ❌"
+
+[offlineMessage]
+other = "Oops, veuillez attendre le retour de votre connexion internet"

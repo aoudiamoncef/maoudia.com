@@ -54,13 +54,13 @@ other = "By"
 other = "homepage"
 
 [pageNotFound]
-other = "Page Not Found"
+other = "Page Not Found ❌"
 
 [issue]
 other = "issue"
 
 [errorMessagePart1]
-other = "Please return to the"
+other = "Please return to the "
 
 [errorMessagePart2]
 other = "Consider opening a"
@@ -69,7 +69,13 @@ other = "Consider opening a"
 other = "to fix the problem"
 
 [shortDescription]
-other = "Software developer, opensource enthusiast"
+other = "Software developer - Open source enthusiast"
 
-[creditsText]
-other = "Source code"
+[reroute]
+other = "Rerouting..."
+
+[offline]
+other = "Offline mode ❌"
+
+[offlineMessage]
+other = "Oops, please wait until your internet connection is back"

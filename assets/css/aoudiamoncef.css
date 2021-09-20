@@ -189,6 +189,49 @@ td, th {
     content: "";
 }
 
-bilberry-hugo-theme footer .container .right .languages span {
+.bilberry-hugo-theme footer .container .right .languages span {
     color: #40603e;
+}
+
+.bilberry-hugo-theme header .logo img {
+    max-width: 100%;
+    border-radius: 50%;
+    height: auto;
+}
+
+.bilberry-hugo-theme pre code {
+    background-color: #000a12;
+}
+
+.bilberry-hugo-theme pre .copy-button {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #f1f1f1;
+    padding-top: 0.5em;
+    padding-right: 0.7em;
+    padding-bottom: 0.5em;
+    padding-left: 0.7em;
+    font-size: 12pt;
+    line-height: normal;
+    height: auto;
+}
+
+.bilberry-hugo-theme article .content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.badge .image {
+    display: inline-table;
+}
+
+.bilberry-hugo-theme article .featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }

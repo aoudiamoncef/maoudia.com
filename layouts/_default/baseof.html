@@ -91,12 +91,19 @@
     {{ end }}
 
     {{ partial "favicon.html" . }}
-
-    <script src="{{ "modernizr-simple.js" | relURL }}"></script>
+    
+    <link rel="preload" as="script" href="{{ "/js/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | absURL }}">
+    
+    <script src="{{ "/js/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | relURL }}"></script>
 
     {{ if .RelPermalink }}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ if eq .Site.Language.Lang "en" }}
+    <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .Site.BaseURL }}blog/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }} Blog" />
+    {{ else }}
+    <link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/blog/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }} Blog" />
+    {{ end }}
     {{ end }}
 
     {{ with .Params.original_url }}
@@ -105,15 +112,31 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
-    <link rel="stylesheet" rel="preload" href="{{ "theme.css" | absURL }}">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-700.woff2?2efeb8cab5dd5cfbeb1b234ff52e92e6" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/comfortaa-v28-greek_latin-ext_vietnamese_cyrillic-ext-regular.woff2?8d1f49af5684c0ea50272b9c4bdce0dc" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/fira-code-v8-latin-ext_cyrillic-ext_greek-ext-700.woff2?f93d7fe2ea295d075238ac5a05e69280" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/fira-code-v8-latin-ext_cyrillic-ext_greek-ext-regular.woff2?65669d5fde094d1d8536436e8f895a27" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-700.woff2?17c283b4e785e073ec09dc72acebafac" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-700italic.woff2?b12383177da0a97afd44a9706a776ce1" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-italic.woff2?eaa7773c89001e5b4bca5092c248df2d" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/open-sans-v17-latin-ext_vietnamese_cyrillic-ext_greek-ext-regular.woff2?a9557eb451f17dcd8e687327ea9383a0" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?ed311c7a0ade9a75bb3ebf5a7670f31d" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?b91d376b8d7646d671cd820950d5f7f1" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet preload" as="style" href="{{ "/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?d824df7eb2e268626a2dd9a6a741ac4e" | absURL }}" crossorigin="anonymous">
+  
 
+    <link rel="preload" as="style" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-SGMNbxDWBwGbPHEK9PIhPReO67gSmfRaAPLJ4a7JuXnIeKCh15mfR7PENxbakJv8" crossorigin="anonymous">
+    <link rel="preload" as="script" href="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-3Y+wS2zj+gx1SJwz2je56ZD3HI8Loy7ERomDRsn3JfW5NAI//C/shVWEhYGyhf2b" crossorigin="anonymous">
+        
+    <link rel="stylesheet" href="{{ "/css/theme.d42b386db969324ac5906671f66cb63aea7b2587a1ca01915e68c2627dd7228d.css" | absURL }}" integrity="sha384-SGMNbxDWBwGbPHEK9PIhPReO67gSmfRaAPLJ4a7JuXnIeKCh15mfR7PENxbakJv8" crossorigin="anonymous">
+    
     {{ if .Site.Params.enableTwitterCard | default true }}
          {{ partial "twitter-card.html" . }}
     {{ end }}
 
     {{ if .Site.Params.concatCssAssets | default true }}
-        {{ $CSS := resources.Match "css/**.css" | resources.Concat "css/main.css" | resources.Minify }}
-        <link rel="stylesheet"  href="{{ $CSS.Permalink  | absURL }}">
+        {{ $css := resources.Match "css/**.css" | resources.Concat "css/main.css" | resources.Minify | resources.Fingerprint "sha384" }}
+        <link rel="stylesheet" href="{{ $css.Permalink  | absURL }}" integrity="{{ $css.Data.Integrity }}">
     {{ end }} 
 
     {{ if isset .Site.Params "css_modules" }}
@@ -141,8 +164,7 @@
     {{ partial "mathjax.html" . }}
     {{ end }}
 
-
-    <script type="text/javascript" src="{{ "theme.js" | absURL }}"></script>
+    <script type="text/javascript" src="{{ "/js/theme.d4afc85f2a24da7d0bb49681842c3c5c1d5b68c40aca7b0f03097738e4576591.js" | absURL }}" integrity="sha384-3Y+wS2zj+gx1SJwz2je56ZD3HI8Loy7ERomDRsn3JfW5NAI//C/shVWEhYGyhf2b" crossorigin="anonymous" defer></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}
@@ -154,16 +176,7 @@
     {{ partial "algolia-search.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.backToTop | default true }}
-        <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-        <script>addBackToTop({
-            diameter: 32,
-            backgroundColor: 'rgb(45, 54, 66)',
-            textColor: '#fff'
-        })
-        </script>
-    {{ end }}
-
+    {{ partial "backtotop.html" . }}
 </body>
 
 </html>

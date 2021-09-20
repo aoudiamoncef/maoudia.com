@@ -6,10 +6,10 @@
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
             <ul>
-                {{ $dontRender :=  (slice "page" "quote" "link" "status") }}
+                {{ $dontRender :=  (slice "page" "quote" "link" "status" "offline") }}
                 {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
                     <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        <a href="{{ .Permalink }}" alt="{{ .Title }}">{{ .Title }}</a>
                     </li>
                 {{ end }}
             </ul>
@@ -18,11 +18,11 @@
 
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
-            <a href="{{ "/categories/" | relLangURL }}"><strong>{{ i18n "categories" }}</strong></a>
+            <a href="{{ "/categories/" | relLangURL }}" alt="{{ i18n "categories" }}"><strong>{{ i18n "categories" }}</strong></a>
             <ul>
                 {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
                 <li>
-                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }}
+                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}" alt="{{ $taxonomy.Name | humanize }}">{{ $taxonomy.Name | humanize }}
                         ({{ $taxonomy.Count }})</a>
                 </li>
                 {{ end }}
@@ -48,9 +48,13 @@
             {{ if .Site.Params.showFindMeOn | default true }}
             <div class="external-profiles">
                 <strong>{{ i18n "findMeOn" }}</strong>
-
                 {{ range .Site.Params.socialMediaLinks }}
                 <a href="{{ .link }}" title="{{ .title }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a>
+                {{ end }}
+                {{ if eq .Site.Language.Lang "en" }}
+                <a href="/index.xml" title="{{ .Site.Params.author }} RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
+                {{ else }}
+                <a href="/{{ .Site.Language.Lang }}/index.xml" title="{{ .Site.Params.author }} RSS" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i></a>
                 {{ end }}
             </div>
             {{ end }}
@@ -87,31 +91,22 @@
                 {{ else }}
                 {{ .Site.Params.copyrightYearOverride | default 2021 }}
                 {{ end }}
-                {{ .Site.Params.copyrightBy | default "by Moncef AOUDIA" }}
+                {{ .Site.Params.copyrightBy | default "by {{ .Site.Params.author }}" }}
             </a>
         </div>
+        <div class="sitemap">
+            {{ if eq .Site.Language.Lang "en" }}
+            <a href="{{ .Site.BaseURL }}{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
+            {{ else }}
+            <a href="{{ .Site.BaseURL | relLangURL }}/{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
+            {{ end }}
+        </div>
+        <div class="source">
+            <a href="{{ .Site.Params.sourceCodeUrl | default "https://github.com/aoudiamoncef/maoudia.com" }}" title="source code" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></i></a>
+        </div>
         <div class="author">
-            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/aoudiamoncef/bilberry-hugo-theme" }}"
-                target="_blank" rel="noopener">{{ i18n "creditsText" | default "Bilberry Hugo Theme" }}</a>
+            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
+                target="_blank" rel="noopener">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>
-
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('/sw.js', { scope: '.' })
-            .then(() => {
-                {{/*  console.info('Moncef AOUDIA Service Worker Registered');  */}}
-            }, err => {
-                {{/*  console.error("Moncef AOUDIA Service Worker registration failed: ", err);  */}}
-                throw err;
-            });
-    
-        navigator.serviceWorker
-            .ready
-            .then(() => {
-                {{/*  console.info('Moncef AOUDIA Service Worker Ready');  */}}
-            });
-    }
-  </script>

@@ -1,0 +1,15 @@
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('/sw.js', { updateViaCache: 'none', scope: '/' })
+            .then(() => {
+                console.info('{{ .Site.Params.author }} Service Worker Registered 😎');
+            }, err => console.error("😥 {{ .Site.Params.author }} Service Worker registration failed: ", err));
+
+        navigator.serviceWorker
+            .ready
+            .then(() => {
+                console.info('{{ .Site.Params.author }} Service Worker Ready 🤩');
+            });
+    }
+</script>
