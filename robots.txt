@@ -1,1 +1,3 @@
+Sitemap: https://www.maoudia.com/sitemap.xml
 User-agent: *
+Disallow: /static
