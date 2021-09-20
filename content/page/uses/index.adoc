@@ -62,7 +62,7 @@ Memory: '32Go'
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Headphone 🎧 🎤
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
 * link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Router 🌐
-* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
+* link:https://www.oneplus.com/6t[OnePlus 6T] - Smartphone 📱
 * link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - EBooks reader 📚
 * link:https://www.xd-design.com/us-us/bobby-hero-small-anti-theft-backpack-navy[Bobby Hero] - Backpack 🎒
 * link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chair 🪑
@@ -90,6 +90,7 @@ Memory: '32Go'
 * link:https://gitforwindows.org//[Git] - Distributed version control system {oss}
 * link:https://www.gitkraken.com/[GitKraken] - Git GUI and more 
 * link:https://www.heidisql.com/[HeidiSQL] - Administration tool for MySQL and its forks {oss}
+* link:https://gohugo.io/[Hugo] - Static site generator {oss}
 * link:https://nosqlbooster.com/[NoSQLBooster] - Cross-platform GUI tool for MongoDB
 * link:https://mremoteng.org/[mRemoteNG] - Multi-protocol, tabbed remote connections manager {oss}
 * link:https://myki.com/[Myki] - Offline Password Manager and 2FA Authenticator
@@ -109,8 +110,8 @@ Memory: '32Go'
 * link:https://www.consul.io/[Consul] - Service mesh solution {oss}
 * link:https://domain.com/[Domain.com] - Domain name provider
 * link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, and Logstash
-* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repository
-* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelines
+* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repositories
+* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelinesworkplace
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
 * link:https://konghq.com/kong/[Kong] - API gateway
 * link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking and testing {oss}

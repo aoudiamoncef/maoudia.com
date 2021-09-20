@@ -13,6 +13,7 @@
   color: #555555;
 }
 .highlight .gs {
+  font-weight: bold;
 }
 .highlight .gu {
   color: #aaaaaa;
@@ -21,28 +22,28 @@
   color: #ffffff;
 }
 .highlight .cm {
-  color: #75715e;
+  color: #e6db74;
 }
 .highlight .cp {
-  color: #75715e;
+  color: #e6db74;
 }
 .highlight .c1 {
-  color: #75715e;
+  color: #e6db74;
 }
 .highlight .cs {
-  color: #75715e;
+  color: #e6db74;
 }
 .highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
-  color: #75715e;
+  color: #e6db74;
 }
 .highlight .err {
-  color: #960050;
+  color: #ff6099;
 }
 .highlight .gr {
-  color: #960050;
+  color: #ff6099;
 }
 .highlight .gt {
-  color: #960050;
+  color: #ff6099;
 }
 .highlight .gd {
   color: #49483e;
@@ -54,46 +55,46 @@
   color: #49483e;
 }
 .highlight .kc {
-  color: #66d9ef;
+  color: #2eddff;
 }
 .highlight .kd {
-  color: #66d9ef;
+  color: #2eddff;
 }
 .highlight .kr {
-  color: #66d9ef;
+  color: #2eddff;
 }
 .highlight .no {
-  color: #66d9ef;
+  color: #2eddff;
 }
 .highlight .kt {
-  color: #66d9ef;
+  color: #2eddff;
 }
 .highlight .mf {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .mh {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .il {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .mi {
-  color: #ae81ff;
+  color: #ffffff;
 }
 .highlight .mo {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .m, .highlight .mb, .highlight .mx {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .sc {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .se {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .ss {
-  color: #ae81ff;
+  color: #ff4fda;
 }
 .highlight .sd {
   color: #e6db74;
@@ -123,10 +124,10 @@
   color: #a6e22e;
 }
 .highlight .nc {
-  color: #aa759f;
+  color: #2eddff;
 }
 .highlight .nd {
-  color: #ffffff;
+  color: #e6db74;
 }
 .highlight .ne {
   color: #a6e22e;
@@ -168,20 +169,20 @@
   color: #ffffff;
 }
 .highlight .ow {
-  color: #f92672;
+  color: #ff6099;
 }
 .highlight .nt {
-  color: #f92672;
+  color: #ff6099;
 }
 .highlight .k, .highlight .kv {
-  color: #f92672;
+  color: #ff6099;
 }
 .highlight .kn {
-  color: #f92672;
+  color: #ff6099;
 }
 .highlight .kp {
-  color: #f92672;
+  color: #ff6099;
 }
 .highlight .o {
-  color: #f92672;
+  color: #ff6099;
 }

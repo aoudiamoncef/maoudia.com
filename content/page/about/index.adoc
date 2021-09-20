@@ -160,6 +160,7 @@ slug = "about"
 :windows: image:{badges}/windows.b1458840edb50f1079895f8b076c71ea47ac13a4881805ca60438ab9f5d21beb.svg[windows]
 :windowsterminal: image:{badges}/windowsterminal.0a22b2b83f1c2ee3bfef80dd9d9a76d2dfd3d38fe4abfea868c41bb5ebd4864d.svg[windowsterminal]
 :winds: image:{badges}/winds.d0bf5a7eb6393f037ad84d772eba6daf042c049e2aa14b8659dd3546755ac061.svg[winds]
+:workplace: image:{badges}/workplace.d42f0a41488ee8d512149778b0e2240dca05c64b378e7940f5a5e52bb85bf0d1.svg[workplace]
 :yammer: image:{badges}/yammer.186faa0bb11f5d92b850f650a138f7129d46293a26277571115011bf671165b5.svg[yammer]
 :zulip: image:{badges}/zulip.37b1f575d1478f098543b2907abcd768eb2c956a211268cded407a205866ec6d.svg[zulip]
 
@@ -334,6 +335,7 @@ Technologies I have used at work and/or side projects.
 {mattermost}
 {meet}
 {slack}
+{workplace}
 {yammer}
 {zulip}
 ====

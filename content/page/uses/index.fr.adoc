@@ -62,7 +62,7 @@ Mémoire vive: 32Go
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Casque 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Casque 🎧 🎤
 * link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Routeur 🌐
-* link:https://www.oneplus.com/6t[OnePlus6T] - Smartphone 📱
+* link:https://www.oneplus.com/6t[OnePlus 6T] - Smartphone 📱
 * link:https://www.amazon.com/Amazon-Kindle-Paperwhite-6-Inch-4GB-eReader/dp/B00OQVZDJM[Kindle Paperwhite] - Liseuse de livres électroniques 📚
 * link:https://www.xd-design.com/fr-fr/bobby-hero-small-anti-theft-backpack-navy[Bobby Hero] - Sac à dos 🎒
 * link:https://www.vertagear.com/products/pl6000-gaming-chair?variant=24979802757[Vertagear PL6000] - Chaise 🪑
@@ -91,6 +91,7 @@ Mémoire vive: 32Go
 * link:https://gitforwindows.org//[Git] - Logiciel de gestion de versions décentralisé {oss}
 * link:https://www.gitkraken.com/[GitKraken] - Interface graphique Git et plus
 * link:https://www.heidisql.com/[HeidiSQL] - Outil d'administration pour MySQL et ses forks {oss}
+* link:https://gohugo.io/[Hugo] - Générateur de sites statiques {oss}
 * link:https://nosqlbooster.com/[NoSQLBooster] - Interface graphique multiplateforme pour MongoDB
 * link:https://mremoteng.org/[mRemoteNG] - Gestionnaire de connexions distantes, multi-protocoles à onglets {oss}
 * link:https://myki.com/[Myki] - Gestionnaire de mots de passe hors ligne et d'authentificateur 2FA
@@ -110,7 +111,7 @@ Mémoire vive: 32Go
 * link:https://www.consul.io/[Consul] - Solution de maillage de services {oss}
 * link:https://domain.com/[Domain.com] - Fournisseur de noms de domaine
 * link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, et Logstash
-* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Dépôt de code source 
+* link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Dépôts de code source 
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - Pipelines CI/CD
 * link:https://www.atlassian.com/software/jira[Jira] - Logiciel de suivi d'incidents et de projets
 * link:https://konghq.com/kong/[Kong] - Passerelle d'API
