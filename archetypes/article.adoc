@@ -14,6 +14,7 @@ author = "Moncef AOUDIA"
 series = []
 audio = []
 videos = []
+gallery = []
 resizeImages = false
 excludeFromIndex = false
 draft = true

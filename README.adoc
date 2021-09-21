@@ -46,7 +46,7 @@ hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings -
 .Build PWA service worker
 [source,shell]
 ----
-npm install && ./scripts/sw.sh
+npm install && cd scripts && ./sw.sh
 ----
 
 .Generate SRI
@@ -56,7 +56,7 @@ openssl dgst -sha384 -binary path/to/your/file | openssl base64 -A
 ----
 [WARNING]
 ----
-Please use Unix just uses `LF` line breaks on targeted file.
+Please use Unix `LF` line breaks on targeted file to avoid finger-printing issues.
 ----
 
 == Deployment

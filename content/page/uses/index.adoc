@@ -111,7 +111,7 @@ Memory: '32Go'
 * link:https://domain.com/[Domain.com] - Domain name provider
 * link:https://www.elastic.co/elastic-stack/[ElasticStack] - Elasticsearch, Kibana, Beats, and Logstash
 * link:https://github.com/[Github] / link:https://gitlab.com/[Gitlab] - Source code repositories
-* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelinesworkplace
+* link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelines
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
 * link:https://konghq.com/kong/[Kong] - API gateway
 * link:https://microcks.io/[Microcks] - Platform for turning OpenAPI specs, AsyncAPI specs, Postman collections and SoapUI projects into live mocks {oss}
