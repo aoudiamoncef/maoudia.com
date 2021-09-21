@@ -114,7 +114,7 @@ Memory: '32Go'
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - CI/CD pipelinesworkplace
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
 * link:https://konghq.com/kong/[Kong] - API gateway
-* link:https://microcks.io/[Microcks] - Kubernetes native tool for API mocking and testing {oss}
+* link:https://microcks.io/[Microcks] - Platform for turning OpenAPI specs, AsyncAPI specs, Postman collections and SoapUI projects into live mocks {oss}
 * link:https://www.openrainbow.com/[Rainbow] - Communications Platform as a Service
 * link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {oss}
 * link:https://wakatime.com/[WakaTime] - Code statistics and dashboards

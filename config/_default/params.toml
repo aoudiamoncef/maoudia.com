@@ -57,11 +57,11 @@ enableTwitterCard = true
 # Set to true to pin only to the first page, false to all pages
 # pinOnlyToFirstPage = true
 # enable automatical localization of the article's PublishedDate with momentjs
-enableMomentJs = true
+enableMomentJs = false
 # customize the date format | only works if momentjs is disabled | only works with English month names
 # you can customize it with the options you find here:
 # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
-dateFormat = "1993-05-19"
+dateFormat = "2006-01-02"
 # display the estimated reading time for an article
 showReadingTime = true
 

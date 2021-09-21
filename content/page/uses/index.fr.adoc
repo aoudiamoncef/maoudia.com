@@ -115,7 +115,7 @@ Mémoire vive: 32Go
 * link:https://github.com/features/actions[Github Action] / link:https://docs.gitlab.com/ee/ci/[Gitlab CI/CD] - Pipelines CI/CD
 * link:https://www.atlassian.com/software/jira[Jira] - Logiciel de suivi d'incidents et de projets
 * link:https://konghq.com/kong/[Kong] - Passerelle d'API
-* link:https://microcks.io/[Microcks] - Outil natif de Kubernetes pour les tests et les simulations(Mocks) d'API {oss}
+* link:https://microcks.io/[Microcks] - Plate-forme de simulation(Mock) à partir de spécifications OpenAPI ou AsyncAPI, collections Postman et projets SoapUI {oss}
 * link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
 * link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {oss}
 * link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
