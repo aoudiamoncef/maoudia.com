@@ -57,4 +57,4 @@ disableAliases = false
   lastmod = [":git", "lastmod", "date", "publishDate"]
 
 [build]
-  writeStats = true
+  writeStats = false

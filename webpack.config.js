@@ -21,12 +21,12 @@ module.exports = {
           context: "public/",
         },
         {
-          from: "*.{html,ico}",
+          from: "*.{html,ico,webp}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         }, 
         {
-          from: "images/offline/*.{ico,svg,png}",
+          from: "images/offline/*.{ico,svg,png,webp}",
           to: path.resolve(__dirname, "dist"),
           context: "public/",
         },

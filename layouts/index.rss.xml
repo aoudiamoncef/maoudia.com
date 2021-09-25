@@ -9,14 +9,14 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <image>
       <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
       <link>{{ .Permalink }}</link>
-      <url>{{ "images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png" | absURL }}</url>
+      <url>{{ "images/favicons/splash.webp" | absURL }}</url>
       <width>512</width>
       <height>512</height>
     </image>
     <image>
       <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
       <link>{{ .Permalink }}</link>
-      <url>{{ "images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png" | absURL }}</url>
+      <url>{{ "images/banners/banner-700x350.webp" | absURL }}</url>
       <width>700</width>
       <height>150</height>
     </image>
@@ -30,9 +30,9 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     <webfeeds:accentColor>000A12</webfeeds:accentColor>
-    <webfeeds:cover image="{{ "images/banners/banner-700x350.f354a8909946bac2051f2dfbe4b616465dcbd36f9e6f918f303f5161919c26b6.png" | absURL }}"/>
+    <webfeeds:cover image="{{ "images/banners/banner-700x350.webp" | absURL }}"/>
     <webfeeds:icon>{{ "images/favicons/favicon.ico" | absURL }}</webfeeds:icon>
-    <webfeeds:logo>{{ "images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png" | absURL }}</webfeeds:logo>
+    <webfeeds:logo>{{ "images/favicons/splash.webp" | absURL }}</webfeeds:logo>
     <webfeeds:related layout="card" target="browser"/>
     {{ if .Site.GoogleAnalytics }}
     <webfeeds:analytics id="{{.Site.GoogleAnalytics}}" engine="GoogleAnalytics"/>

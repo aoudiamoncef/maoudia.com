@@ -28,3 +28,15 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 
 .sidebarblock { background: none; border: none; -webkit-box-shadow: 0 0 5px rgba(118, 137, 4, 0.5); box-shadow: 0 0 5px rgba(118, 137, 4, 0.5); }
 .sidebarblock > .content > .title { color: #181818; }
+
+table.linenotable td.linenos {
+    border-right: 1px solid rgba(255,255,255,.60);
+    opacity: .60;
+    padding-right: .5em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

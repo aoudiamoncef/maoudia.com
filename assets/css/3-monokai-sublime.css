@@ -67,7 +67,7 @@
   color: #2eddff;
 }
 .highlight .kt {
-  color: #2eddff;
+  color: #a6e22e;
 }
 .highlight .mf {
   color: #ff4fda;
@@ -121,10 +121,10 @@
   color: #e6db74;
 }
 .highlight .na {
-  color: #a6e22e;
+  color: #ffffff;
 }
 .highlight .nc {
-  color: #2eddff;
+  color: #a6e22e;
 }
 .highlight .nd {
   color: #e6db74;
@@ -133,7 +133,7 @@
   color: #a6e22e;
 }
 .highlight .nf, .highlight .fm {
-  color: #a6e22e;
+  color:#ffffff;
 }
 .highlight .vc {
   color: #ffffff;

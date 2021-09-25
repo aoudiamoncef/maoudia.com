@@ -79,7 +79,7 @@ Mémoire vive: 32Go
 
 === Applications et productivité 📊 
 [.badge]
-* link:https://altair.sirmuel.design/[Altair] - Interface graphique(client) GraphQL {oss}
+* link:https://altair.sirmuel.design/[Altair] - Interface graphique multiplateforme pour les APIs GraphQL {oss}
 * link:https://asciidoctor.org/[Asciidoctor] - Processeur de texte permettant d'analyser AsciiDoc en un modèle de document et de le convertir en de nombreux formats de sortie {oss}
 * link:https://brave.com/[Brave] - Navigateur web axé sur la confidentialité et basé sur Chromium {oss}
 * link:https://calibre-ebook.com//[Calibre] - Gestionnaire  de livres électroniques {oss}

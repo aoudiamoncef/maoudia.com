@@ -121,11 +121,7 @@
     <link rel="preload" as="style" href="{{ "/css/main.min.css" | absURL }}" crossorigin="anonymous">
 
     {{ if .Site.Params.concatCssAssets | default true }}
-        {{ $css := resources.Match "css/**.css" | resources.Concat "css/main.min.css" }}
-        {{ $css = $css | resources.PostCSS }}
-        {{ if hugo.IsProduction }}
-        {{ $css = $css | minify | fingerprint  "sha384" | resources.PostProcess }}
-        {{ end }}
+        {{ $css := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
         <link rel="stylesheet" href="{{ $css.Permalink  | absURL }}" integrity="{{ $css.Data.Integrity }}">
     {{ end }} 
 

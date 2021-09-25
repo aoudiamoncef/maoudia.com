@@ -1,6 +1,6 @@
 ++++
 <h1 align="center">
-    <img src="static/images/favicons/android-chrome-384x384.8b4d4c18f540207ccc4a1521b3985d8c461322f0936d43bdb4ded6bbc61338d7.png" width="100"> </br>
+    <img src="static/images/favicons/android-chrome-384x384.webp" width="100"> </br>
     Moncef AOUDIA's website
 </h1>
 ++++

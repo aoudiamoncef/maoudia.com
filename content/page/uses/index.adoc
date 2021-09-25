@@ -79,7 +79,7 @@ Memory: '32Go'
 
 === Apps and Productivity 📊 
 [.badge]
-* link:https://altair.sirmuel.design/[Altair] - GraphQL GUI client {oss}
+* link:https://altair.sirmuel.design/[Altair] - Cross-platform GUI tool for GraphQL APIs{oss}
 * link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc into a document model and converting it to many output formats {oss}
 * link:https://brave.com/[Brave] - Privacy-focused web browser based on Chromium {oss}
 * link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Linux terminal emulator {oss}
@@ -116,7 +116,7 @@ Memory: '32Go'
 * link:https://www.atlassian.com/software/jira[Jira] - Issue and project tracking software
 * link:https://konghq.com/kong/[Kong] - API gateway
 * link:https://microcks.io/[Microcks] - Platform for turning OpenAPI specs, AsyncAPI specs, Postman collections and SoapUI projects into live mocks {oss}
-* link:https://www.openrainbow.com/[Rainbow] - Communications Platform as a Service
+* link:https://www.openrainbow.com/[Rainbow] - Communications Platform Saas
 * link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {oss}
 * link:https://wakatime.com/[WakaTime] - Code statistics and dashboards
 * link:https://winds.getstream.io/[Winds] - RSS and Podcast application powered by GetStream.io {oss}

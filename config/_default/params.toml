@@ -34,7 +34,7 @@ resizeImages = true
 gravatarEMail = "mf.aoudia@gmail.com"
 # avatarEmail = "mf.aoudia@gmail.com"
 # set an path to the image file you want to use | overwrites gravatar
-customImage = "/images/favicons/splash.f9c116e0f087ad82848c9cbf22b05e1e60e3369067f198462f4fbba1c6ceab82.png"
+customImage = "/images/favicons/splash.webp"
 # define the icon you want to use for the overlay for the customImage or gravatar.
 overlayIcon = "fa-home"
 # always display the top navigation (with pages and search) on non-mobile screens
