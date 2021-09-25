@@ -8,7 +8,7 @@
                 {{ if eq .Site.Language.Lang "en" }}
                 <a href="{{ .Site.BaseURL }}" class="logo">
                 {{ else }}
-                <a href="{{ .Site.BaseURL | relLangURL }}/" class="logo">
+                <a href="{{ .Site.BaseURL}}{{ .Site.Language.Lang }}/" class="logo">
                 {{ end }}
                     {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
                         <img src="{{ .Site.Params.customImage | relURL }}"  width="512" height="512" alt="{{ .Site.Params.author }} logo">
