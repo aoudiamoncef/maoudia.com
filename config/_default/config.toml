@@ -55,3 +55,6 @@ disableAliases = false
   publishDate = ["publishDate", "date", "lastmod"]
   expiryDate = ["expiryDate"]
   lastmod = [":git", "lastmod", "date", "publishDate"]
+
+[build]
+  writeStats = true

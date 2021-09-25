@@ -1,6 +1,7 @@
 +++
 title = "About"
-date = 2021-05-19T07:30:00+02:00
+date = "2021-05-19T07:30:00+02:00"
+publishDate = "2021-05-19T07:30:00+02:00"
 excludeFromTopNav = false
 showPublishDate = false
 showLastModificationDate = false
