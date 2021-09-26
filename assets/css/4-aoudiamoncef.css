@@ -166,12 +166,12 @@ td, th {
 }
 
 .bilberry-hugo-theme footer .container ul a {
-    color: #40603e;
+    color: #2b5c00;
 }
 
 
 .bilberry-hugo-theme footer .container .right .languages a {
-    color: #40603e;
+    color: #2b5c00;
 }
 
 .bilberry-hugo-theme .credits .container .author {
@@ -202,7 +202,7 @@ td, th {
 }
 
 .bilberry-hugo-theme footer .container .right .languages span {
-    color: #40603e;
+    color: #2b5c00;
 }
 
 .bilberry-hugo-theme header .logo img {
@@ -246,4 +246,19 @@ td, th {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.bilberry-hugo-theme .credits .container {
+    padding: 4rem 1.5em;
+    font-size: 1.25em;
+    color: #777;
+    flex-wrap: wrap;
+}
+
+.bilberry-hugo-theme header .languages a {
+    font-size: 1em;
+}
+
+.bilberry-hugo-theme article .footer .languages .links {
+    font-size: 1em;
 }
