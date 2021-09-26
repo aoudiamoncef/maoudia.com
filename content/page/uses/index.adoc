@@ -92,6 +92,7 @@ Memory: '32Go'
 * link:https://www.gitkraken.com/[GitKraken] - Git GUI and more 
 * link:https://www.heidisql.com/[HeidiSQL] - Administration tool for MySQL and its forks {oss}
 * link:https://gohugo.io/[Hugo] - Static site generator {oss}
+* link:https://developers.google.com/web/tools/lighthouse/[Lighthouse ] - Automated tool for improving the quality of web pages {oss}
 * link:https://nosqlbooster.com/[NoSQLBooster] - Cross-platform GUI tool for MongoDB
 * link:https://mremoteng.org/[mRemoteNG] - Multi-protocol, tabbed remote connections manager {oss}
 * link:https://myki.com/[Myki] - Offline Password Manager and 2FA Authenticator

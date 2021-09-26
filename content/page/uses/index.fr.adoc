@@ -93,6 +93,7 @@ Mémoire vive: 32Go
 * link:https://www.gitkraken.com/[GitKraken] - Interface graphique Git et plus
 * link:https://www.heidisql.com/[HeidiSQL] - Outil d'administration pour MySQL et ses forks {oss}
 * link:https://gohugo.io/[Hugo] - Générateur de sites statiques {oss}
+* link:https://developers.google.com/web/tools/lighthouse/[Lighthouse ] - Outil automatisé pour l'améliorer la qualité des pages web {oss}
 * link:https://nosqlbooster.com/[NoSQLBooster] - Interface graphique multiplateforme pour MongoDB
 * link:https://mremoteng.org/[mRemoteNG] - Gestionnaire de connexions distantes, multi-protocoles à onglets {oss}
 * link:https://myki.com/[Myki] - Gestionnaire de mots de passe hors ligne et d'authentificateur 2FA
