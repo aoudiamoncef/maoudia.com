@@ -124,7 +124,7 @@
          {{ partial "twitter-card.html" . }}
     {{ end }}
 
-    <link rel="preload" as="style" href="{{ "/css/main.min.css" | absURL }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/css/theme.min.css" | absURL }}">
 
     {{ if .Site.Params.concatCssAssets | default true }}
         {{ $css := resources.Match "css/**.css" | resources.Concat "css/main.css" | minify }}
