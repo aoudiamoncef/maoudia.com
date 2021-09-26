@@ -160,7 +160,7 @@
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}
-    <script src="{{ . | absURL }}" type="application/javascript"></script>
+    <script src="{{ . | absURL }}" type="application/javascript" crossorigin=anonymous async></script>
     {{ end }}
     {{ end }}
 
