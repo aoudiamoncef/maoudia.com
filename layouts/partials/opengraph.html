@@ -15,7 +15,13 @@
 {{- end -}}
 
 {{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
-{{- with .Site.Language.Lang }}<meta property="og:locale" content="{{ . }}" />{{ end }}
+{{ range $.Site.Home.AllTranslations }}
+  {{ if eq ($.Site.Language.Lang) .Lang }}
+  <meta property="og:locale" content="{{ .Language }}" />
+  {{ else }}
+  <meta property="og:locale:alternate" content="{{ .Language }}" />
+  {{ end }}
+{{ end }}
 {{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
 {{- with .Params.videos }}{{- range . }}
 <meta property="og:video" content="{{ . | absURL }}" />
