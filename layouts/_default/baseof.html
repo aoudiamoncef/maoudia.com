@@ -3,23 +3,27 @@
     {{ $imageUrl := "" }}
 
     {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
-        {{ $imageUrl = ($image.Fill "700x350 q95").Permalink }}
+        {{ $imageUrl = ($image.Fill "700x350").Permalink }}
     {{ else }}
         {{ $imageUrl = $image.Permalink }}
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
+    {{ .Scratch.Set "imageWidth" 700 }}
+    {{ .Scratch.Set "imageHeight" 350 }}
 
 {{ else if .Resources.GetMatch "featuredImage.*" }}
     {{ $imageUrl := "" }}
 
     {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
-         {{ $imageUrl = ((.Resources.GetMatch "featuredImage.*").Fill "700x350 q95").Permalink }}
+         {{ $imageUrl = ((.Resources.GetMatch "featuredImage.*").Fill "700x350").Permalink }}
     {{ else }}
         {{ $imageUrl = (.Resources.GetMatch "featuredImage.*").Permalink }}
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
+    {{ .Scratch.Set "imageWidth" 700 }}
+    {{ .Scratch.Set "imageHeight" 350 }}
 
 {{ else if .Params.featuredImage }}
   {{ .Scratch.Set "image" (.Params.featuredImage | absURL) }}
@@ -27,6 +31,8 @@
   {{ .Scratch.Set "image" (.Params.mp4videoImage | absURL) }}
 {{ else }}
   {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
+  {{ .Scratch.Set "imageWidth" 200 }}
+  {{ .Scratch.Set "imageHeight" 200 }}
 {{ end }}
 
 {{- if ne .Description "" -}}
@@ -58,8 +64,8 @@
 
     {{ if .Site.Params.webmention }}
         <link href="https://github.com/aoudiamoncef" rel="me">
-        <link rel="webmention" href="https://webmention.io/maoudia.com/webmention"/>
-        <link rel="pingback" href="https://webmention.io/maoudia.com/xmlrpc"/>
+        <link rel="webmention" href="https://webmention.io/www.maoudia.com/webmention"/>
+        <link rel="pingback" href="https://webmention.io/www.maoudia.com/xmlrpc"/>
     {{ end }}
     
     {{ hugo.Generator }}

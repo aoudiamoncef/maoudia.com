@@ -112,6 +112,7 @@ creditsText = "Bilberry Hugo Theme"
 creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 sourceCodetUrl = "https://github.com/aoudiamoncef/maoudia.com"
+showComments = true
 # Enable / Disable Utterances comments
 utterances    = true
 utterancesJsUrl     = "https://utteranc.es/client.js"
