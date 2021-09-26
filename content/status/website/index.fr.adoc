@@ -8,8 +8,6 @@ type = "status"
 exclude = true
 +++
 
-image:/images/banners/banner-700x350.webp[maoudia.com banner, 750, 350]
-
 .Pages disponibles 🔗
 [NOTE]
 ====
