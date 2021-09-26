@@ -3,7 +3,7 @@
 # Files are imported in the order they appear here, after
 # theme.css and theme.js, respectively.
 css_modules = []
-js_modules = ['/js/vanilla-back-to-top.min.js', '/js/webmention.min.js']
+js_modules = []
 
 concatCssAssets = true
 # Description and meta data for the search engines

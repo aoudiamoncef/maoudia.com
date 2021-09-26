@@ -1,3 +1,4 @@
 {{ if .Site.Params.webmention }}
+<script src={{ "/js/webmention.min.js" | absURL }} integrity="sha384-jpBjl7uFXhBwC/Pl3XF47lKziQiVigVJCtlg1xu0m3tqSlKzWyv5DzHnIQWWTakS" data-id="webmention-container" crossorigin="anonymous" async></script>
 <div id="webmentions"></div>
 {{ end }}
