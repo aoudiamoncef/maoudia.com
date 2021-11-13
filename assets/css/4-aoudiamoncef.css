@@ -11,8 +11,39 @@ td, th {
     border-bottom: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+details {
+    margin: 1rem;
+}
+
+details[open] > summary:first-of-type {
+    list-style-type: disclosure-open;
+    list-style-image: url(/images/icons/right-arrow.svg);
+}
+
+summary {
+    list-style-image: url(/images/icons/down-arrow.svg);
+}
+
+summary::-webkit-details-marker {
+    background: url(/images/icons/down-arrow.svg);
+}
+
+summary:focus::-webkit-details-marker {
+    background: url(/images/icons/right-arrow.svg);
+}
+
+.bilberry-hugo-theme {
+    font-size: 1.7em;
+}
+
 .bilberry-hugo-theme article .content {
     padding: 0em;
+    margin: 1.5em;
 }
 
 .bilberry-hugo-theme header {
@@ -21,10 +52,6 @@ td, th {
 
 .bilberry-hugo-theme article .content a {
     font-style: normal;
-}
-
-.bilberry-hugo-theme article .content {
-    padding: 1.5em;
 }
 
 .bilberry-hugo-theme a {
@@ -85,7 +112,7 @@ td, th {
     border-radius: 4px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     width: -webkit-fill-available;
     position: relative;
 }
@@ -99,7 +126,7 @@ td, th {
     color: #f1f1f1;
 }
 
-.bilberry-hugo-theme header .titles h3 a:hover{
+.bilberry-hugo-theme header .titles h3 a:hover {
     color: #5abf00;
 }
 
@@ -134,10 +161,10 @@ td, th {
 
 .bilberry-hugo-theme .main #comments-container {
     margin: 0 1.5em;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 .utterances {
@@ -149,7 +176,7 @@ td, th {
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
 
 .bilberry-hugo-theme #webmentions-container {
@@ -159,16 +186,15 @@ td, th {
 
 .bilberry-hugo-theme .main #webmentions-container {
     margin: 0 1.5em;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 .bilberry-hugo-theme footer .container ul a {
     color: #2b5c00;
 }
-
 
 .bilberry-hugo-theme footer .container .right .languages a {
     color: #2b5c00;
@@ -248,17 +274,14 @@ td, th {
     margin: 0 auto;
 }
 
-.bilberry-hugo-theme .credits .container {
-    padding: 4rem 1.5em;
-    font-size: 1.25em;
-    color: #777;
-    flex-wrap: wrap;
+.bilberry-hugo-theme header .languages {
+    padding: .25em .5em;
 }
 
 .bilberry-hugo-theme header .languages a {
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
-.bilberry-hugo-theme article .footer .languages .links {
-    font-size: 1em;
+.content .listingblock .content {
+    margin: 0px;
 }

@@ -39,6 +39,7 @@ Processeur: Intel i7-8750H (12) à 4.100 GHz
 Processeur graphique: Intel UHD Graphics 630
 Processeur graphique: NVIDIA GeForce GTX 1050 Ti Mobile
 Mémoire vive: 16Go
+Stockage: 475Go
 ----
 
 .Dell Latitude 7400
@@ -51,6 +52,7 @@ Terminal: PowerShell
 Processeur: Intel i7-8665U CPU @ 1.90GHz-2.11 GHz
 Processeur graphique: Intel UHD Graphics 620 
 Mémoire vive: 32Go
+Stockage: 475Go
 ----
 
 === Équipements 🧰
@@ -60,6 +62,7 @@ Mémoire vive: 32Go
 * link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Station d'accueil 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Clavier ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Souris 🖱️
+* link:https://durabilitymatters.com/soundsticks-ii-review/[Harman Kardon SoundSticks II] - Haut-parleurs 🔈
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Casque 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Casque 🎧 🎤
 * link:https://store.google.com/product/google_wifi_2nd_gen[Google Wi-Fi] - Routeur 🌐
@@ -121,7 +124,7 @@ Mémoire vive: 32Go
 * link:https://www.openrainbow.com/[Rainbow] - Plate-forme de communication en tant que service
 * link:https://utteranc.es/[Utterances] - Widget de commentaires léger basé sur GitHub issues {oss}
 * link:https://wakatime.com/[WakaTime] - Tableaux de bord et statistiques sur le code source
-* link:https://winds.getstream.io/[Winds] - Application RSS et Podcast propulsée par GetStream.io {oss}
+
 
 [NOTE]
 link:https://uses.tech/[Uses.tech] est un projet de link:https://wesbos.com/about[Wes Bos] pour "détailler les installations, le matériel, les logiciels et les configurations des développeurs". Soumettez votre ``/uses`` à link:https://github.com/wesbos/awesome-uses[Awesome Uses].

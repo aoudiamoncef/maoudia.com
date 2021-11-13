@@ -2,18 +2,20 @@
 <footer>
     <div class="container">
 
-        {{ if gt (.Site.Params.amountLatestPostsInFooter | default 7) 0 }}
-        <div class="recent-posts">
-            <strong>{{ i18n "latestPosts" }}</strong>
-            <ul>
-                {{ $dontRender :=  (slice "page" "quote" "link" "status" "offline") }}
-                {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
-                    <li>
-                        <a href="{{ .Permalink }}" alt="{{ .Title }}">{{ .Title }}</a>
-                    </li>
-                {{ end }}
-            </ul>
-        </div>
+        {{ if ( .Site.Params.enableLatestPosts | default true ) }}
+            {{ if gt (.Site.Params.amountLatestPostsInFooter | default 7) 0 }}
+            <div class="recent-posts">
+                <strong>{{ i18n "latestPosts" }}</strong>
+                <ul>
+                    {{ $dontRender :=  (slice "page" "quote" "link" "status" "offline") }}
+                    {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
+                        <li>
+                            <a href="{{ .Permalink }}" alt="{{ .Title }}">{{ .Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
         {{ end }}
 
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
@@ -93,16 +95,6 @@
                 {{ end }}
                 {{ .Site.Params.copyrightBy | default "by {{ .Site.Params.author }}" }}
             </a>
-        </div>
-        <div class="sitemap">
-            {{ if eq .Site.Language.Lang "en" }}
-            <a href="{{ .Site.BaseURL }}{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
-            {{ else }}
-            <a href="{{ .Site.BaseURL | relLangURL }}/{{ .Sitemap.Filename }}" title="sitemap"><i class="fas fa-sitemap"></i></a>
-            {{ end }}
-        </div>
-        <div class="source">
-            <a href="{{ .Site.Params.sourceCodeUrl | default "https://github.com/aoudiamoncef/maoudia.com" }}" title="source code" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></i></a>
         </div>
         <div class="author">
             <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"

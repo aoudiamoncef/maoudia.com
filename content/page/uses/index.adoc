@@ -39,6 +39,7 @@ CPU: 'Intel i7-8750H (12) @ 4.100GHz'
 GPU: 'Intel UHD Graphics 630' 
 GPU: 'NVIDIA GeForce GTX 1050 Ti Mobile' 
 Memory: '16Go'  
+Storage: '475Go'
 ----
 
 .Dell Latitude 7400
@@ -51,6 +52,7 @@ Terminal: 'PowerShell'
 CPU: 'Intel i7-8665U CPU @ 1.90GHz-2.11 GHz'
 GPU: 'Intel UHD Graphics 620' 
 Memory: '32Go'
+Storage: '475Go'
 ----
 
 === Equipment 🧰
@@ -59,6 +61,7 @@ Memory: '32Go'
 * link:https://www.amazon.fr/Excuty-Ports-Reader-MacBook-Devices/dp/B07M7DNB85[Excuty hub] - Docking Station 🏷️
 * link:https://www.corsair.com/us/en/Categories/Products/Gaming-Keyboards/Standard-Gaming-Keyboards/K55-RGB-PRO-Gaming-Keyboard/p/CH-9226765-NA[Corsair K55] - Keyboard ⌨️
 * link:https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.910-005447.html[Logitech MX Vertical] - Mouse 🖱️
+* link:https://durabilitymatters.com/soundsticks-ii-review/[Harman Kardon SoundSticks II] - Speakers 🔈
 * link:https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4[Sony WH1000XM4] - Headphone 🎧 🎵
 * link:https://steelseries.com/gaming-headsets/arctis-7[SteelSeries ARCTIS 7] - Headphone 🎧 🎤
 * link:https://www.amazon.com/Headphones-Headsets-Sennheiser-Audio-Technica-Display/dp/B07LGY5RSG[Neetto HS908] -  Headphones Stand 🏷️
@@ -79,7 +82,7 @@ Memory: '32Go'
 
 === Apps and Productivity 📊 
 [.badge]
-* link:https://altair.sirmuel.design/[Altair] - Cross-platform GUI tool for GraphQL APIs{oss}
+* link:https://altair.sirmuel.design/[Altair] - Cross-platform GUI tool for GraphQL APIs {oss}
 * link:https://asciidoctor.org/[Asciidoctor] - Text processor for parsing AsciiDoc into a document model and converting it to many output formats {oss}
 * link:https://brave.com/[Brave] - Privacy-focused web browser based on Chromium {oss}
 * link:https://www.deepin.org/en/original/deepin-terminal/[Deepin terminal] - Linux terminal emulator {oss}
@@ -120,7 +123,6 @@ Memory: '32Go'
 * link:https://www.openrainbow.com/[Rainbow] - Communications Platform Saas
 * link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {oss}
 * link:https://wakatime.com/[WakaTime] - Code statistics and dashboards
-* link:https://winds.getstream.io/[Winds] - RSS and Podcast application powered by GetStream.io {oss}
 
 
 [NOTE]

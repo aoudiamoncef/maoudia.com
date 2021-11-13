@@ -113,14 +113,20 @@ creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 sourceCodetUrl = "https://github.com/aoudiamoncef/maoudia.com"
 showComments = true
-# Enable / Disable Utterances comments
-utterances    = true
-utterancesJsUrl     = "https://utteranc.es/client.js"
-utterancesRepository    = "aoudiamoncef/maoudia.com"
-utterancesIssueTerm   = "pathname"
-utterancesLabel   = "Comment"
-utterancesTheme = "github-light"
-utterancesCrossOrigin = "anonymous"
+
+# Enable / Disable Giscus comments
+giscus    = true
+giscusJsUrl     = "https://giscus.app/client.js"
+giscusRepository    = "aoudiamoncef/discussions.maoudia.com"
+giscusRepositoryId   = "R_kgDOGX153A"
+giscusMapping   = "pathname"
+giscusCategory  = "Announcements"
+giscusCategoryId   = "DIC_kwDOGX153M4B_2Vz"
+giscusTheme = "light"
+giscusReactions = "1"
+giscusEmitMetadata = "0"
+# giscusLanguage = "en"
+giscusCrossOrigin = "anonymous"
 
 # Enable / Disable Webmentions
 webmention = true
@@ -128,3 +134,5 @@ webmention = true
 backToTop = true
 
 enableSw = true
+
+enableLatestPosts = false
