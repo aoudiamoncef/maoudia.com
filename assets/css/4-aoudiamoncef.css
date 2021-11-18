@@ -246,7 +246,11 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-table;
 }
 
- details[open].badge summary {
+details.badge .content {
+    margin: 0.5em;
+}
+
+details[open].badge summary {
     animation: open 0.3s ease-in-out;
 }
 
@@ -254,18 +258,19 @@ h1, h2, h3, h4, h5, h6 {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
 
- details.badge summary::-webkit-details-marker {
+details.badge summary::-webkit-details-marker {
     display: none;
 }
 
- details.badge summary {
+details.badge summary {
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
     border-top: 1px solid black;
     position: relative;
     cursor: pointer;
@@ -274,13 +279,13 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
 }
 
- details.badge summary:after {
+details.badge summary:after {
     content: "+";
     color: black;
     position: absolute;
     font-size: 1.75rem;
     line-height: 0;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
     padding-right: 0.25rem;
     right: 0;
     font-weight: 200;
@@ -288,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 200ms linear;
 }
 
- details[open].badge summary:after {
+details[open].badge summary:after {
     transform: rotate(45deg);
 }
 
