@@ -1,0 +1,15 @@
+/css/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet
+
+/fonts/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet
+
+/js/*
+Access-Control-Allow-Origin: *
+X-Robots-Tag: nosnippet
+
+/images/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: nosnippet

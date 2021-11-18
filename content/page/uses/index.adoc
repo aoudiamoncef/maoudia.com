@@ -9,7 +9,7 @@ showReadingTime = false
 slug = "uses"
 +++
 
-:oss: image:/images/badges/oss.ebd8475a105c691f9b71d04bf37e55977af7953f20d4bd6d2d487cd80572c802.svg[open source badge, 50, 20]
+:oss: image:/images/badges/oss.svg[open source badge, 50, 20]
 
 
 Here are the software and hardware I use.
