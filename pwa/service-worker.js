@@ -63,7 +63,7 @@ setCatchHandler(async ({ event }) => {
 
     case "image":
       return matchPrecache(
-        "/images/offline/image-not-found.6975d304cc153ce2c557b07a68b82339f19fc88ca2376077469b2c951b25d20b.svg"
+        "/images/offline/image-not-found.svg"
       );
 
     default:
