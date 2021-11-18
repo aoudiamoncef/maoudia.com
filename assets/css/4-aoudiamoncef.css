@@ -16,27 +16,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
 }
 
-details {
-    margin: 1rem;
-}
-
-details[open] > summary:first-of-type {
-    list-style-type: disclosure-open;
-    list-style-image: url(/images/icons/right-arrow.svg);
-}
-
-summary {
-    list-style-image: url(/images/icons/down-arrow.svg);
-}
-
-summary::-webkit-details-marker {
-    background: url(/images/icons/down-arrow.svg);
-}
-
-summary:focus::-webkit-details-marker {
-    background: url(/images/icons/right-arrow.svg);
-}
-
 .bilberry-hugo-theme {
     font-size: 1.7em;
 }
@@ -265,6 +244,52 @@ summary:focus::-webkit-details-marker {
 
 .badge .image {
     display: inline-table;
+}
+
+ details[open].badge summary {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ details.badge summary::-webkit-details-marker {
+    display: none;
+}
+
+ details.badge summary {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.75rem;
+    font-weight: 300;
+    list-style: none;
+}
+
+ details.badge summary:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 1.75rem;
+    line-height: 0;
+    margin-top: 1.5rem;
+    padding-right: 0.25rem;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+}
+
+ details[open].badge summary:after {
+    transform: rotate(45deg);
 }
 
 .bilberry-hugo-theme article .featured-image img {

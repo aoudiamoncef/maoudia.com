@@ -154,7 +154,7 @@ registerRoute(
 );
 
 registerRoute(
-  "https://utteranc.es/client.js",
+  "https://giscus.app/client.js",
   new StaleWhileRevalidate({
     plugins: [
       new CacheableResponsePlugin({

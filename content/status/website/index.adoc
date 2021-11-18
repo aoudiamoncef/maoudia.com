@@ -13,7 +13,7 @@ exclude = true
 ====
 * link:https://www.maoudia.com/about/[About]
 
-* link:https://www.maoudia.com/uses/[Usages]
+* link:https://www.maoudia.com/uses/[Uses]
 ====
 
 [WARNING]

@@ -196,8 +196,8 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 
 .Languages
 [%collapsible]
-====
 [.badge]
+====
 {java}
 {kotlin}
 {sql}

@@ -197,8 +197,8 @@ Technologies I have used at work and/or side projects.
 
 .Languages
 [%collapsible]
-====
 [.badge]
+====
 {java}
 {kotlin}
 {sql}
