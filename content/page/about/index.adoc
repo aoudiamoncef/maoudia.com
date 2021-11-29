@@ -1,7 +1,7 @@
 +++
 title = "About"
-date = "2021-05-19T07:30:00+02:00"
-publishDate = "2021-05-19T07:30:00+02:00"
+date = "2021-05-19T07:30:00"
+publishDate = "2021-05-19T07:30:00"
 excludeFromTopNav = false
 showPublishDate = false
 showLastModificationDate = false
@@ -105,6 +105,7 @@ slug = "about"
 :medium: image:{badges}/medium.svg[medium]
 :mediumBadge: image:{badges}/medium-large.svg[mediumbadge, link = "https://medium.com/@aoudiamoncef"]
 :meet: image:{badges}/meet.svg[googlemeet]
+:meetupBadge: image:{badges}/meetup-large.svg[meetup, link = "https://www.meetup.com/members/237616760"]
 :microcks: image:{badges}/microcks.svg[microcks]
 :microservices: image:{badges}/microservices.svg[microservices]
 :mongodb: image:{badges}/mongodb.svg[mongodb]
@@ -136,7 +137,7 @@ slug = "about"
 :redditBadge: image:{badges}/reddit-large.svg[redditbadge, link = "https://www.reddit.com/user/aoudiamoncef"]
 :redis: image:{badges}/redis.svg[redis] 
 :rss: image:{badges}/rss.svg[rss]
-:rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/en/index.xml"]
+:rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/index.xml"]
 :rxjava: image:{badges}/rxjava.svg[rxjava]
 :slack: image:{badges}/slack.svg[slack]
 :slides: image:{badges}/slides.svg[slides]
@@ -183,6 +184,7 @@ I am a software developer, open-source enthusiast/maintainer.
 {hashnodeBadge}
 {devtoBadge}
 {mediumBadge}
+{meetupBadge}
 {pocketBadge}
 {redditBadge}
 {slidesBadge}

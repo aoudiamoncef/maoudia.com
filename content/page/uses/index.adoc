@@ -1,7 +1,7 @@
 +++
 title = "Uses"
-date = "2021-05-19T08:30:00+01:00"
-publishDate = "2021-05-19T08:30:00+01:00"
+date = "2021-05-19T08:30:00"
+publishDate = "2021-05-19T08:30:00"
 excludeFromTopNav = false
 showPublishDate = false
 showLastModificationDate = false
@@ -121,7 +121,7 @@ Storage: '475Go'
 * link:https://konghq.com/kong/[Kong] - API gateway
 * link:https://microcks.io/[Microcks] - Platform for turning OpenAPI specs, AsyncAPI specs, Postman collections and SoapUI projects into live mocks {oss}
 * link:https://www.openrainbow.com/[Rainbow] - Communications Platform Saas
-* link:https://utteranc.es/[Utterances] - Lightweight comments widget built on GitHub issues {oss}
+* link:https://giscus.app/[Giscus] - Comments system powered by GitHub Discussions. Heavily inspired by Utterances {oss}
 * link:https://wakatime.com/[WakaTime] - Code statistics and dashboards
 
 
