@@ -12,6 +12,7 @@ slug = "about"
 :badges: /images/badges
 
 :activemq: image:{badges}/activemq.svg[activemq]
+:angular: image:{badges}/angular.svg[angular]
 :algolia: image:{badges}/algolia.svg[algolia]
 :altair: image:{badges}/altair.svg[altair]
 :analytics: image:{badges}/analytics.svg[googleanalytics]
@@ -88,6 +89,7 @@ slug = "about"
 :jenkins: image:{badges}/jenkins.svg[jenkins]
 :jira: image:{badges}/jira.svg[jira]
 :junit5: image:{badges}/junit.svg[junit5]
+:keepassxc: image:{badges}/junit.svg[keepassxc]
 :keycloak: image:{badges}/keycloak.svg[keycloak]
 :kibana: image:{badges}/kibana.svg[kibana]
 :kong: image:{badges}/kong.svg[kong]
@@ -138,10 +140,12 @@ slug = "about"
 :redis: image:{badges}/redis.svg[redis] 
 :rss: image:{badges}/rss.svg[rss]
 :rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/index.xml"]
+:rust: image:{badges}/rust.svg[rust]
 :rxjava: image:{badges}/rxjava.svg[rxjava]
 :slack: image:{badges}/slack.svg[slack]
 :slides: image:{badges}/slides.svg[slides]
 :slidesBadge: image:{badges}/slides-large.svg[slidesbadge, link = "https://slides.com/aoudiamoncef"]
+:solidity: image:{badges}/solidity.svg[solidity] 
 :sonarqube: image:{badges}/sonarqube.svg[sonarqube] 
 :sonatype: image:{badges}/sonatype.svg[sonatype]
 :speakerdeck: image:{badges}/speakerdeck.svg[speakerdeck]
@@ -152,9 +156,11 @@ slug = "about"
 :sql: image:{badges}/sql.svg[sql]
 :stackoverflow: image:{badges}/stackoverflow.svg[stackoverflow]
 :stackoverflowBadge: image:{badges}/stackoverflow-large.svg[stackoverflowbadge, link = "https://stackoverflow.com/users/8126192/moncef-aoudia"]
+:syncthing: image:{badges}/syncthing.svg[syncthing] 
 :travisci: image:{badges}/travisci.svg[travisci] 
 :twitter: image:{badges}/twitter.svg[twitter] 
 :twitterBadge: image:{badges}/twitter-large.svg[twitterbadge, link= "https://twitter.com/aoudiamoncef"] 
+:typescript: image:{badges}/typescript.svg[typescript]
 :ublockorigin: image:{badges}/ublockorigin.svg[ublockorigin]
 :ubuntu: image:{badges}/ubuntu.svg[ubuntu]
 :vagrant: image:{badges}/vagrant.svg[vagrant]
@@ -204,6 +210,8 @@ Technologies I have used at work and/or side projects.
 ====
 {java}
 {kotlin}
+{rust}
+{solidity}
 {sql}
 {asciidoc}
 {css3}
@@ -212,6 +220,7 @@ Technologies I have used at work and/or side projects.
 {latex}
 {markdown}
 {python}
+{typescript}
 ====
 
 .IDEs
@@ -241,6 +250,7 @@ Technologies I have used at work and/or side projects.
 [%collapsible]
 [.badge]
 ====
+{angular}
 {apachecamel}
 {apollographql}
 {bootstrap}
@@ -284,13 +294,14 @@ Technologies I have used at work and/or side projects.
 {heidisql}
 {hyper}
 {kibana}
+{keepassxc}
 {logstash}
 {mremoteng}
-{myki}
 {npm}
 {ohmyzsh}
 {pocket}
 {postman}
+{syncthing}
 {vagrant}
 {visualvm}
 {windowsterminal}

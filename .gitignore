@@ -1,4 +1,5 @@
 .DS_Store
+Thumbs.db
 /public/
 /resources/_gen/
 hugo_stats.json
@@ -7,3 +8,40 @@ hugo.darwin
 hugo.linux
 node_modules
 dist
+
+# compiled output
+/dist
+/dist-dev
+/dist-staging
+/dist-prod
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.iml
+
+# IDE - VSCode
+.vscode/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map

@@ -9,9 +9,10 @@ This repo contains the source code of the https://www.maoudia.com[maoudia.com] w
 built using https://gohugo.io/[Hugo] + https://github.com/Lednerb/bilberry-hugo-theme[Billeberry] theme and hosted on https://maoudia.pages.dev/[CloudFlare Pages] + https://pages.github.com/[GitHub Pages].
 
 == Requirements
-1. https://gohugo.io/getting-started/installing/[Hugo] (0.89.x)
+1. https://gohugo.io/getting-started/installing/[Hugo] (0.98.x)
 2. https://www.ruby-lang.org/en/documentation/installation/[Ruby] (2.7.x)
-3. https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
+3. https://nodejs.org/[NodeJS] (16.15.x)
+4. https://asciidoctor.org/[Asciidoctor] with required https://asciidoctor.org/docs/extensions/[extensions]:
 
 [source,shell]
 ----
@@ -40,7 +41,7 @@ Launch a local Hugo server including live reload:
 .Development
 [source,shell]
 ----
-hugo server --debug --buildDrafts --buildExpired --buildFuture --path-warnings --i18n-warnings --templateMetrics --templateMetricsHints --verbose --verboseLog
+hugo server --debug --buildDrafts --buildExpired --buildFuture  --templateMetrics --templateMetricsHints --verbose --verboseLog
 ----
 
 .Build PWA service worker

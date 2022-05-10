@@ -94,15 +94,16 @@ Stockage: 475Go
 * link:https://joplinapp.org/[Joplin] - Application de prise de notes {oss}
 * link:https://gitforwindows.org//[Git] - Logiciel de gestion de versions décentralisé {oss}
 * link:https://www.gitkraken.com/[GitKraken] - Interface graphique Git et plus
+* link:https://keepassxc.org/[KeePassXC] - Gestionnaire de mots de passe multiplateforme {oss}
 * link:https://www.heidisql.com/[HeidiSQL] - Outil d'administration pour MySQL et ses forks {oss}
 * link:https://gohugo.io/[Hugo] - Générateur de sites statiques {oss}
-* link:https://developers.google.com/web/tools/lighthouse/[Lighthouse ] - Outil automatisé pour l'améliorer la qualité des pages web {oss}
+* link:https://developers.google.com/web/tools/lighthouse/[Lighthouse] - Outil automatisé pour l'améliorer la qualité des pages web {oss}
 * link:https://nosqlbooster.com/[NoSQLBooster] - Interface graphique multiplateforme pour MongoDB
 * link:https://mremoteng.org/[mRemoteNG] - Gestionnaire de connexions distantes, multi-protocoles à onglets {oss}
-* link:https://myki.com/[Myki] - Gestionnaire de mots de passe hors ligne et d'authentificateur 2FA
 * link:https://ohmyz.sh/[Oh My Zsh] - Framework pour la configuration de Zsh {oss}
 * link:https://getpocket.com/[Pocket] - Gestionnaire de listes de lecture
 * link:https://www.getpostman.com/[Postman] - Plateforme pour la création et l'utilisation d'API
+* link:https://syncthing.net/[Syncthing] - Programme de synchronisation continue des fichiers {oss}
 * link:https://www.jetbrains.com/toolbox-app/[Toolbox App] - Gestionnaire d'IDEs JetBrains
 * link:https://visualvm.github.io/[VisualVM] - Outil de dépannage Java {oss}
 * link:https://github.com/microsoft/terminal[Windows terminal] - Emulateur de terminal Windows {oss}

@@ -18,7 +18,7 @@ disableAliases = false
 [permalinks]
     blog = ":section/:slug/"
     page = "/:slug/"
-    status = ":section/:slug/" 
+    status = ":section/:slug/"
 
 [sitemap]
     changefreq = "weekly"
@@ -58,3 +58,7 @@ disableAliases = false
 
 [build]
   writeStats = false
+
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
