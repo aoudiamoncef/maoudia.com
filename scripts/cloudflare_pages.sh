@@ -4,6 +4,7 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 cd ..
 
+echo "Installing Asciidoctor plugins"
 gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
 
 echo "Updating to latest theme submodule"
