@@ -142,23 +142,28 @@ slug = "about"
 :rssBadge: image:{badges}/rss-large.svg[rssbadge, link = "https://www.maoudia.com/index.xml"]
 :rust: image:{badges}/rust.svg[rust]
 :rxjava: image:{badges}/rxjava.svg[rxjava]
+:scala: image:{badges}/scala.svg[scala]
 :slack: image:{badges}/slack.svg[slack]
 :slides: image:{badges}/slides.svg[slides]
 :slidesBadge: image:{badges}/slides-large.svg[slidesbadge, link = "https://slides.com/aoudiamoncef"]
 :solidity: image:{badges}/solidity.svg[solidity] 
-:sonarqube: image:{badges}/sonarqube.svg[sonarqube] 
+:sonarlint: image:{badges}/sonarlint.svg[sonarlint]
+:sonarqube: image:{badges}/sonarqube.svg[sonarqube]
 :sonatype: image:{badges}/sonatype.svg[sonatype]
 :speakerdeck: image:{badges}/speakerdeck.svg[speakerdeck]
 :speakerdeckBadge: image:{badges}/speakerdeck-large.svg[speakerdeckbadge, link = "https://speakerdeck.com/aoudiamoncef"]
+:spectrum: image:{badges}/spectrum.svg[spectrum]
 :spotify: image:{badges}/spotify.svg[spotify]
 :spring: image:{badges}/spring.svg[spring]
 :springboot: image:{badges}/springboot.svg[springboot]
+:springsecurity: image:{badges}/springsecurity.svg[springsecurity]
 :sql: image:{badges}/sql.svg[sql]
 :stackoverflow: image:{badges}/stackoverflow.svg[stackoverflow]
 :stackoverflowBadge: image:{badges}/stackoverflow-large.svg[stackoverflowbadge, link = "https://stackoverflow.com/users/8126192/moncef-aoudia"]
 :syncthing: image:{badges}/syncthing.svg[syncthing] 
-:travisci: image:{badges}/travisci.svg[travisci] 
-:twitter: image:{badges}/twitter.svg[twitter] 
+:thymeleaf: image:{badges}/thymeleaf.svg[thymeleaf]
+:travisci: image:{badges}/travisci.svg[travisci]
+:twitter: image:{badges}/twitter.svg[twitter]
 :twitterBadge: image:{badges}/twitter-large.svg[twitterbadge, link= "https://twitter.com/aoudiamoncef"] 
 :typescript: image:{badges}/typescript.svg[typescript]
 :ublockorigin: image:{badges}/ublockorigin.svg[ublockorigin]
@@ -166,6 +171,7 @@ slug = "about"
 :vagrant: image:{badges}/vagrant.svg[vagrant]
 :visualstudiocode: image:{badges}/visualstudiocode.svg[visualstudiocode]
 :visualvm: image:{badges}/visualvm.svg[visualvm]
+:webstorm: image:{badges}/webstorm.svg[webstorm]
 :windows: image:{badges}/windows.svg[windows]
 :windowsterminal: image:{badges}/windowsterminal.svg[windowsterminal]
 :winds: image:{badges}/winds.svg[winds]
@@ -179,48 +185,54 @@ Je suis développeur logiciels, passionné/mainteneur d'open-source.
 
 == Trouver moi sur 🌍
 [.badge]
-{twitterBadge} 
-{githubBadge}
-{gitlabBadge}
-{linkedinBadge}
 {gmailBadge}
-{clubhouseBadge}
+{twitterBadge}
+{linkedinBadge}
+{githubBadge}
+{stackoverflowBadge}
+{slidesBadge}
+{speakerdeckBadge}
 {discordBadge}
+{meetupBadge}
+{redditBadge}
+{pocketBadge}
+{gitlabBadge}
+{clubhouseBadge}
 {hashnodeBadge}
 {devtoBadge}
 {mediumBadge}
-{meetupBadge}
-{pocketBadge}
-{redditBadge}
-{slidesBadge} 
-{speakerdeckBadge}
-{stackoverflowBadge}
 {quoraBadge}
 {maoudia}
-{rssBadge} 
+{rssBadge}
 
 == Mon univers 🔮
 
-Technologies que j'ai utilisées au travail et/ou dans le cadre de projets parallèles.
+Les technologies que j'ai utilisées* au travail et/ou dans le cadre de projets personnels.
 
-.Languages
-[%collapsible]
-[.badge]
-====
-{java}
-{kotlin}
-{rust}
-{solidity}
-{sql}
-{asciidoc}
-{css3}
-{graphql}
-{html5}
-{latex}
-{markdown}
-{python}
-{typescript}
-====
+++++
+<details class="badge" open="">
+   <summary class="title">Languages</summary>
+   <div class="content">
+      <div class="paragraph">
+         <p><span class="image"><img src="/images/badges/java.svg" alt="java"></span>
+            <span class="image"><img src="/images/badges/kotlin.svg" alt="kotlin"></span>
+            <span class="image"><img src="/images/badges/scala.svg" alt="scala"></span>
+            <span class="image"><img src="/images/badges/rust.svg" alt="rust"></span>
+            <span class="image"><img src="/images/badges/solidity.svg" alt="solidity"></span>
+            <span class="image"><img src="/images/badges/typescript.svg" alt="typescript"></span>
+            <span class="image"><img src="/images/badges/python.svg" alt="python"></span>
+            <span class="image"><img src="/images/badges/graphql.svg" alt="graphql"></span>
+            <span class="image"><img src="/images/badges/sql.svg" alt="sql"></span>
+            <span class="image"><img src="/images/badges/asciidoc.svg" alt="asciidoc"></span>
+            <span class="image"><img src="/images/badges/css3.svg" alt="css3"></span>
+            <span class="image"><img src="/images/badges/html5.svg" alt="html5"></span>
+            <span class="image"><img src="/images/badges/latex.svg" alt="latex"></span>
+            <span class="image"><img src="/images/badges/markdown.svg" alt="markdown"></span>
+         </p>
+      </div>
+   </div>
+</details>
+++++
 
 .IDEs
 [%collapsible]
@@ -229,6 +241,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {androidstudio}
 {intellijidea}
 {visualstudiocode}
+{webstorm}
 ====
 
 .Data 
@@ -265,7 +278,9 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {reactor}
 {rxjava}
 {spring} 
-{springboot} 
+{springboot}
+{springsecurity}
+{thymeleaf}
 ====
 
 .Outils
@@ -300,6 +315,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {ohmyzsh}
 {pocket}
 {postman}
+{sonarlint}
 {syncthing}
 {vagrant}
 {visualvm}
@@ -316,6 +332,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 {meet}
 {rainbow}
 {slack}
+{spectrum}
 {workplace}
 {yammer}
 {zulip}
@@ -353,7 +370,7 @@ Technologies que j'ai utilisées au travail et/ou dans le cadre de projets paral
 
 == Mes projets 👨‍💻
 
-image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin, 400, 140, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"] 
+image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=apollo-client-maven-plugin[projet Apollo client maven plugin, 400, 140, link = "https://github.com/aoudiamoncef/apollo-client-maven-plugin"]
 image:https://github-readme-stats.vercel.app/api/pin/?username=aoudiamoncef&repo=maoudia.com[projet maoudia.com, 400, 120, link = "https://github.com/aoudiamoncef/maoudia.com"]
 
 == Statistiques Github 📊 
