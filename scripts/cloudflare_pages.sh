@@ -4,14 +4,8 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 cd ..
 
-echo "Get gem enviroment"
-gem env
-
 echo "Installing Asciidoctor plugins"
 gem install asciidoctor asciidoctor-html5s asciidoctor-rouge
-
-echo "Get asciidoctor path"
-gem which asciidoctor
 
 echo "Updating to latest theme submodule"
 git submodule update --init --recursive --remote
