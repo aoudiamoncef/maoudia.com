@@ -7,6 +7,13 @@ showPublishDate = false
 showLastModificationDate = false
 showReadingTime = false
 slug = "about"
+[twitter]
+    card = "summary_large_image"
+    site = "@AoudiaMoncef"
+    creator = "@AoudiaMoncef"
+    title = "Moncef AOUDIA"
+    description = "Ingénieur 1x, passionné/mainteneur d'open-source, amoureux de simulations automobiles et vols."
+    image = "https://www.maoudia.com/images/banners/banner-1200x600.png"
 +++
 
 :badges: /images/badges
@@ -179,7 +186,7 @@ slug = "about"
 :yammer: image:{badges}/yammer.svg[yammer]
 :zulip: image:{badges}/zulip.svg[zulip]
 
-Je suis développeur logiciels, passionné/mainteneur d'open-source.
+Ingénieur 1x, passionné/mainteneur d'open-source, amoureux de simulations automobiles et vols.
 
 <!--more-->
 

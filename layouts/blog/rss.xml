@@ -9,16 +9,16 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <image>
       <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
       <link>{{ .Permalink }}</link>
-      <url>{{ .Site.BaseURL }}images/favicons/splash.webp</url>
+      <url>{{ .Site.BaseURL }}images/logo.png</url>
       <width>512</width>
       <height>512</height>
     </image>
     <image>
       <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
       <link>{{ .Permalink }}</link>
-      <url>{{ .Site.BaseURL }}images/banners/banner-700x350.webp</url>
-      <width>700</width>
-      <height>150</height>
+      <url>{{ .Site.BaseURL }}images/banners/banner-1200x600.png</url>
+      <width>1200</width>
+      <height>600</height>
     </image>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
     <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
@@ -30,9 +30,9 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     <webfeeds:accentColor>000A12</webfeeds:accentColor>
-    <webfeeds:cover image="{{ .Site.BaseURL }}images/banners/banner-700x350.webp"/>
+    <webfeeds:cover image="{{ .Site.BaseURL }}images/banners/banner-1200x600.png"/>
     <webfeeds:icon>{{ .Site.BaseURL }}images/favicons/favicon.ico</webfeeds:icon>
-    <webfeeds:logo>{{ .Site.BaseURL }}images/favicons/splash.webp</webfeeds:logo>
+    <webfeeds:logo>{{ .Site.BaseURL }}images/logo.png</webfeeds:logo>
     <webfeeds:related layout="card" target="browser"/>
     {{ if .Site.GoogleAnalytics }}
     <webfeeds:analytics id="{{.Site.GoogleAnalytics}}" engine="GoogleAnalytics"/>

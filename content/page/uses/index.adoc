@@ -7,6 +7,13 @@ showPublishDate = false
 showLastModificationDate = false
 showReadingTime = false
 slug = "uses"
+[twitter]
+    card = "summary_large_image"
+    site = "@AoudiaMoncef"
+    creator = "@AoudiaMoncef"
+    title = "Moncef AOUDIA"
+    description = "Here are the software and hardware I use."
+    image = "https://www.maoudia.com/images/banners/banner-1200x600.png"
 +++
 
 :oss: image:/images/badges/oss.svg[open source badge, 50, 20]

@@ -34,7 +34,7 @@ resizeImages = false
 gravatarEMail = "mf.aoudia@gmail.com"
 # avatarEmail = "mf.aoudia@gmail.com"
 # set an path to the image file you want to use | overwrites gravatar
-customImage = "/images/favicons/splash.webp"
+customImage = "/images/logo.png"
 # define the icon you want to use for the overlay for the customImage or gravatar.
 overlayIcon = "fa-home"
 # always display the top navigation (with pages and search) on non-mobile screens
@@ -65,6 +65,8 @@ showReadingTime = true
 showPublishDate = true
 
 showLastModificationDate = true
+
+showAuthor = true
 # Minimum word count to display the Table of Contents
 tocMinWordCount = 400
 # Footer configuration

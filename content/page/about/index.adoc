@@ -7,6 +7,13 @@ showPublishDate = false
 showLastModificationDate = false
 showReadingTime = false
 slug = "about"
+[twitter]
+    card = "summary_large_image"
+    site = "@AoudiaMoncef"
+    creator = "@AoudiaMoncef"
+    title = "Moncef AOUDIA"
+    description = "1x engineer, open-source enthusiast/maintainer, simracing/flightsim lover."
+    image = "https://www.maoudia.com/images/banners/banner-1200x600.png"
 +++
 
 :badges: /images/badges
@@ -180,7 +187,7 @@ slug = "about"
 :zulip: image:{badges}/zulip.svg[zulip]
 
 
-I am a software developer, open-source enthusiast/maintainer.
+1x engineer, open-source enthusiast/maintainer, simracing/flightsim lover.
 
 <!--more-->
 

@@ -11,7 +11,7 @@ echo "Updating to latest theme submodule"
 git submodule update --init --recursive --remote
 
 echo "Building Hugo website"
-hugo --minify
+hugo $HUGO_ARGS
 
 echo "Building service worker"
 cd scripts && ./sw.sh

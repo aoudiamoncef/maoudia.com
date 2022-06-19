@@ -7,8 +7,8 @@
 
     <div class="meta">
         {{ if ( .ctx.Params.showPublishDate | default true ) }}
+             <span>{{ i18n "published" }} </span>
             {{ if ( .ctx.Site.Params.enableMomentJs | default true ) }}
-                <span>{{ i18n "published" }} </span>
                 <span class="date moment">{{ .ctx.PublishDate.Format "2006-01-02" }}</span>
             {{ else }}
                 <span class="date">{{ .ctx.PublishDate.Format (.ctx.Site.Params.DateFormat | default "2006-01-02") }}</span>
@@ -30,13 +30,15 @@
                     {{ $lastMod := .ctx.Lastmod.Format (.ctx.Site.Params.DateFormat | default "2006-01-02") }}
                     {{ $lastModTime := time $lastMod }}
                         {{if ($lastModTime.After (time $publishDate))}}
+                            <span> &vert; </span>
+                            <span>{{ i18n "updated" }} </span>
                             <span class="date">{{ $lastMod }}</span>
                         {{ end }}
                 {{ end }}
 
         {{ end }}
 
-        {{ if ( and (.ctx.Site.Params.showReadingTime | default false) (.ctx.Params.showReadingTime | default true)) }}
+        {{ if ( and (.ctx.Site.Params.showReadingTime | default true) (.ctx.Params.showReadingTime | default false)) }}
             <span> &vert; </span>
             {{ if .ctx.Params.readingTime }}
                 <span class="readingTime">{{ i18n "readingTime" .ctx.Params.readingTime }}</span>
@@ -57,14 +59,16 @@
             </span>
         {{ end }}
 
-        {{ with .ctx.Params.author }}
-            <span> &vert; {{ i18n "by" }}</span>
-            <span class="author">
-                {{ $urlValue := replace . " " "-" | lower}}
-                {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-            </span>
+        {{ if ( and (.ctx.Site.Params.showAuthor | default true) (.ctx.Params.showAuthor | default false)) }}
+            {{ with .ctx.Params.author }}
+                <span> &vert; {{ i18n "by" }}</span>
+                <span class="author">
+                    {{ $urlValue := replace . " " "-" | lower}}
+                    {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
+                </span>
+            {{ end }}
         {{ end }}
     </div>
 

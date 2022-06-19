@@ -1,0 +1,649 @@
++++
+title = "Mise À Jour En Masse Avec Spring Data MongoDB Reactive"
+date = 2022-06-20T00:00:00+02:00
+description = "On va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données en utilisant Spring Data MongoDB Reactive."
+author = "Moncef AOUDIA"
+showAuthor = false
+showReadingTime = true
+readingtime = 10
+tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers"]
+series = ["MongoDB Reactive CLI"]
+categories = ["Tutorial", "Reactive Programming"]
+slug = "mise-a-jour-en-masse-avec-spring-data-mongodb-reactive"
+type = "article"
+[twitter]
+    card = "summary_large_image"
+    site = "@AoudiaMoncef"
+    creator = "@AoudiaMoncef"
+    title = "Mise À Jour En Masse Avec Spring Data MongoDB Reactive"
+    description = "On va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données en utilisant Spring Data MongoDB Reactive."
+    image = "https://www.maoudia.com/fr/blog/mise-a-jour-en-masse-avec-spring-data-mongodb-reactive/featuredImage.png"
++++
+
+:toc: macro
+:toc-title: Sommaire
+:toclevels: 4
+:imagesdir: /images/blog/bulk-update-with-spring-data-mongodb-reactive
+ifdef::env-github[]
+:imagesdir: ../../static/images/bulk-update-with-spring-data-mongodb-reactive
+endif::[]
+
+Afin de mettre à jour les documents d'une collection MongoDB, on passe souvent par des requêtes de mise à jour, si le volume des données est conséquent,
+cela peut conduire à des problèmes de performance et une surconsommation des ressources matérielles.
+
+On va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données
+en utilisant Spring Data MongoDB Reactive.
+
+<!--more-->
+
+toc::[]
+
+Avant de continuer la lecture, si vous n'êtes pas familier avec la pile réactive de Spring et MongoDB,
+je suggère de consulter la section *ressources*.
+
+== EIP enrichisseur de contenu
+
+++++
+<div class="imageblock">
+   <div class="content schema">
+      <img src="/images/blog/bulk-update-with-spring-data-mongodb-reactive/content-enricher-fr.svg" alt="eip enrichisseur de contenu">
+   </div>
+</div>
+++++
+
+Le modèle d'intégration d'entreprise _enrichisseur de contenu_ permet d'ajouter des informations à un message existant depuis une source externe.
+Il utilise les informations contenues dans le message entrant pour effectuer l'opération d'enrichissement.
+
+On va implémenter une version simplifiée de l'_EIP_ :
+
+. Message en entrée : représenté par un document MongoDB.
+. Enrichisseur : notre application.
+. Ressource : appel à une API RESTful.
+. Message en sortie : nous ne conserverons que le document enrichi.
+
+=== Flux d'intégration
+
+++++
+<div class="imageblock">
+   <div class="content schema">
+      <img src="/images/blog/bulk-update-with-spring-data-mongodb-reactive/integration-flow.svg" alt="schema du flux d'intégration">
+   </div>
+</div>
+++++
+
+L'application va lire les documents adresse, ajouter le produit et sauvegarder les documents enrichis dans la base MongoDB.
+
+== Configuration du projet
+
+=== Prérequis
+
+* Java 1.8+
+* Maven 3+
+* Docker Compose
+* MongoDB Database Tools
+
+=== Génération
+
+On génère le squelette du projet depuis https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.0&packaging=jar&jvmVersion=1.8&groupId=com.maoudia&artifactId=bulk-update-with-spring-data-mongodb&name=Bulk%20Update%20with%20Spring%20Data%20MongoDB%20Reactive&description=Bulk%20Update%20with%20Spring%20data%20MongoDB%20reactive&packageName=com.maoudia.tutorial&dependencies=data-mongodb-reactive,webflux,testcontainers[`Spring Initializr`, window=\"_blank\"].
+
+=== Structure
+
+[source,shell,indent=0,linenums=true]
+----
+.
+│  .gitignore
+│  docker-compose.yml
+│  pom.xml
+│  README.adoc
+├───data
+│  ├───mongodb
+│  │     address.ndjson
+│  └───product
+│        db.json
+└───src
+   ├───main
+   │  ├───java
+   │  │  └───com
+   │  │     └───maoudia
+   │  │        └───tutorial
+   │  │             Application.java
+   │  │             AppProperties.java
+   │  │             CollectionService.java
+   │  │             NetworkConfig.java
+   │  └───resources
+   │        application.yml
+   └───test
+      └───java
+        └───com
+           └───maoudia
+              └───tutorial
+                   CollectionServiceTest.java
+----
+
+=== Conteneurs
+
+On télécharge le dossier https://github.com/maoudia/code.maoudia.com/tree/main/bulk-update-with-spring-data-mongodb-reactive/data[`data`] vers la racine du projet.
+
+On utilise `docker-compose` pour créer les conteneurs nécessaires pour ce tutoriel.
+
+[source,yml,indent=0,linenums=true]
+.docker-compose.yml
+----
+services:
+  mongodb: // <1>
+    container_name: maoudia-mongodb
+    image: mongo:5.0.8
+    environment:
+      - MONGO_INITDB_DATABASE=test
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    networks:
+      - mongodb-network
+    ports:
+      - 15015:27017
+    volumes:
+      - ./data/mongodb:/data/mongodb
+
+  mongo-express: // <2>
+    container_name: maoudia-mongo-express
+    image: mongo-express:0.54.0
+    depends_on:
+      - mongodb
+    networks:
+      - mongodb-network
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=maoudia-mongodb
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+    ports:
+      - 1515:8081
+    volumes:
+      - ./data/mongodb:/data/mongodb
+
+  product-api: // <3>
+    container_name: maoudia-product-api
+    image: clue/json-server:latest
+    ports:
+      - 1519:80
+    volumes:
+      - ./data/product/db.json:/data/db.json
+
+networks:
+  mongodb-network:
+    driver: bridge
+----
+
+<1> MongoDB initialisé avec la base de données `test`.
+<2> MongoExpress est une interface d'administration MongoDB.
+<3> L'API produit est configurée depuis le fichier `db.json`.
+
+
+On démarre les services :
+
+[source,shell,indent=0,linenums=true]
+----
+docker-compose up -d
+----
+
+=== Initialisation des données
+
+On utilise un document JSON issu de la base d'adresses française.
+
+.Adresse
+[source,json,indent=0,linenums=true]
+----
+{
+  "id": "59350",
+  "type": "municipality",
+  "name": "Lille",
+  "postcode": [
+    "59000",
+    "59800",
+    "59260",
+    "59777",
+    "59160"
+  ],
+  "citycode": "59350",
+  "x": 703219.96,
+  "y": 7059335.72,
+  "lon": 3.045433,
+  "lat": 50.630992,
+  "population": 234475,
+  "city": "Lille",
+  "context": "59, Nord, Hauts-de-France",
+  "importance": 0.56333
+}
+----
+
+On importe la collection d'adresses :
+
+[source,shell,indent=0,linenums=true]
+----
+mongoimport --uri "mongodb://admin:password@localhost:15015" --authenticationDatabase=admin --db test --collection address ./data/mongodb/address.ndjson
+----
+
+Ou :
+
+On utilise MongoExpress qui est accessible sur http://localhost:1515[`http://localhost:1515`].
+
+Le produit représente une offre d'internet par satellite.
+
+.Produit
+[source,json,indent=0,linenums=true]
+----
+{
+  "id": 1,
+  "available": true,
+  "company": "SPACEX",
+  "provider": "STARLINK",
+  "type": "SATELLITE"
+}
+----
+
+L'API produit est accessible sur http://localhost:1519[`http://localhost:1519`].
+
+== Application
+
+=== Configuration
+
+On change l'extension du fichier de `application.properties` vers `application.yml`.
+
+[source,yml,indent=0,linenums=true]
+.application.yml
+----
+app:
+  buffer-max-size: 500
+  bulk-size: 100
+  collection-name: address
+  enriching-key: product
+  enriching-uri: http://localhost:1519/products/1
+spring:
+  main:
+    web-application-type: none
+  data:
+    mongodb:
+      database: test
+      uri: mongodb://admin:password@localhost:15015
+---
+spring.config.activate.on-profile: dev
+logging:
+  level:
+    org.mongodb.driver: debug
+---
+spring.config.activate.on-profile: test
+app:
+  bulk-size: 2
+----
+
+On déclare une classe qui va contenir les propriétés de configuration de l'application.
+
+[source,java,indent=0,linenums=true]
+.AppProperties.java
+----
+@ConfigurationProperties(prefix = "app")
+public class AppProperties {
+    private int bulkSize;
+    private int bufferMaxSize;
+    private String collectionName;
+    private String enrichingKey;
+    private String enrichingUri;
+    // Les Getter et Setter sont omis
+}
+----
+
+On crée un `@Bean` du client HTTP non bloquant de Spring.
+
+[source,java,indent=0,linenums=true]
+.NetworkConfig.java
+----
+@Configuration
+public class NetworkConfig {
+
+    @Bean
+    public WebClient client() {
+        return WebClient.create();
+    }
+
+}
+----
+
+=== Implémentation
+
+On crée le `@Service` qui va contenir la logique métier de l'application.
+
+[source,java,indent=0,linenums=true]
+.CollectionService.java
+----
+@Service
+public class CollectionService {
+    private final AppProperties properties;
+    private final ReactiveMongoTemplate template;
+    private final WebClient client;
+
+    public CollectionService(AppProperties properties,
+                             ReactiveMongoTemplate template,
+                             WebClient client) {
+        this.properties = properties;
+        this.template = template;
+        this.client = client;
+    }
+
+    public Flux<BulkWriteResult> enrichAll(String collectionName, String enrichingKey, String enrichingUri) {
+            return template.findAll(Document.class, collectionName) // <1>
+                    .onBackpressureBuffer(properties.getBufferMaxSize()) // <2>
+                    .flatMap(document -> enrich(document,  enrichingKey, enrichingUri)) // <3>
+                    .map(CollectionService::toReplaceOneModel) // <4>
+                    .window(properties.getBulkSize()) // <5>
+                    .flatMap(replaceOneModelFlux -> bulkWrite(replaceOneModelFlux, collectionName)); // <6>
+    }
+}
+----
+
+<1> Crée un flux de documents à partir de la collection.
+<2> Limite le nombre maximum de documents chargés dans la _RAM_ en cas de consommation plus lente que la production.
+Si la taille maximale du tampon est dépassée, une `IllegalStateException` est levée.
+<3> Enrichie le document avec le document externe d'une façon asynchrone.
+<4> Crée un `ReplaceOneModel` à partir du document.
+<5> Regroupe les documents en flux de taille fixe. Le dernier flux peut être de taille inférieure.
+<6> Appel la fonction d'écriture en masse.
+
+[NOTE]
+====
+La propriété de configuration `app.bulk-size` peut être ajustée en fonction des besoins et ressources matérielles disponibles.
+Plus la taille du _bulk_ est grande,  plus la consommation de mémoire et la taille des requêtes seront élevées.
+====
+
+On crée les fonctions d'enrichissement de document.
+
+[source,java,indent=0,linenums=true]
+.CollectionService.java
+----
+private Publisher<Document> enrich(Document document, String enrichingKey, String enrichingUri) { // <1>
+    return getEnrichingDocument(enrichingUri)
+            .map(enrichingDocument -> {
+                document.put(enrichingKey, enrichingDocument);
+                document.put("updatedAt", new Date());
+                return document;
+            });
+}
+
+private Mono<Document> getEnrichingDocument(String enrichingUri) { // <2>
+    return client.get()
+            .uri(URI.create(enrichingUri))
+            .retrieve()
+            .bodyToMono(Document.class);
+}
+----
+
+<1> Ajoute le document récupéré depuis l'appel _HTTP_ à la racine du document à enrichir avec la clef passée en paramètre.
+<2> Récupère le document depuis l'_URI_.
+
+[NOTE]
+====
+MongoDB convertie et stocke les dates en UTC par défaut.
+====
+
+[source,java,indent=0,linenums=true]
+.CollectionService.java
+----
+private static final ReplaceOptions REPLACE_OPTIONS = new ReplaceOptions(); // <1>
+private static ReplaceOneModel<Document> toReplaceOneModel (Document document) {
+    return new ReplaceOneModel<>(
+            Filters.eq("_id", document.get("_id")), // <2>
+            document, // <3>
+            REPLACE_OPTIONS
+    );
+}
+----
+
+<1> Instancie la configuration de remplacement par défaut.
+<2> Le filtre permet la correspondance par identifiant document.
+<3> Le contenu à remplacer, représente l'intégralité du document enrichi.
+
+
+[source,java,indent=0,linenums=true]
+.CollectionService.java
+----
+private static final BulkWriteOptions BULK_WRITE_OPTIONS = new BulkWriteOptions().ordered(false); // <1>
+private Flux<BulkWriteResult> bulkWrite(Flux<ReplaceOneModel<Document>> updateOneModelFlux, String collectionName) {
+    return updateOneModelFlux.collectList() // <2>
+            .flatMapMany(unused -> template.getCollection(collectionName) // <3>
+                    .flatMapMany(collection -> collection.bulkWrite(updateOneModels, BULK_WRITE_OPTIONS))); // <4>
+}
+----
+
+<1> Instancie les options d'écritures en désactivant l'ordre des opérations.
+<2> Collecte le flux dans une liste.
+<3> Récupère la collection passée en paramètre.
+<4> Écrit en masse les documents dans la collection MongoDB.
+
+[NOTE]
+====
+Les transactions sont supportées sur les  _Replicaset_ depuis MongoDB 4.2.
+Si les transactions sont activées, on peut utiliser `@Transactional` ou `TransactionalOperator` pour rendre une méthode transactionnelle.
+====
+
+On implémente les interfaces suivantes :
+
+* `CommandLineRunner` : exécute la commande d'enrichissement au démarrage de l'application.
+* `ExitCodeGenerator` : gère le code de sortie système.
+
+[source,java,indent=0,linenums=true]
+.Application.java
+----
+@SpringBootApplication(exclude = MongoReactiveRepositoriesAutoConfiguration.class) // <1>
+@ConfigurationPropertiesScan("com.maoudia.tutorial") // <2>
+public class Application implements CommandLineRunner, ExitCodeGenerator {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+    private final AppProperties properties;
+    private final CollectionService service;
+    private int exitCode = 255;
+
+    public static void main(String[] args) {
+        System.exit(SpringApplication.exit(SpringApplication.run(Application.class, args)));
+    }
+
+    public Application(AppProperties properties, CollectionService service) {
+        this.properties = properties;
+        this.service = service;
+    }
+
+    @Override
+    public void run(final String... args) {
+        service.enrichAll(properties.getCollectionName(), properties.getEnrichingKey(), properties.getEnrichingUri())
+                .doOnSubscribe(unused -> LOGGER.info("------------------< Staring Collection Enriching Command >-------------------")) // <3>
+                .doOnNext(bulkWriteResult -> LOGGER.info("Bulk write result with {} modified document(s)", bulkWriteResult.getModifiedCount()))
+                .doOnError(throwable -> {
+                    exitCode = 1;
+                    LOGGER.error("Collection enriching failed due to : {}", throwable.getMessage(), throwable);
+                })
+                .doOnComplete(() -> exitCode = 0)
+                .doOnTerminate(() -> LOGGER.info("------------------< Collection Enriching Command Finished >------------------"))
+                .blockLast(); // <4>
+    }
+
+    @Override
+    public int getExitCode() {
+        return exitCode;
+    }
+
+}
+----
+
+<1> Désactive l'auto-configuration des repositories, car on utilise `MongoReactiveTemplate` seulement.
+<2> Permet de scanner et détecter les _beans_ qui portent l'annotation `@ConfigProperties`.
+<3> L'inscription au flux déclenche le traitement.
+<4> Sans un serveur web en fonctionnement, nous devons nous abonner indéfiniment au `Publisher` afin de déclencher
+et attendre la fin de l'exécution.
+
+=== Démo
+
+On lance l'application :
+
+[source,shell,indent=0,linenums=true]
+----
+mvn spring-boot:run
+----
+
+Sortie :
+
+[source,console,indent=0,linenums=true]
+----
+...
+2022-06-10 00:36:45.152  INFO 7036 --- [           main] com.maoudia.tutorial.Application         : Started Application in 2.755 seconds (JVM running for 3.251)
+2022-06-10 00:36:45.227  INFO 7036 --- [           main] com.maoudia.tutorial.Application         : ------------------< Staring Collection Enriching Command >-------------------
+2022-06-10 00:36:45.297  INFO 7036 --- [           main] org.mongodb.driver.cluster               : No server chosen by com.mongodb.reactivestreams.client.internal.ClientSessionHelper$$Lambda$543/543409470@4647881c from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:15015, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2022-06-10 00:36:46.527  INFO 7036 --- [localhost:15015] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:39}] to localhost:15015
+2022-06-10 00:36:46.527  INFO 7036 --- [localhost:15015] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:40}] to localhost:15015
+2022-06-10 00:36:46.527  INFO 7036 --- [localhost:15015] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:15015, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=61576400}
+2022-06-10 00:36:46.692  INFO 7036 --- [ntLoopGroup-2-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:41}] to localhost:15015
+2022-06-10 00:36:48.355  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:48.482  INFO 7036 --- [ntLoopGroup-2-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:42}] to localhost:15015
+2022-06-10 00:36:48.562  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:48.742  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:48.982  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:49.222  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:49.488  INFO 7036 --- [ntLoopGroup-2-4] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:49.701  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:49.852  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:50.031  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:50.105  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : Bulk write result with 100 modified document(s)
+2022-06-10 00:36:50.106  INFO 7036 --- [ntLoopGroup-2-3] com.maoudia.tutorial.Application         : ------------------< Collection Enriching Command Finished >------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.315 s
+[INFO] Finished at: 2022-06-10T00:36:54+02:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+----
+
+=== Rapport VisuelVM
+
+*VisualVM* est un outil de profilage léger. On l'utilise pour avoir une vue d'ensemble sur les threads qui sont lancés par l'application.
+
+++++
+<div class="imageblock">
+   <div class="content image-block">
+      <img src="/images/blog/bulk-update-with-spring-data-mongodb-reactive/visual-vm-report.webp" alt="rapport VisualVM">
+   </div>
+</div>
+++++
+
+On observe deux groupes de threads qui exécutent les opérations en parallèle, chaque groupe forme une l'_event loop_.
+
+* Les requêtes MongoDB sont exécutées par `nioEventLoopGroup`.
+* Les requêtes HTTP sont exécutées par `reactor-http-nio`.
+
+== Tests d'intégration
+
+On utilise *JUnit 5* et le module *Testcontainers MongoDB* pour les tests d'intégration.
+Cela permet d'avoir un retour proche du comportement réel de l'application qui fait essentiellement des opérations de lecture/écriture.
+
+Pour que ce tutoriel reste court, on va se contenter d'écrire qu'un seul test.
+
+[source,java,indent=0,linenums=true]
+.CollectionServiceTest.java
+----
+@Profile("test")
+@SpringBootTest
+@Testcontainers // <1>
+class CollectionServiceTest {
+
+    @Container
+    private static final MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:5.0.8") // <2>
+            .withReuse(true);
+
+    @DynamicPropertySource
+    private static void setProperties(DynamicPropertyRegistry registry) {
+        registry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl); // <3>
+    }
+
+    @Autowired
+    private AppProperties properties;
+    @Autowired
+    private CollectionService command;
+    @Autowired
+    private ReactiveMongoTemplate template;
+
+    @Test
+    void multipleBulkWriteResultsAreReturned() {
+        Document givenDocument1 = new Document();
+        givenDocument1.put("_id", "628ea3edb5110304e5e814f6");
+        givenDocument1.put("type", "municipality");
+        Document givenDocument2 = new Document();
+        givenDocument2.put("_id", "628ea3edb5110304e5e814f7");
+        givenDocument2.put("type", "street");
+        Document givenDocument3 = new Document();
+        givenDocument3.put("_id", "628ea3edb5110304e5e814f8");
+        givenDocument3.put("type", "housenumber");
+
+        template.insert(Arrays.asList(givenDocument1, givenDocument2, givenDocument3), properties.getCollectionName()).blockLast();
+
+        BulkWriteResult expectedBulkWriteResult1 = BulkWriteResult.acknowledged(WriteRequest.Type.REPLACE, 2, 2, Collections.emptyList(),
+                Collections.emptyList());
+        BulkWriteResult expectedBulkWriteResult2 = BulkWriteResult.acknowledged(WriteRequest.Type.REPLACE, 1, 1, Collections.emptyList(),
+                Collections.emptyList());
+
+        command.enrichAll( properties.getCollectionName(), properties.getEnrichingKey() , properties.getEnrichingUri())
+                .as(StepVerifier::create) // <4>
+                .expectNext(expectedBulkWriteResult1)
+                .expectNext(expectedBulkWriteResult2)
+                .verifyComplete();
+    }
+}
+----
+
+<1> Ajoute l'extension Junit 5 de TestContainers.
+<2> Démarre un conteneur MongoDB.
+<3> Configure l'application avec l'URI du conteneur.
+<4> Utilise `StepVerifier` de *Reactor Test* pour faire des assertions sur le flux en sortie.
+
+On lance les tests d'intégration :
+
+[source,shell,indent=0,linenums=true]
+----
+mvn test -Dspring.profiles.active=test
+----
+
+Résultats des tests :
+
+[source,console,indent=0,linenums=true]
+----
+...
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.563 s - in com.maoudia.tutorial.CollectionServiceTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.100 s
+[INFO] Finished at: 2022-06-10T01:02:17+02:00
+[INFO] ------------------------------------------------------------------------
+----
+
+== Conclusion
+
+Dans ce tutoriel, on a réussi à implémenter une solution complète pour enrichir et mettre à jour efficacement une collection MongoDB.
+De plus, on a vu comment écrire des tests d'intégration avec JUnit 5 et Testcontainers.
+
+Le code source complet est disponible sur https://github.com/maoudia/code.maoudia.com/tree/main/bulk-update-with-spring-data-mongodb-reactive[Github].
+
+Dans le prochain chapitre de la série *MongoDB Reactive CLI*, on ajoutera de nouvelles fonctionnalités et utilisera https://picocli.info/[Picocli] afin de faciliter les interactions
+avec l'application.
+
+== Ressources
+
+* https://www.enterpriseintegrationpatterns.com/DataEnricher.html[EIP Data enricher]
+* https://www.mongodb.com/try/download/database-tools[MongoDB Database Tools]
+* https://adresse.data.gouv.fr/data/ban/adresses/latest/addok/[French Adresses Data]
+* https://mongodb.github.io/mongo-java-driver/4.6/driver-reactive/tutorials/bulk-writes/[MongoDB Java Driver Bulk operations]
+* https://projectreactor.io/docs/core/release/reference/[Reactor 3 Reference Guide]
+* https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/[Spring Data MongoDB Reference]
+* https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html[Web on Reactive Stack]
+* https://visualvm.github.io/[VisualVM]
+* https://www.testcontainers.org/modules/databases/mongodb/[Testcontainers MongoDB]

@@ -31,17 +31,17 @@ disableAliases = false
 
 [markup]
   [markup.tableOfContents]
-    endLevel = 5
-    ordered = false
+    endLevel = 4
+    ordered = true
     startLevel = 2
   [markup.asciidocExt]
     backend = "html5"
     extensions = ["asciidoctor-html5s"]
     failureLevel = "fatal"
     noHeaderOrFooter = true
-    preserveTOC = false
+    preserveTOC = true
     safeMode = "unsafe"
-    sectionNumbers = false
+    sectionNumbers = true
     trace = false
     verbose = false
     workingFolderCurrent = false

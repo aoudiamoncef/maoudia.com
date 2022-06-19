@@ -33,7 +33,7 @@ other = "Other languages"
 
 [readingTime]
 one = "1 min read"
-other = "{{.Count}} min read"
+other = "{{.Count}} mins read"
 
 [tableOfContents]
 other = "Table of Contents"
@@ -79,3 +79,12 @@ other = "Offline mode ❌"
 
 [offlineMessage]
 other = "Oops, please wait until your internet connection is back"
+
+[recentContent]
+other = "Recent content"
+
+[in]
+other = "in"
+
+[on]
+other = "on"
