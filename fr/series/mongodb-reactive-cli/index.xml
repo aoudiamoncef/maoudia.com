@@ -3,6 +3,6 @@
 cela peut conduire à des problèmes de performance et une surconsommation des ressources matérielles.&lt;/p>
 &lt;/div>
 &lt;div class="paragraph">
-&lt;p>Dans ce tutoriel, on va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données
+&lt;p>On va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données
 en utilisant Spring Data MongoDB Reactive.&lt;/p>
 &lt;/div></description></item></channel></rss>
