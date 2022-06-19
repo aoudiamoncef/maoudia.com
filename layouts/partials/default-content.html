@@ -38,7 +38,7 @@
 
         {{ end }}
 
-        {{ if ( and (.ctx.Site.Params.showReadingTime | default false) (.ctx.Params.showReadingTime | default true)) }}
+        {{ if ( and (.ctx.Site.Params.showReadingTime | default true) (.ctx.Params.showReadingTime | default false)) }}
             <span> &vert; </span>
             {{ if .ctx.Params.readingTime }}
                 <span class="readingTime">{{ i18n "readingTime" .ctx.Params.readingTime }}</span>
@@ -59,14 +59,16 @@
             </span>
         {{ end }}
 
-        {{ with .ctx.Params.author }}
-            <span> &vert; {{ i18n "by" }}</span>
-            <span class="author">
-                {{ $urlValue := replace . " " "-" | lower}}
-                {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
-            </span>
+        {{ if ( and (.ctx.Site.Params.showAuthor | default true) (.ctx.Params.showAuthor | default false)) }}
+            {{ with .ctx.Params.author }}
+                <span> &vert; {{ i18n "by" }}</span>
+                <span class="author">
+                    {{ $urlValue := replace . " " "-" | lower}}
+                    {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
+                </span>
+            {{ end }}
         {{ end }}
     </div>
 

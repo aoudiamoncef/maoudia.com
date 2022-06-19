@@ -60,11 +60,13 @@ enableMomentJs = false
 # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 dateFormat = "2006-01-02"
 # display the estimated reading time for an article
-showReadingTime = false
+showReadingTime = true
 
 showPublishDate = true
 
 showLastModificationDate = true
+
+showAuthor = true
 # Minimum word count to display the Table of Contents
 tocMinWordCount = 400
 # Footer configuration

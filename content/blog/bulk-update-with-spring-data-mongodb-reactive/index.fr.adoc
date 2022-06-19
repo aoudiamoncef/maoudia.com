@@ -1,6 +1,8 @@
 +++
 title = "Mise à Jour En Masse Avec Spring Data MongoDB Reactive"
 date = 2022-06-19T07:30:00+02:00
+author = "Moncef AOUDIA"
+showAuthor = false
 tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers"]
 series = ["MongoDB Reactive CLI"]
 categories = ["Tutorial", "Reactive Programming"]

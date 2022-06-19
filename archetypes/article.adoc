@@ -6,6 +6,7 @@ lastmod = 2021-05-19T08:30:00+01:00
 showPublishDate = true
 showLastModificationDate = true
 showReadingTime = true
+showAuthor = true
 images = ["featuredImage.jpg"]
 categories = ["Tutorial", "Tip"]
 tags = ["Java", "Kotlin", "Android", "Hugo", "SpringBoot", "GraphQL", "Programming", "Quarkus"]

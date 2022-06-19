@@ -9,8 +9,8 @@
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
-    {{ .Scratch.Set "imageWidth" 700 }}
-    {{ .Scratch.Set "imageHeight" 350 }}
+    {{ .Scratch.Set "imageWidth" 1600 }}
+    {{ .Scratch.Set "imageHeight" 628 }}
 
 {{ else if .Resources.GetMatch "featuredImage.*" }}
     {{ $imageUrl := "" }}
@@ -22,17 +22,17 @@
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
-    {{ .Scratch.Set "imageWidth" 700 }}
-    {{ .Scratch.Set "imageHeight" 350 }}
+    {{ .Scratch.Set "imageWidth" 1600 }}
+    {{ .Scratch.Set "imageHeight" 628 }}
 
 {{ else if .Params.featuredImage }}
   {{ .Scratch.Set "image" (.Params.featuredImage | absURL) }}
 {{ else if .Params.mp4videoImage }}
   {{ .Scratch.Set "image" (.Params.mp4videoImage | absURL) }}
 {{ else }}
-  {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
-  {{ .Scratch.Set "imageWidth" 200 }}
-  {{ .Scratch.Set "imageHeight" 200 }}
+  {{ .Scratch.Set "image" ("/images/banners/banner-1600x628.png" | absURL) }}
+  {{ .Scratch.Set "imageWidth" 1600 }}
+  {{ .Scratch.Set "imageHeight" 628 }}
 {{ end }}
 
 {{- if ne .Description "" -}}
