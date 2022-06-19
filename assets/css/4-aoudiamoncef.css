@@ -21,8 +21,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme article .content {
-    padding: 0em;
+    padding: 0;
     margin: 1.5em;
+}
+
+.bilberry-hugo-theme article .content h2 {
+    font-size: 1.8em;
+}
+
+.bilberry-hugo-theme article .content h3 {
+    font-size: 1.4em;
 }
 
 .bilberry-hugo-theme header {
@@ -172,19 +180,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme footer .container ul a {
-    color: #2b5c00;
+    color: #377300;
 }
 
 .bilberry-hugo-theme footer .container .right .languages a {
-    color: #2b5c00;
+    color: #377300;
 }
 
 .bilberry-hugo-theme .credits .container .author {
-    color: #2b5c00;
+    color: #377300;
 }
 
 .bilberry-hugo-theme .credits .container a {
-    color: #2b5c00;
+    color: #377300;
 }
 
 .bilberry-hugo-theme footer .container a:hover {
@@ -207,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme footer .container .right .languages span {
-    color: #2b5c00;
+    color: #377300;
 }
 
 .bilberry-hugo-theme header .logo img {
@@ -235,11 +243,36 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 }
 
+.bilberry-hugo-theme article .content .meta {
+    color: #737373;
+}
+
 .bilberry-hugo-theme article .content img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.bilberry-hugo-theme article .content.schema img {
+    width: 60%;
+}
+
+@media (max-width: 1200px) {
+    .bilberry-hugo-theme article .content.schema img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bilberry-hugo-theme article .content.schema img {
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+    .bilberry-hugo-theme article .content.schema img {
+        width: 100%;
+    }
 }
 
 .badge .image {
@@ -292,6 +325,32 @@ details.badge summary {
     font-size: 0.95em;
 }
 
-.content .listingblock .content {
+.bilberry-hugo-theme .content .listingblock .content {
     margin: 0;
+}
+
+.bilberry-hugo-theme .container {
+    width: 70%;
+    max-width: 100%;
+}
+
+.bilberry-hugo-theme ul {
+    padding-left: revert;
+}
+
+.bilberry-hugo-theme ol li {
+    list-style: decimal;
+}
+
+.bilberry-hugo-theme ol {
+    padding-left: revert;
+    margin-top: 0;
+}
+
+.bilberry-hugo-theme .ulist ul {
+    padding-left: inherit;
+}
+
+.bilberry-hugo-theme .toc ul li ul {
+    padding-left: inherit;
 }

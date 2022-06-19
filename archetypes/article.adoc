@@ -9,7 +9,7 @@ showReadingTime = true
 images = ["featuredImage.jpg"]
 categories = ["Tutorial", "Tip"]
 tags = ["Java", "Kotlin", "Android", "Hugo", "SpringBoot", "GraphQL", "Programming", "Quarkus"]
-project_url = "https://github.com/gohugoio/hugo"
+project_url = "https=//github.com/gohugoio/hugo"
 author = "Moncef AOUDIA"
 series = []
 audio = []
@@ -19,8 +19,7 @@ resizeImages = false
 excludeFromIndex = false
 draft = true
 slug = "/"
-exclude = false
+exclude : false
 +++
-
 
 <!--more-->

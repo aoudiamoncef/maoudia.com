@@ -179,7 +179,7 @@ slug = "about"
 :yammer: image:{badges}/yammer.svg[yammer]
 :zulip: image:{badges}/zulip.svg[zulip]
 
-Je suis développeur logiciels, passionné/mainteneur d'open-source.
+Ingénieur 1x, passionné/mainteneur d'open-source, amoureux de simulations automobiles et vols.
 
 <!--more-->
 

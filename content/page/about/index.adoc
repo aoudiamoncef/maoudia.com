@@ -180,7 +180,7 @@ slug = "about"
 :zulip: image:{badges}/zulip.svg[zulip]
 
 
-I am a software developer, open-source enthusiast/maintainer.
+1x engineer, open-source enthusiast/maintainer, simracing/flightsim lover.
 
 <!--more-->
 

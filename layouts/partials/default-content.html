@@ -7,8 +7,8 @@
 
     <div class="meta">
         {{ if ( .ctx.Params.showPublishDate | default true ) }}
+             <span>{{ i18n "published" }} </span>
             {{ if ( .ctx.Site.Params.enableMomentJs | default true ) }}
-                <span>{{ i18n "published" }} </span>
                 <span class="date moment">{{ .ctx.PublishDate.Format "2006-01-02" }}</span>
             {{ else }}
                 <span class="date">{{ .ctx.PublishDate.Format (.ctx.Site.Params.DateFormat | default "2006-01-02") }}</span>
@@ -30,6 +30,8 @@
                     {{ $lastMod := .ctx.Lastmod.Format (.ctx.Site.Params.DateFormat | default "2006-01-02") }}
                     {{ $lastModTime := time $lastMod }}
                         {{if ($lastModTime.After (time $publishDate))}}
+                            <span> &vert; </span>
+                            <span>{{ i18n "updated" }} </span>
                             <span class="date">{{ $lastMod }}</span>
                         {{ end }}
                 {{ end }}

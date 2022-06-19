@@ -20,20 +20,20 @@ other = "Chercher ..."
 other = "Rien n'a été trouvé."
 
 [olderPosts]
-other = "Articles plus anciens"
+other = "Postes plus anciens"
 
 [newerPosts]
-other = "messages plus récents"
+other = "Postes plus récents"
 
 [continueReading]
-other = "continuer la lecture"
+other = "Continuer la lecture"
 
 [otherLanguages]
 other = "Autres langues"
 
 [readingTime]
-one = "1 Min. lecture"
-other = "{{.Count}} Min. lecture"
+one = "1 min de lecture"
+other = "{{.Count}} mins lecture"
 
 [series]
 other = "Séries"

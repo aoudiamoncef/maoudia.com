@@ -119,7 +119,7 @@
     {{ end }}
   
     <link rel="preload" as="script" href="{{ "/js/theme.min.js" | absURL }}" crossorigin="anonymous">
-        
+
     {{ if .Site.Params.enableTwitterCard | default true }}
          {{ partial "twitter-card.html" . }}
     {{ end }}

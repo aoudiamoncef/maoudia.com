@@ -33,7 +33,7 @@ other = "Other languages"
 
 [readingTime]
 one = "1 min read"
-other = "{{.Count}} min read"
+other = "{{.Count}} mins read"
 
 [tableOfContents]
 other = "Table of Contents"

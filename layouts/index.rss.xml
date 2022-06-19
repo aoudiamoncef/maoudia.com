@@ -16,7 +16,7 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <image>
       <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
       <link>{{ .Permalink }}</link>
-      <url>{{ "images/banners/banner-700x350.webp" | absURL }}</url>
+      <url>{{ "images/banners/banner-700x350.png" | absURL }}</url>
       <width>700</width>
       <height>150</height>
     </image>
@@ -30,7 +30,7 @@ xmlns:webfeeds="http://webfeeds.org/rss/1.0">
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     <webfeeds:accentColor>000A12</webfeeds:accentColor>
-    <webfeeds:cover image="{{ "images/banners/banner-700x350.webp" | absURL }}"/>
+    <webfeeds:cover image="{{ "images/banners/banner-700x350.png" | absURL }}"/>
     <webfeeds:icon>{{ "images/favicons/favicon.ico" | absURL }}</webfeeds:icon>
     <webfeeds:logo>{{ "images/favicons/splash.webp" | absURL }}</webfeeds:logo>
     <webfeeds:related layout="card" target="browser"/>
