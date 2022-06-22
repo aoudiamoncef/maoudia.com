@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme a {
-    color: #3f8500;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme a:hover {
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme article .content a.more {
-    color: #3f8500;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme a:hover {
@@ -180,19 +180,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme footer .container ul a {
-    color: #377300;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme footer .container .right .languages a {
-    color: #377300;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme .credits .container .author {
-    color: #377300;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme .credits .container a {
-    color: #377300;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme footer .container a:hover {
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bilberry-hugo-theme footer .container .right .languages span {
-    color: #377300;
+    color: #356f00;
 }
 
 .bilberry-hugo-theme header .logo img {

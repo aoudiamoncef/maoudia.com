@@ -6,18 +6,19 @@ author = "Moncef AOUDIA"
 showAuthor = false
 showReadingTime = true
 readingtime = 10
-tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers"]
+tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers", "VisualVM"]
 series = ["MongoDB Reactive CLI"]
 categories = ["Tutorial", "Reactive Programming"]
 slug = "bulk-update-with-spring-data-mongodb-reactive"
 type = "article"
+featuredImage = "/blog/bulk-update-with-spring-data-mongodb-reactive/featured-image-en.png"
 [twitter]
     card = "summary_large_image"
     site = "@AoudiaMoncef"
     creator = "@AoudiaMoncef"
     title = "Bulk Update With Spring Data MongoDB Reactive"
     description = "We will implement a solution to enrich and update efficiently a large amount of data using Spring Data MongoDB Reactive."
-    image = "https://www.maoudia.com/blog/bulk-update-with-spring-data-mongodb-reactive/featuredImage.png"
+    image = "https://www.maoudia.com/blog/bulk-update-with-spring-data-mongodb-reactive/featured-image-en.png"
 +++
 
 :toc: macro

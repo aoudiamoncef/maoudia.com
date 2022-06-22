@@ -6,19 +6,19 @@ author = "Moncef AOUDIA"
 showAuthor = false
 showReadingTime = true
 readingtime = 10
-tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers"]
+tags = ["EIP", "Java", "Reactor", "MongoDB", "Spring Boot", "Spring Data", "Spring WebFlux", "Docker Compose", "TestContainers" , "VisualVM"]
 series = ["MongoDB Reactive CLI"]
 categories = ["Tutorial", "Reactive Programming"]
 slug = "mise-a-jour-en-masse-avec-spring-data-mongodb-reactive"
 type = "article"
-images = ["featuredImage-fr.jpg"]
+featuredImage = "/fr/blog/mise-a-jour-en-masse-avec-spring-data-mongodb-reactive/featured-image-fr.png"
 [twitter]
     card = "summary_large_image"
     site = "@AoudiaMoncef"
     creator = "@AoudiaMoncef"
     title = "Mise À Jour En Masse Avec Spring Data MongoDB Reactive"
     description = "On va implémenter une solution pour enrichir et mettre à jour efficacement un grand volume de données en utilisant Spring Data MongoDB Reactive."
-    image = "https://www.maoudia.com/fr/blog/mise-a-jour-en-masse-avec-spring-data-mongodb-reactive/featuredImage.png"
+    image = "https://www.maoudia.com/fr/blog/mise-a-jour-en-masse-avec-spring-data-mongodb-reactive/featured-image-fr.png"
 +++
 
 :toc: macro
