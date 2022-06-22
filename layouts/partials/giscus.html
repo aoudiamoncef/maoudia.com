@@ -8,6 +8,8 @@
         data-reactions-enabled="{{ .Site.Params.giscusReactions }}"
         data-emit-metadata="{{ .Site.Params.giscusMetadata }}"
         data-theme="{{ .Site.Params.giscusTheme }}"
+        data-input-position="{{ .Site.Params.giscusInputPosition }}"
+        data-loading="{{ .Site.Params.giscusLoading }}"
         {{ if isset .Site.Params "giscusLanguage" }}
         data-lang="{{ .Site.Params.giscusLanguage }}"
         {{ else }}

@@ -11,6 +11,7 @@ series = ["MongoDB Reactive CLI"]
 categories = ["Tutorial", "Reactive Programming"]
 slug = "mise-a-jour-en-masse-avec-spring-data-mongodb-reactive"
 type = "article"
+images = ["featuredImage-fr.jpg"]
 [twitter]
     card = "summary_large_image"
     site = "@AoudiaMoncef"
